@@ -3,12 +3,10 @@
   <i class='fa fa-refresh pull-right cursor refresh' style="margin-top: 3px;margin-right: 3px;"></i>
   <center><a href="#eqLink#" style="font-size : 1.5em;"> #name# </a></center>
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
-  <center>
-    Status : <span class="ping tooltips" title="#ping_collect#"></span><br/>
-    Latence : <span class="label label-success latency tooltips" title="#latency_collect#">#latency#</span> ms
-    #action#
+  <center title="#latency_collect#" class="tooltips">
+    <span class="cmd #ping_history#" data-cmd_id="#ping_id#">Status : <span class="ping" ></span></span><br/>
+    <span class="cmd #latency_history#" data-cmd_id="#latency_id#" >Latence : <span class="label label-success latency" >#latency#</span> ms</span>
   </center>
-  <span class="statusBattery" style="position : absolute;right : 0px;bottom : -10px; width : 30px;"></span>
   <script>
     $('.eqLogic[data-eqLogic_id=#id#] .refresh').on('click', function () {
       jeedom.cmd.execute({id: '#refresh_id#'});
@@ -24,6 +22,7 @@
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-warning');
    }else if (parseFloat('#latency#') < 0 ){
     $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-default');
-   }
- </script>
+  }
+  initTooltips();
+</script>
 </div>

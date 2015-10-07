@@ -4,19 +4,18 @@
   <center>#name#</center>
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
   <center>
-    Status : <span class="status"></span><br/>
+    Status : <span class="ping"></span><br/>
     Latence : <span class="latency">#latency#</span> ms
     #action#
   </center>
-  <span class="statusBattery" style="position : absolute;right : 0px;bottom : -10px; width : 30px;"></span>
   <script>
     $('.eqLogic[data-eqLogic_id=#id#] .refresh').on('click', function () {
       jeedom.cmd.execute({id: '#refresh_id#'});
     });
     if('#ping#' == 1){
-      $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-check"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-check"></i>');
     }else{
-      $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-times"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-times"></i>');
     }
  </script>
 </div>

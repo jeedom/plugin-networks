@@ -1,0 +1,14 @@
+{
+    "name": "jeedom/networks",
+    "description": "Plugin for network management (ping and wol)",
+    "require": {
+        "geerlingguy/ping": "^1.0",
+        "tomnomnom/phpwol": "^0.0.1"
+    },
+    "authors": [
+        {
+            "name": "Loic Gevrey",
+            "email": "loic@jeedom.com"
+        }
+    ]
+}

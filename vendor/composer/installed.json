@@ -1,0 +1,74 @@
+[
+    {
+        "name": "tomnomnom/phpwol",
+        "version": "0.0.1",
+        "version_normalized": "0.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/TomNomNom/phpwol.git",
+            "reference": "1c31562040a14d0512669dd38e4421b2c600370f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/TomNomNom/phpwol/zipball/1c31562040a14d0512669dd38e4421b2c600370f",
+            "reference": "1c31562040a14d0512669dd38e4421b2c600370f",
+            "shasum": ""
+        },
+        "time": "2013-02-18 00:19:45",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Phpwol": "./"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Tom Hudson",
+                "email": "mail@tomnomnom.com",
+                "homepage": "http://tomhudson.co.uk/"
+            }
+        ],
+        "description": "Wake On LAN for PHP",
+        "homepage": "https://github.com/TomNomNom/phpwol/"
+    },
+    {
+        "name": "geerlingguy/ping",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/geerlingguy/Ping.git",
+            "reference": "f67ff9483be1977cde38e10f79c5ead2f96149c0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/geerlingguy/Ping/zipball/f67ff9483be1977cde38e10f79c5ead2f96149c0",
+            "reference": "f67ff9483be1977cde38e10f79c5ead2f96149c0",
+            "shasum": ""
+        },
+        "time": "2015-06-05 15:15:27",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "JJG/Ping.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeff Geerling",
+                "email": "jeff@jeffgeerling.com"
+            }
+        ],
+        "description": "A PHP class to ping hosts."
+    }
+]

@@ -1,0 +1,87 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "a2842a1743fd199ada17b968350f769c",
+    "content-hash": "7d9e1e52b33bc017ab79f817831de8e3",
+    "packages": [
+        {
+            "name": "geerlingguy/ping",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geerlingguy/Ping.git",
+                "reference": "f67ff9483be1977cde38e10f79c5ead2f96149c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geerlingguy/Ping/zipball/f67ff9483be1977cde38e10f79c5ead2f96149c0",
+                "reference": "f67ff9483be1977cde38e10f79c5ead2f96149c0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "JJG/Ping.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "email": "jeff@jeffgeerling.com"
+                }
+            ],
+            "description": "A PHP class to ping hosts.",
+            "time": "2015-06-05 15:15:27"
+        },
+        {
+            "name": "tomnomnom/phpwol",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TomNomNom/phpwol.git",
+                "reference": "1c31562040a14d0512669dd38e4421b2c600370f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TomNomNom/phpwol/zipball/1c31562040a14d0512669dd38e4421b2c600370f",
+                "reference": "1c31562040a14d0512669dd38e4421b2c600370f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phpwol": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Hudson",
+                    "email": "mail@tomnomnom.com",
+                    "homepage": "http://tomhudson.co.uk/"
+                }
+            ],
+            "description": "Wake On LAN for PHP",
+            "homepage": "https://github.com/TomNomNom/phpwol/",
+            "time": "2013-02-18 00:19:45"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

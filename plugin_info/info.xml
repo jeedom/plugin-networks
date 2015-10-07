@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>networks</id>
+    <name>Networks</name>
+    <description>Plugin permettant la gestion réseaux des équipements (ping et wake on lan)</description>
+    <icon>fa fa-sitemap</icon>
+    <licence>AGPL</licence>
+    <author>Loïc Gevrey</author>
+    <installation>Aucune</installation>
+    <require>1.210</require>
+    <category>communication</category>
+    <include type="php">networks.inc</include>
+</info>
+

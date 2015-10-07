@@ -5,8 +5,8 @@
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
   <br/>
   <center>
-    Status : <span class="status"></span><br/>
-    Latence : <span class="label label-success latency">#latency#</span> ms
+    Status : <span class="status tooltips" title="#ping_collect#"></span><br/>
+    Latence : <span class="label label-success latency tooltips" title="#latency_collect#">#latency#</span> ms
     #action#
   </center>
   <span class="statusBattery" style="position : absolute;right : 0px;bottom : -10px; width : 30px;"></span>
@@ -17,7 +17,7 @@
     if('#ping#' == 1){
       $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-check"></i>');
     }else{
-      $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-times"  style="color:#e74c3c"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-times"></i>');
     }
     if(parseFloat('#latency#') > 1){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');

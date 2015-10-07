@@ -4,8 +4,8 @@
   <center><a href="#eqLink#" style="font-size : 1.5em;"> #name# </a></center>
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
   <center>
-    Status : <span class="status"></span><br/>
-    Latence : <span class="label label-success latency">#latency#</span> ms
+    Status : <span class="ping tooltips" title="#ping_collect#"></span><br/>
+    Latence : <span class="label label-success latency tooltips" title="#latency_collect#">#latency#</span> ms
     #action#
   </center>
   <span class="statusBattery" style="position : absolute;right : 0px;bottom : -10px; width : 30px;"></span>
@@ -14,9 +14,9 @@
       jeedom.cmd.execute({id: '#refresh_id#'});
     });
     if('#ping#' == 1){
-      $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-check"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-check"></i>');
     }else{
-      $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-times"  style="color:#e74c3c"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-times"></i>');
     }
     if(parseFloat('#latency#') > 1){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');

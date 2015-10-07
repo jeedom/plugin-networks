@@ -125,10 +125,6 @@ class networks extends eqLogic {
 		}
 		$ping = new Ping($this->getConfiguration('ip'));
 		$latency_time = $ping->ping();
-		if ($latency_time === false) {
-			sleep(1);
-			$latency_time = $ping->ping();
-		}
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');
 			if (is_object($ping)) {
@@ -164,7 +160,7 @@ class networks extends eqLogic {
 		}
 		$mc = cache::byKey('networksWidget' . $_version . $this->getId());
 		if ($mc->getValue() != '') {
-			//return preg_replace("/" . preg_quote(self::UIDDELIMITER) . "(.*?)" . preg_quote(self::UIDDELIMITER) . "/", self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER, $mc->getValue());
+			return preg_replace("/" . preg_quote(self::UIDDELIMITER) . "(.*?)" . preg_quote(self::UIDDELIMITER) . "/", self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER, $mc->getValue());
 		}
 		$replace = array(
 			'#name#' => $this->getName(),

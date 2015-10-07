@@ -2,35 +2,36 @@
 
 Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, il n'y a aucune configuration à ce niveau.
 
-image::../images/dyndns.PNG[]
+image::../images/networks.PNG[]
 
 == Configuration des équipements
 
 La configuration des équipements dyndns est accessible à partir du menu plugin : 
 
-image::../images/dyndns2.PNG[]
+image::../images/networks2.PNG[]
 
 Voilà à quoi ressemble la page du plugin Dyndns (ici avec déjà 1 équipement) : 
 
-image::../images/dyndns3.PNG[]
+image::../images/networks3.PNG[]
 
 [TIP]
 Comme à beaucoup d'endroits sur Jeedom, placer la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez, à partir de votre profil, le laisser toujours visible).
 
 Une fois que vous cliquez sur l'un d'eux, vous obtenez : 
 
-image::../images/dyndns4.PNG[]
+image::../images/networks4.PNG[]
 
 Vous retrouvez ici toute la configuration de votre équipement : 
 
 * *Nom de l'équipement Ambilight* : nom de votre équipement Ambilights,
 * *Objet parent* : indique l'objet parent auquel appartient l'équipement,
+* *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
 * *Activer* : permet de rendre votre équipement actif,
 * *Visible* : rend votre équipement visible sur le dashboard,
-* *Service* : Le nom du service utilisé (dyndns.org, noip.com)
-* *Hostname* : nom complet du DNS à mettre à jour (ex toto.ddns.net)
-* *Nom d'utilisateur* : nom d'utilisateur sur le service en question
-* *Mot de passer* : mot de passe sur le service en question
+* *Adresse IP* : Adresse IP sur laquelle faire le ping
+* *Adresse MAC (wol)* : Adresse MAC pour le wake-on-lan
+* *Broadcast IP (wol)* : IP de broadcast du réseaux pour envoyer le wake-on-lan
+* *Auto-actualisation (cron)* : cron definissant la fréquence du ping
 
 
 En-dessous vous retrouvez la liste des commandes : 
@@ -40,7 +41,4 @@ En-dessous vous retrouvez la liste des commandes :
 * *Tester* : permet de tester la commande
 
 [NOTE]
-Jeedom va vérifier toute les 15 minutes l'ip externe si celle-ci a changé alors le DNS sera mise à jour
-
-[IMPORTANT]
-Le plugin fournis une commande pour forcer la mise à jour. Attention à ne pas en abuser car vous pouvez être bani temporairement du service de DNS
+Jeedom va vérifier toute les minutes (par defaut) le ping sur l'ip

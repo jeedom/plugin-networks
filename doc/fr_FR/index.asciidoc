@@ -1,5 +1,5 @@
-= Dyndns
+= Networks
 
-Ce plugin permet de mettre à jour un service de DNS dynamique (dyndns,noip...)
+Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement réseaux
 
 include::configuration.asciidoc[]

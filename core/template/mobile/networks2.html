@@ -1,11 +1,11 @@
 <div class="eqLogic-widget eqLogic tooltips" style="width: 160px;background-color: #background_color#;#style#" data-eqLogic_id="#id#" data-eqLogic_uid="#uid#" data-version="dashboard">
   <span class="statusCmd" style="position : absolute;left : 5px; width : 30px;z-index: 1030;"></span>
   <i class='fa fa-refresh pull-right cursor refresh' style="margin-top: 3px;margin-right: 3px;"></i>
-  <center><a href="#eqLink#" style="font-size : 1.5em;"> #name# </a></center>
+  <center>#name#</center>
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
   <center>
     Status : <span class="status"></span><br/>
-    Latence : <span class="label label-success latency">#latency#</span> ms
+    Latence : <span class="latency">#latency#</span> ms
     #action#
   </center>
   <span class="statusBattery" style="position : absolute;right : 0px;bottom : -10px; width : 30px;"></span>
@@ -18,12 +18,5 @@
     }else{
       $('.eqLogic[data-eqLogic_uid=#uid#] .status').append('<i class="fa fa-times"  style="color:#e74c3c"></i>');
     }
-    if(parseFloat('#latency#') > 1){
-     $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');
-   }else if(parseFloat('#latency#') > 0.5){
-     $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-warning');
-   }else if (parseFloat('#latency#') < 0 ){
-    $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-default');
-   }
- </script>
+</script>
 </div>

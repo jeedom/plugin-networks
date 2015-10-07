@@ -3,6 +3,7 @@
   <i class='fa fa-refresh pull-right cursor refresh' style="margin-top: 3px;margin-right: 3px;"></i>
   <center><a href="#eqLink#" style="font-size : 1.5em;"> #name# </a></center>
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
+  <br/>
   <center>
     Status : <span class="status"></span><br/>
     Latence : <span class="label label-success latency">#latency#</span> ms
@@ -24,6 +25,6 @@
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-warning');
    }else if (parseFloat('#latency#') < 0 ){
     $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-default');
-   }
- </script>
+  }
+</script>
 </div>

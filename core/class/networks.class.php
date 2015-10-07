@@ -53,6 +53,19 @@ class networks extends eqLogic {
 	}
 
 	public function postSave() {
+		$refresh = $this->getCmd(null, 'refresh');
+		if (!is_object($refresh)) {
+			$refresh = new networksCmd();
+			$refresh->setLogicalId('refresh');
+			$refresh->setIsVisible(1);
+			$refresh->setName(__('Rafraîchir', __FILE__));
+		}
+		$refresh->setType('action');
+		$refresh->setSubType('other');
+		$refresh->setEventOnly(1);
+		$refresh->setEqLogic_id($this->getId());
+		$refresh->save();
+
 		$ping = $this->getCmd(null, 'ping');
 		if (!is_object($ping)) {
 			$ping = new networksCmd();
@@ -98,7 +111,6 @@ class networks extends eqLogic {
 			$wol->setEqLogic_id($this->getId());
 			$wol->save();
 		}
-		$this->ping();
 	}
 
 	public function preUpdate() {
@@ -113,6 +125,10 @@ class networks extends eqLogic {
 		}
 		$ping = new Ping($this->getConfiguration('ip'));
 		$latency_time = $ping->ping();
+		if ($latency_time === false) {
+			sleep(1);
+			$latency_time = $ping->ping();
+		}
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');
 			if (is_object($ping)) {
@@ -132,6 +148,70 @@ class networks extends eqLogic {
 				$latency->event(-1);
 			}
 		}
+		$this->refreshWidget();
+	}
+
+	public function toHtml($_version) {
+		if ($this->getIsEnable() != 1) {
+			return '';
+		}
+		if (!$this->hasRight('r')) {
+			return '';
+		}
+		$_version = jeedom::versionAlias($_version);
+		if ($this->getDisplay('hideOn' . $_version) == 1) {
+			return '';
+		}
+		$mc = cache::byKey('networksWidget' . $_version . $this->getId());
+		if ($mc->getValue() != '') {
+			//return preg_replace("/" . preg_quote(self::UIDDELIMITER) . "(.*?)" . preg_quote(self::UIDDELIMITER) . "/", self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER, $mc->getValue());
+		}
+		$replace = array(
+			'#name#' => $this->getName(),
+			'#id#' => $this->getId(),
+			'#background_color#' => '#bdc3c7',
+			'#eqLink#' => ($this->hasRight('w')) ? $this->getLinkToConfiguration() : '#',
+			'#uid#' => 'networks' . $this->getId() . self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER,
+		);
+
+		foreach ($this->getCmd('info') as $cmd) {
+			$replace['#' . $cmd->getLogicalId() . '_history#'] = '';
+			$replace['#' . $cmd->getLogicalId() . '_id#'] = $cmd->getId();
+			$replace['#' . $cmd->getLogicalId() . '#'] = $cmd->execCmd(null, 2);
+			if ($cmd->getSubType() == 'numeric' && $replace['#' . $cmd->getLogicalId() . '#'] === '') {
+				$replace['#' . $cmd->getLogicalId() . '#'] = 0;
+			}
+			$replace['#' . $cmd->getLogicalId() . '_collect#'] = $cmd->getCollectDate();
+			if ($cmd->getIsHistorized() == 1) {
+				$replace['#' . $cmd->getLogicalId() . '_history#'] = 'history cursor';
+			}
+		}
+		$replace['#action#'] = '';
+		foreach ($this->getCmd('action') as $cmd) {
+			if ($cmd->getLogicalId() == 'refresh') {
+				continue;
+			}
+			$replace['#action#'] .= $cmd->toHtml($_version, '', '#7f8c8d');
+		}
+		$refresh = $this->getCmd(null, 'refresh');
+		if (is_object($refresh)) {
+			$replace['#refresh_id#'] = $refresh->getId();
+		}
+
+		$parameters = $this->getDisplay('parameters');
+		if (is_array($parameters)) {
+			foreach ($parameters as $key => $value) {
+				$replace['#' . $key . '#'] = $value;
+			}
+		}
+		if ($replace['#action#'] == '') {
+			$html = template_replace($replace, getTemplate('core', $_version, 'networks', 'networks'));
+		} else {
+			$html = template_replace($replace, getTemplate('core', $_version, 'networks2', 'networks'));
+		}
+
+		cache::set('networksWidget' . $_version . $this->getId(), $html, 0);
+		return $html;
 	}
 
 	/*     * **********************Getteur Setteur*************************** */
@@ -171,6 +251,9 @@ class networksCmd extends cmd {
 				}
 				throw new Exception(__('Echec de la commande : ', __FILE__) . $error);
 			}
+		}
+		if ($this->getLogicalId() == 'refresh') {
+			$eqLogic->ping();
 		}
 	}
 

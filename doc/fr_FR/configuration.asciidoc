@@ -42,3 +42,16 @@ En-dessous vous retrouvez la liste des commandes :
 
 [NOTE]
 Jeedom va vérifier toute les minutes (par defaut) le ping sur l'ip
+
+[IMPORTANT]
+Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan
+
+== Widgets
+
+Voila un exemple de widget (sans le wake-on-lan) en desktop :
+
+image::../images/networks5.PNG[]
+
+Et en mobile : 
+
+image::../images/networks6.PNG[]

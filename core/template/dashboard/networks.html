@@ -1,0 +1,50 @@
+<div class="eqLogic-widget eqLogic tooltips" style="width: 280px;background-color: #background_color#;#style#" data-eqLogic_id="#id#" data-version="dashboard" title="Dernière communication le #last_transmission# prochaine communication #next_transmission#">
+  <span class="statusCmd" style="position : absolute;left : 5px; width : 30px;z-index: 1030;"></span>
+  <i class='fa fa-refresh pull-right cursor refresh' style="margin-top: 3px;margin-right: 3px;"></i>
+  <center><a href="#eqLink#" style="font-size : 1.5em;"> #name# </a></center>
+  <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
+
+  <div class="row" style="margin-left : 2px;margin-right : 2px;">
+   <div class="col-xs-5" style="padding-right : 2px;padding-left : 2px;border-right: solid white 1px;">
+    <i class="icon jeedom-thermo-moyen"></i> <strong class="tooltips #temperature_history#" data-cmd_id="#temperature_id#" title="#temperature_collect#" style="font-size:1.1em;">#temperature#</strong> °C<br/>
+    <i class="icon nature-watering1"></i> <strong class="tooltips #humidity_history#" data-cmd_id="#humidity_id#" title="#humidity_collect#" style="font-size:1.1em;">#humidity#</strong> %<br/>
+    <i class="icon meteo-soleil"></i> <strong class="tooltips #light_history#" data-cmd_id="#light_id#"title="#light_collect#" style="font-size:1.1em;">#light#</strong> Lux<br/>
+    <i class="icon nature-plant30"></i> <strong class="tooltips" title="#recent_soilmoisture_reading_si_value_collect#" style="font-size:1.1em;">#recent_soilmoisture_reading_si_value#</strong>
+  </div>
+  <div class="col-xs-7" style="padding-right : 5px;padding-left : 5px;">
+    <center>
+      <i class="fa fa-check-circle allOK" style="font-size : 6em;display:none;"></i>
+      <strong class="tooltips" style="font-size:1.1em;">
+       #hint_light#
+       #hint_temperature#
+       #hint_water#
+       #hint_mist#
+       #hint_fertilizer#
+     </strong>
+   </center>
+ </div>
+</div>
+<center>
+  #action#
+</center>
+<span class="statusBattery" style="position : absolute;right : 0px;bottom : -10px; width : 30px;"></span>
+<script>
+  $('.eqLogic[data-eqLogic_id=#id#] .refresh').on('click', function () {
+    jeedom.cmd.execute({id: '#refresh_id#'});
+  });
+  if("#hint_light#" == '' && "#hint_temperature#" == '' && "#hint_water#" == '' && "#hint_mist#" == '' && "#hint_fertilizer#" == ''){
+    $('.eqLogic[data-eqLogic_id=#id#] .allOK').show();
+  }
+  if(!isNaN('#battery#') && parseInt('#battery#') >= 0){
+    if(parseInt('#battery#') >= 75){
+      $('.eqLogic[data-eqLogic_id=#id#] .statusBattery').append('<i class="icon jeedom-batterie3 tooltips" title="#battery# % (#batteryDatetime#)" style="font-size : 2em;"></i>');
+    }else if(parseInt('#battery#') >= 50){
+      $('.eqLogic[data-eqLogic_id=#id#] .statusBattery').append('<i class="icon jeedom-batterie2 tooltips" title="#battery# % (#batteryDatetime#)" style="font-size : 2em;"></i>');
+    }else if(parseInt('#battery#') >= 25){
+      $('.eqLogic[data-eqLogic_id=#id#] .statusBattery').append('<i class="icon jeedom-batterie1 tooltips" title="#battery# % (#batteryDatetime#)" style="font-size : 2em;"></i>');
+    }else{
+      $('.eqLogic[data-eqLogic_id=#id#] .statusBattery').append('<i class="icon jeedom-batterie0 tooltips" title="#battery# % (#batteryDatetime#)" style="font-size : 2em;"></i>');
+    }
+  }
+</script>
+</div>

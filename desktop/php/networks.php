@@ -97,10 +97,25 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
   </div>
 </div>
 <div class="form-group">
-  <label class="col-sm-3 control-label">{{Adresse MAC}}</label>
+  <label class="col-sm-3 control-label">{{Adresse MAC (wol)}}</label>
   <div class="col-sm-3">
     <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="mac"/>
   </div>
+</div>
+<div class="form-group">
+  <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
+  <div class="col-sm-3">
+    <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
+  </div>
+</div>
+ <div class="form-group expertModeVisible">
+    <label class="col-sm-3 control-label">{{Auto-actualisation (cron)}}</label>
+    <div class="col-sm-2">
+        <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
+    </div>
+    <div class="col-sm-1">
+        <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
+    </div>
 </div>
 </fieldset>
 </form>

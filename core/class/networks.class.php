@@ -22,9 +22,35 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 class networks extends eqLogic {
 	/*     * *************************Attributs****************************** */
 
+	public static function cron() {
+		foreach (self::byType('networks') as $networks) {
+			$autorefresh = $eqLogic->getConfiguration('autorefresh');
+			if ($eqLogic->getIsEnable() == 1 && $autorefresh != '') {
+				try {
+					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
+					if ($c->isDue()) {
+						try {
+							$networks->ping();
+						} catch (Exception $exc) {
+							log::add('networks', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
+						}
+					}
+				} catch (Exception $exc) {
+					log::add('networks', 'error', __('Expression cron non valide pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $autorefresh);
+				}
+			}
+		}
+	}
+
 	/*     * ***********************Methode static*************************** */
 
 	/*     * *********************Méthodes d'instance************************* */
+
+	public function preSave() {
+		if ($this->getConfiguration('autorefresh') == '') {
+			$this->setConfiguration('autorefresh', '* * * * *');
+		}
+	}
 
 	public function postSave() {
 		$ping = $this->getCmd(null, 'ping');
@@ -55,21 +81,36 @@ class networks extends eqLogic {
 		$latency->save();
 
 		$wol = $this->getCmd(null, 'wol');
-		if (!is_object($wol)) {
-			$wol = new networksCmd();
-			$wol->setLogicalId('wol');
-			$wol->setIsVisible(1);
-			$wol->setName(__('Wake-on-lan', __FILE__));
+		if ($this->getConfiguration('mac') == '' || $this->getConfiguration('broadcastIP') == '') {
+			if (is_object($wol)) {
+				$wol->remove();
+			}
+		} else {
+			if (!is_object($wol)) {
+				$wol = new networksCmd();
+				$wol->setLogicalId('wol');
+				$wol->setIsVisible(1);
+				$wol->setName(__('Wake-on-lan', __FILE__));
+			}
+			$wol->setType('action');
+			$wol->setSubType('other');
+			$wol->setEventOnly(1);
+			$wol->setEqLogic_id($this->getId());
+			$wol->save();
 		}
-		$wol->setType('action');
-		$wol->setSubType('other');
-		$wol->setEventOnly(1);
-		$wol->setEqLogic_id($this->getId());
-		$wol->save();
 		$this->ping();
 	}
 
+	public function preUpdate() {
+		if ($this->getConfiguration('ip') == '') {
+			throw new Exception(__('L\'adresse IP ne peut être vide', __FILE__));
+		}
+	}
+
 	public function ping() {
+		if ($this->getConfiguration('ip') == '') {
+			return;
+		}
 		$ping = new Ping($this->getConfiguration('ip'));
 		$latency_time = $ping->ping();
 		if ($latency_time !== false) {
@@ -90,7 +131,6 @@ class networks extends eqLogic {
 			if (is_object($latency)) {
 				$latency->event(-1);
 			}
-
 		}
 	}
 
@@ -105,7 +145,33 @@ class networksCmd extends cmd {
 	/*     * *********************Methode d'instance************************* */
 
 	public function execute($_options = array()) {
-
+		if ($this->getType() == 'info') {
+			return;
+		}
+		$eqLogic = $this->getEqLogic();
+		if ($this->getLogicalId() == 'wol') {
+			$f = new \Phpwol\Factory();
+			$magicPacket = $f->magicPacket();
+			$result = $magicPacket->send($eqLogic->getConfiguration('mac'), $eqLogic->getConfiguration('broadcastIP'));
+			if (!$result) {
+				$error = '';
+				switch ($magicPacket->getLastError()) {
+					case 1:
+						$error = __('IP invalide', __FILE__);
+						break;
+					case 2:
+						$error = __('MAC invalide', __FILE__);
+						break;
+					case 4:
+						$error = __('SUBNET invalide', __FILE__);
+						break;
+					default:
+						$error = $magicPacket->getLastError();
+						break;
+				}
+				throw new Exception(__('Echec de la commande : ', __FILE__) . $error);
+			}
+		}
 	}
 
 	/*     * **********************Getteur Setteur*************************** */

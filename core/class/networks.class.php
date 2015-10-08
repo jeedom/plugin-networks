@@ -24,19 +24,19 @@ class networks extends eqLogic {
 
 	public static function cron() {
 		foreach (self::byType('networks') as $networks) {
-			$autorefresh = $eqLogic->getConfiguration('autorefresh');
-			if ($eqLogic->getIsEnable() == 1 && $autorefresh != '') {
+			$autorefresh = $networks->getConfiguration('autorefresh');
+			if ($networks->getIsEnable() == 1 && $autorefresh != '') {
 				try {
 					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
 					if ($c->isDue()) {
 						try {
 							$networks->ping();
 						} catch (Exception $exc) {
-							log::add('networks', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
+							log::add('networks', 'error', __('Erreur pour ', __FILE__) . $networks->getHumanName() . ' : ' . $exc->getMessage());
 						}
 					}
 				} catch (Exception $exc) {
-					log::add('networks', 'error', __('Expression cron non valide pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $autorefresh);
+					log::add('networks', 'error', __('Expression cron non valide pour ', __FILE__) . $networks->getHumanName() . ' : ' . $autorefresh);
 				}
 			}
 		}

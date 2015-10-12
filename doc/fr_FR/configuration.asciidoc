@@ -6,7 +6,7 @@ image::../images/networks.PNG[]
 
 == Configuration des équipements
 
-La configuration des équipements dyndns est accessible à partir du menu plugin : 
+La configuration des équipements networks est accessible à partir du menu plugin : 
 
 image::../images/networks2.PNG[]
 
@@ -23,7 +23,7 @@ image::../images/networks4.PNG[]
 
 Vous retrouvez ici toute la configuration de votre équipement : 
 
-* *Nom de l'équipement Ambilight* : nom de votre équipement Ambilights,
+* *Nom de l'équipement Networks* : nom de votre équipement Networks,
 * *Objet parent* : indique l'objet parent auquel appartient l'équipement,
 * *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
 * *Activer* : permet de rendre votre équipement actif,

@@ -10,7 +10,7 @@ La configuration des équipements dyndns est accessible à partir du menu plugin
 
 image::../images/networks2.PNG[]
 
-Voilà à quoi ressemble la page du plugin Dyndns (ici avec déjà 1 équipement) : 
+Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1 équipement) : 
 
 image::../images/networks3.PNG[]
 

@@ -144,6 +144,14 @@ class networks extends eqLogic {
 				$latency->event(-1);
 			}
 		}
+		$mc = cache::byKey('networksWidgetdashboard' . $this->getId());
+		$mc->remove();
+		$mc = cache::byKey('networksWidgetdview' . $this->getId());
+		$mc->remove();
+		$mc = cache::byKey('networksWidgetmobile' . $this->getId());
+		$mc->remove();
+		$mc = cache::byKey('networksWidgetmview' . $this->getId());
+		$mc->remove();
 		$this->refreshWidget();
 	}
 

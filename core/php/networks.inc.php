@@ -17,7 +17,7 @@
  */
 
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
-require_once dirname(__FILE__) . '/../../3rdparty/ping.class.php';
+require_once dirname(__FILE__) . '/../../3rdparty/networks_ping.class.php';
 require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 include_file('core', 'networks', 'class', 'networks');
 ?>

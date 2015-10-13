@@ -123,7 +123,7 @@ class networks extends eqLogic {
 		if ($this->getConfiguration('ip') == '') {
 			return;
 		}
-		$ping = new Ping($this->getConfiguration('ip'));
+		$ping = new networks_Ping($this->getConfiguration('ip'));
 		$latency_time = $ping->ping();
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');

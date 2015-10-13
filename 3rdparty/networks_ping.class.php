@@ -1,5 +1,5 @@
 <?php
-class Ping {
+class networks_Ping {
 	private $host;
 	private $ttl;
 	private $port = 80;

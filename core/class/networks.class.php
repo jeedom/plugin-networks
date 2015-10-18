@@ -155,7 +155,7 @@ class networks extends eqLogic {
 		$this->refreshWidget();
 	}
 
-	public function toHtml($_version) {
+	public function toHtml($_version = 'dashboard') {
 		if ($this->getIsEnable() != 1) {
 			return '';
 		}

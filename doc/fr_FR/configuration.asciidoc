@@ -28,23 +28,23 @@ Vous retrouvez ici toute la configuration de votre équipement :
 * *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
 * *Activer* : permet de rendre votre équipement actif,
 * *Visible* : rend votre équipement visible sur le dashboard,
-* *Adresse IP* : Adresse IP sur laquelle faire le ping
-* *Adresse MAC (wol)* : Adresse MAC pour le wake-on-lan
-* *Broadcast IP (wol)* : IP de broadcast du réseaux pour envoyer le wake-on-lan
-* *Auto-actualisation (cron)* : cron definissant la fréquence du ping
+* *Adresse IP* : adresse IP sur laquelle faire le ping,
+* *Adresse MAC (wol)* : adresse MAC pour le wake-on-lan,
+* *Broadcast IP (wol)* : adresse IP de broadcast du réseaux pour envoyer le wake-on-lan,
+* *Auto-actualisation (cron)* : cron definissant la fréquence du ping.
 
 
 En-dessous vous retrouvez la liste des commandes : 
 
 * *Nom* : le nom affiché sur le dashboard,
 * *Afficher* : permet d'afficher la donnée sur le dashboard,
-* *Tester* : permet de tester la commande
+* *Tester* : permet de tester la commande.
 
 [NOTE]
-Jeedom va vérifier toute les minutes (par defaut) le ping sur l'ip
+Jeedom va vérifier toute les minutes (par defaut) le ping sur l'IP.
 
 [IMPORTANT]
-Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan
+Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan.
 
 == Widgets
 

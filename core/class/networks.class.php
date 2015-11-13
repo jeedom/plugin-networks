@@ -172,7 +172,6 @@ class networks extends eqLogic {
 		$replace = array(
 			'#name#' => $this->getName(),
 			'#id#' => $this->getId(),
-			'#background_color#' => '#bdc3c7',
 			'#eqLink#' => ($this->hasRight('w')) ? $this->getLinkToConfiguration() : '#',
 			'#uid#' => 'networks' . $this->getId() . self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER,
 		);

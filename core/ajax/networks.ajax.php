@@ -46,9 +46,9 @@ try {
 				$return['eqLogics'][] = $networks->toHtml(init('version'));
 			}
 			foreach (object::buildTree($object) as $child) {
-				$cameras = $child->getEqLogic(true, false, 'networks');
-				if (count($cameras) > 0) {
-					foreach ($cameras as $networks) {
+				$networks = $child->getEqLogic(true, false, 'networks');
+				if (count($networks) > 0) {
+					foreach ($networks as $networks) {
 						$return['eqLogics'][] = $networks->toHtml(init('version'));
 					}
 				}

@@ -62,7 +62,6 @@ class networks extends eqLogic {
 		}
 		$refresh->setType('action');
 		$refresh->setSubType('other');
-		$refresh->setEventOnly(1);
 		$refresh->setEqLogic_id($this->getId());
 		$refresh->save();
 

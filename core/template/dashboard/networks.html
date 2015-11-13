@@ -4,8 +4,8 @@
   <center><a href="#eqLink#" style="font-size : 1.5em;"> #name# </a></center>
   <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
   <center title="#latency_collect#" class="tooltips">
-    <span class="cmd #ping_history#" data-cmd_id="#ping_id#">Status : <span class="ping" ></span></span><br/>
-    <span class="cmd #latency_history#" data-cmd_id="#latency_id#" >Latence : <span class="label label-success latency" >#latency#</span> ms</span>
+    <span class="cmd noRefresh #ping_history#" data-cmd_id="#ping_id#">Status : <span class="ping" ></span></span><br/>
+    <span class="cmd noRefresh #latency_history#" data-cmd_id="#latency_id#" >Latence : <span class="label label-success latency" >#latency#</span> ms</span>
   </center>
   <script>
     $('.eqLogic[data-eqLogic_id=#id#] .refresh').on('click', function () {
@@ -16,9 +16,9 @@
     }else{
       $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-times"></i>');
     }
-    if(parseFloat('#latency#') > 1){
+    if(parseFloat('#latency#') > 1.5){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');
-   }else if(parseFloat('#latency#') > 0.5){
+   }else if(parseFloat('#latency#') > 0.75){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-warning');
    }else if (parseFloat('#latency#') < 0 ){
     $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-default');

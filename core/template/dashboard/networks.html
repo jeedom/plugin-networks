@@ -16,9 +16,9 @@
     }else{
       $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-times"></i>');
     }
-    if(parseFloat('#latency#') > 1.5){
+    if(parseFloat('#latency#') > 500){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');
-   }else if(parseFloat('#latency#') > 0.75){
+   }else if(parseFloat('#latency#') > 100){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-warning');
    }else if (parseFloat('#latency#') < 0 ){
     $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-default');

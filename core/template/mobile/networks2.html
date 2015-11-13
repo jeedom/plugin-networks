@@ -14,8 +14,10 @@
     });
     if('#ping#' == 1){
       $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-check"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#]').css('background-color','#2ecc71');
     }else{
       $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-times"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#]').css('background-color','#e74c3c');
     }
 </script>
 </div>

@@ -17,15 +17,17 @@
     });
     if('#ping#' == 1){
       $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-check"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#]').css('background-color','#2ecc71');
     }else{
       $('.eqLogic[data-eqLogic_uid=#uid#] .ping').append('<i class="fa fa-times"></i>');
+      $('.eqLogic[data-eqLogic_uid=#uid#]').css('background-color','#e74c3c');
     }
     if(parseFloat('#latency#') > 500){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');
    }else if(parseFloat('#latency#') > 100){
      $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-warning');
    }else if (parseFloat('#latency#') < 0 ){
-    $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-default');
+    $('.eqLogic[data-eqLogic_uid=#uid#] .latency').removeClass('label-success').addClass('label-danger');
   }
   initTooltips();
 </script>

@@ -10,5 +10,7 @@
     <require>1.210</require>
     <category>communication</category>
     <include type="php">networks.inc</include>
+    <display>panel</display>
+    <mobile>panel</mobile>
 </info>
 

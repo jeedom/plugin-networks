@@ -127,19 +127,23 @@ class networks extends eqLogic {
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');
 			if (is_object($ping) && $ping->execCmd() !== $ping->formatValue(1)) {
+				$ping->setCollectDate('');
 				$ping->event(1);
 			}
 			$latency = $this->getCmd(null, 'latency');
 			if (is_object($latency) && $latency->execCmd() !== $latency->formatValue($latency_time)) {
+				$latency->setCollectDate('');
 				$latency->event($latency_time);
 			}
 		} else {
 			$ping = $this->getCmd(null, 'ping');
 			if (is_object($ping) && $ping->execCmd() !== $ping->formatValue(0)) {
+				$ping->setCollectDate('');
 				$ping->event(0);
 			}
 			$latency = $this->getCmd(null, 'latency');
 			if (is_object($latency) && $latency->execCmd() !== $latency->formatValue(-1)) {
+				$latency->setCollectDate('');
 				$latency->event(-1);
 			}
 		}

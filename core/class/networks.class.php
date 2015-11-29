@@ -72,6 +72,7 @@ class networks extends eqLogic {
 			$ping->setIsVisible(1);
 			$ping->setName(__('Status', __FILE__));
 		}
+		$ping->setConfiguration('doNotRepeatEvent', 1);
 		$ping->setType('info');
 		$ping->setSubType('binary');
 		$ping->setEventOnly(1);
@@ -85,6 +86,7 @@ class networks extends eqLogic {
 			$latency->setIsVisible(1);
 			$latency->setName(__('Latence', __FILE__));
 		}
+		$latency->setConfiguration('doNotRepeatEvent', 1);
 		$latency->setType('info');
 		$latency->setSubType('numeric');
 		$latency->setEventOnly(1);
@@ -126,24 +128,20 @@ class networks extends eqLogic {
 		$latency_time = $ping->ping();
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');
-			if (is_object($ping) && $ping->execCmd() !== $ping->formatValue(1)) {
-				$ping->setCollectDate('');
+			if (is_object($ping)) {
 				$ping->event(1);
 			}
 			$latency = $this->getCmd(null, 'latency');
-			if (is_object($latency) && $latency->execCmd() !== $latency->formatValue($latency_time)) {
-				$latency->setCollectDate('');
+			if (is_object($latency)) {
 				$latency->event($latency_time);
 			}
 		} else {
 			$ping = $this->getCmd(null, 'ping');
-			if (is_object($ping) && $ping->execCmd() !== $ping->formatValue(0)) {
-				$ping->setCollectDate('');
+			if (is_object($ping)) {
 				$ping->event(0);
 			}
 			$latency = $this->getCmd(null, 'latency');
-			if (is_object($latency) && $latency->execCmd() !== $latency->formatValue(-1)) {
-				$latency->setCollectDate('');
+			if (is_object($latency)) {
 				$latency->event(-1);
 			}
 		}

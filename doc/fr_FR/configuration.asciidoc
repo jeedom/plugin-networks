@@ -46,6 +46,9 @@ Jeedom va vérifier toute les minutes (par defaut) le ping sur l'IP.
 [IMPORTANT]
 Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan.
 
+[NOTE]
+L'adresse mac doit être sous la forme : 5E:FF:56:A2:AF:15.
+
 == Widgets
 
 Voila un exemple de widget (sans le wake-on-lan) en desktop :

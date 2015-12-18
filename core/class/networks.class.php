@@ -22,6 +22,25 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 class networks extends eqLogic {
 	/*     * *************************Attributs****************************** */
 
+	public static function dependancy_info() {
+		$return = array();
+		$return['log'] = 'networks_update';
+		$return['progress_file'] = '/tmp/dependancy_networks_in_progress';
+		if (exec('which etherwake | wc -l') != 0 && exec('which wakeonlan | wc -l') != 0) {
+			$return['state'] = 'ok';
+		} else {
+			$return['state'] = 'nok';
+		}
+		return $return;
+	}
+
+	public static function dependancy_install() {
+		log::remove('networks_update');
+		$cmd = 'sudo /bin/bash ' . dirname(__FILE__) . '/../../ressources/install.sh';
+		$cmd .= ' >> ' . log::getPathToLog('networks_update') . ' 2>&1 &';
+		exec($cmd);
+	}
+
 	public static function cron() {
 		foreach (self::byType('networks') as $networks) {
 			$autorefresh = $networks->getConfiguration('autorefresh');

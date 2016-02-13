@@ -200,7 +200,7 @@ class networks extends eqLogic {
 		foreach ($this->getCmd('info') as $cmd) {
 			$replace['#' . $cmd->getLogicalId() . '_history#'] = '';
 			$replace['#' . $cmd->getLogicalId() . '_id#'] = $cmd->getId();
-			$replace['#' . $cmd->getLogicalId() . '#'] = $cmd->execCmd(null, 2);
+			$replace['#' . $cmd->getLogicalId() . '#'] = $cmd->execCmd();
 			if ($cmd->getSubType() == 'numeric' && $replace['#' . $cmd->getLogicalId() . '#'] === '') {
 				$replace['#' . $cmd->getLogicalId() . '#'] = 0;
 			}

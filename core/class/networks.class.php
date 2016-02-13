@@ -94,7 +94,6 @@ class networks extends eqLogic {
 		$ping->setConfiguration('doNotRepeatEvent', 1);
 		$ping->setType('info');
 		$ping->setSubType('binary');
-		$ping->setEventOnly(1);
 		$ping->setEqLogic_id($this->getId());
 		$ping->save();
 
@@ -108,7 +107,6 @@ class networks extends eqLogic {
 		$latency->setConfiguration('doNotRepeatEvent', 1);
 		$latency->setType('info');
 		$latency->setSubType('numeric');
-		$latency->setEventOnly(1);
 		$latency->setEqLogic_id($this->getId());
 		$latency->setUnite('ms');
 		$latency->save();
@@ -127,7 +125,6 @@ class networks extends eqLogic {
 			}
 			$wol->setType('action');
 			$wol->setSubType('other');
-			$wol->setEventOnly(1);
 			$wol->setEqLogic_id($this->getId());
 			$wol->save();
 		}

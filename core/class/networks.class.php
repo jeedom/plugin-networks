@@ -22,6 +22,10 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 class networks extends eqLogic {
 	/*     * *************************Attributs****************************** */
 
+	public static $_widgetPossibility = array('custom' => true);
+
+	/*     * ***********************Methode static*************************** */
+
 	public static function dependancy_info() {
 		$return = array();
 		$return['log'] = 'networks_update';
@@ -163,39 +167,15 @@ class networks extends eqLogic {
 				$latency->event(-1);
 			}
 		}
-		$mc = cache::byKey('networksWidgetdashboard' . $this->getId());
-		$mc->remove();
-		$mc = cache::byKey('networksWidgetdview' . $this->getId());
-		$mc->remove();
-		$mc = cache::byKey('networksWidgetmobile' . $this->getId());
-		$mc->remove();
-		$mc = cache::byKey('networksWidgetmview' . $this->getId());
-		$mc->remove();
 		$this->refreshWidget();
 	}
 
 	public function toHtml($_version = 'dashboard') {
-		if ($this->getIsEnable() != 1) {
-			return '';
-		}
-		if (!$this->hasRight('r')) {
-			return '';
+		$replace = $this->preToHtml($_version);
+		if (!is_array($replace)) {
+			return $replace;
 		}
 		$_version = jeedom::versionAlias($_version);
-		if ($this->getDisplay('hideOn' . $_version) == 1) {
-			return '';
-		}
-		$mc = cache::byKey('networksWidget' . $_version . $this->getId());
-		if ($mc->getValue() != '') {
-			return preg_replace("/" . preg_quote(self::UIDDELIMITER) . "(.*?)" . preg_quote(self::UIDDELIMITER) . "/", self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER, $mc->getValue());
-		}
-		$replace = array(
-			'#name#' => $this->getName(),
-			'#id#' => $this->getId(),
-			'#eqLink#' => ($this->hasRight('w')) ? $this->getLinkToConfiguration() : '#',
-			'#uid#' => 'networks' . $this->getId() . self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER,
-		);
-
 		foreach ($this->getCmd('info') as $cmd) {
 			$replace['#' . $cmd->getLogicalId() . '_history#'] = '';
 			$replace['#' . $cmd->getLogicalId() . '_id#'] = $cmd->getId();
@@ -219,20 +199,12 @@ class networks extends eqLogic {
 		if (is_object($refresh)) {
 			$replace['#refresh_id#'] = $refresh->getId();
 		}
-
-		$parameters = $this->getDisplay('parameters');
-		if (is_array($parameters)) {
-			foreach ($parameters as $key => $value) {
-				$replace['#' . $key . '#'] = $value;
-			}
-		}
 		if ($replace['#action#'] == '') {
 			$html = template_replace($replace, getTemplate('core', $_version, 'networks', 'networks'));
 		} else {
 			$html = template_replace($replace, getTemplate('core', $_version, 'networks2', 'networks'));
 		}
-
-		cache::set('networksWidget' . $_version . $this->getId(), $html, 0);
+		cache::set('widgetHtml' . $_version . $this->getId(), $html, 0);
 		return $html;
 	}
 

@@ -175,7 +175,7 @@ class networks extends eqLogic {
 		if (!is_array($replace)) {
 			return $replace;
 		}
-		$_version = jeedom::versionAlias($_version);
+		$version = jeedom::versionAlias($_version);
 		foreach ($this->getCmd('info') as $cmd) {
 			$replace['#' . $cmd->getLogicalId() . '_history#'] = '';
 			$replace['#' . $cmd->getLogicalId() . '_id#'] = $cmd->getId();
@@ -200,9 +200,9 @@ class networks extends eqLogic {
 			$replace['#refresh_id#'] = $refresh->getId();
 		}
 		if ($replace['#action#'] == '') {
-			$html = template_replace($replace, getTemplate('core', $_version, 'networks', 'networks'));
+			$html = template_replace($replace, getTemplate('core', $version, 'networks', 'networks'));
 		} else {
-			$html = template_replace($replace, getTemplate('core', $_version, 'networks2', 'networks'));
+			$html = template_replace($replace, getTemplate('core', $version, 'networks2', 'networks'));
 		}
 		cache::set('widgetHtml' . $_version . $this->getId(), $html, 0);
 		return $html;

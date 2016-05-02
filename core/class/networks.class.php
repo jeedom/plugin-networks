@@ -93,7 +93,7 @@ class networks extends eqLogic {
 			$ping = new networksCmd();
 			$ping->setLogicalId('ping');
 			$ping->setIsVisible(1);
-			$ping->setName(__('Status', __FILE__));
+			$ping->setName(__('Statut', __FILE__));
 		}
 		$ping->setType('info');
 		$ping->setSubType('binary');

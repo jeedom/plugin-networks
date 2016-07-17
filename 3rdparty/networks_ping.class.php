@@ -140,7 +140,7 @@ class networks_Ping {
 		// Exec string for UNIX-based systems (Mac, Linux).
 		else {
 			// -n = numeric output; -c = number of pings; -t = ttl.
-			$exec_string = 'sudo ping -n -c 1 -t ' . $ttl . ' ' . $host;
+			$exec_string = 'sudo ping -n -c 2 -t ' . $ttl . ' ' . $host;
 		}
 		exec($exec_string, $output, $return);
 		// Strip empty lines and reorder the indexes from 0 (to make results more

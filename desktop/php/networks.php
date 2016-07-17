@@ -84,39 +84,39 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
      </div>
    </div>
    <div class="form-group">
-    <label class="col-sm-3 control-label" ></label>
-    <div class="col-sm-9">
-     <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
-     <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
-   </div>
- </div>
- <div class="form-group">
-  <label class="col-sm-3 control-label">{{Adresse IP}}</label>
-  <div class="col-sm-3">
-    <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip"/>
+   <label class="col-sm-3 control-label"></label>
+    <div class="col-sm-8">
+      <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
+      <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
+    </div>
   </div>
-</div>
-<div class="form-group">
-  <label class="col-sm-3 control-label">{{Adresse MAC (wol)}}</label>
-  <div class="col-sm-3">
-    <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="mac"/>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">{{Adresse IP}}</label>
+    <div class="col-sm-3">
+      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip"/>
+    </div>
   </div>
-</div>
-<div class="form-group">
-  <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
-  <div class="col-sm-3">
-    <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">{{Adresse MAC (wol)}}</label>
+    <div class="col-sm-3">
+      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="mac"/>
+    </div>
   </div>
-</div>
- <div class="form-group expertModeVisible">
+  <div class="form-group">
+    <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
+    <div class="col-sm-3">
+      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
+    </div>
+  </div>
+  <div class="form-group expertModeVisible">
     <label class="col-sm-3 control-label">{{Auto-actualisation (cron)}}</label>
     <div class="col-sm-2">
-        <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
+      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
     </div>
     <div class="col-sm-1">
-        <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
+      <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
     </div>
-</div>
+  </div>
 </fieldset>
 </form>
 

@@ -160,7 +160,6 @@ class networks extends eqLogic {
 				}
 			}
 		}
-
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');
 			if (is_object($ping) && $ping->formatValue(1) !== $ping->execCmd(null, 2)) {

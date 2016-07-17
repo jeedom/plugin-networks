@@ -144,6 +144,23 @@ class networks extends eqLogic {
 		}
 		$ping = new networks_Ping($this->getConfiguration('ip'));
 		$latency_time = $ping->ping();
+		if ($latency_time === false) {
+			$latency_time = $ping->ping();
+		}
+		if ($latency_time === false) {
+			usleep(100);
+			$latency_time = $ping->ping();
+		}
+		if ($this->getConfiguration('notifyifko') == 1) {
+			if ($latency_time === false) {
+				message::add('networks', __('Echec du ping sur : ', __FILE__) . $this->getHumanName(), '', 'pingFailed' . $this->getId());
+			} else {
+				foreach (message::byPluginLogicalId('networks', 'pingFailed' . $this->getId()) as $message) {
+					$message->remove();
+				}
+			}
+		}
+
 		if ($latency_time !== false) {
 			$ping = $this->getCmd(null, 'ping');
 			if (is_object($ping) && $ping->formatValue(1) !== $ping->execCmd(null, 2)) {

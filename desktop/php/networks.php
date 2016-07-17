@@ -117,6 +117,12 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
       <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
     </div>
   </div>
+    <div class="form-group expertModeVisible">
+    <label class="col-sm-3 control-label">{{Notifier si le ping est KO}}</label>
+    <div class="col-sm-2">
+      <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="notifyifko"/>
+    </div>
+  </div>
 </fieldset>
 </form>
 

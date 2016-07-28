@@ -48,96 +48,110 @@ foreach ($eqLogics as $eqLogic) {
 </div>
 
 <div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
-  <form class="form-horizontal">
-    <fieldset>
-      <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}  <i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i></legend>
-      <div class="form-group">
-        <label class="col-sm-3 control-label">{{Nom de l'équipement networks}}</label>
-        <div class="col-sm-3">
-          <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
-          <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement networks}}"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" >{{Objet parent}}</label>
-        <div class="col-sm-3">
-          <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
-            <option value="">{{Aucun}}</option>
-            <?php
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#eqlogictab" aria-controls="home" role="tab" data-toggle="tab">{{Equipement}}</a></li>
+    <li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab">{{Commandes}}</a></li>
+  </ul>
+
+  <div class="tab-content" style="height:calc(100% - 90px)">
+    <div role="tabpanel" class="tab-pane active" id="eqlogictab">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}  <i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i></legend>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">{{Nom de l'équipement networks}}</label>
+            <div class="col-sm-3">
+              <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
+              <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement networks}}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" >{{Objet parent}}</label>
+            <div class="col-sm-3">
+              <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
+                <option value="">{{Aucun}}</option>
+                <?php
 foreach (object::all() as $object) {
 	echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
 }
 ?>
-         </select>
-       </div>
-     </div>
-     <div class="form-group">
-       <label class="col-sm-3 control-label">{{Catégorie}}</label>
-       <div class="col-sm-8">
-        <?php
+             </select>
+           </div>
+         </div>
+         <div class="form-group">
+           <label class="col-sm-3 control-label">{{Catégorie}}</label>
+           <div class="col-sm-8">
+            <?php
 foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 	echo '<label class="checkbox-inline">';
 	echo '<input type="checkbox" class="eqLogicAttr" data-l1key="category" data-l2key="' . $key . '" />' . $value['name'];
 	echo '</label>';
 }
 ?>
-     </div>
-   </div>
-   <div class="form-group">
-   <label class="col-sm-3 control-label"></label>
-    <div class="col-sm-8">
-      <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
-      <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{Adresse IP}}</label>
-    <div class="col-sm-3">
-      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{Adresse MAC (wol)}}</label>
-    <div class="col-sm-3">
-      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="mac"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
-    <div class="col-sm-3">
-      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
-    </div>
-  </div>
-  <div class="form-group expertModeVisible">
-    <label class="col-sm-3 control-label">{{Auto-actualisation (cron)}}</label>
-    <div class="col-sm-2">
-      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
-    </div>
-    <div class="col-sm-1">
-      <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
-    </div>
-  </div>
-    <div class="form-group expertModeVisible">
-    <label class="col-sm-3 control-label">{{Notifier si le ping est KO}}</label>
-    <div class="col-sm-2">
-      <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="notifyifko"/>
-    </div>
-  </div>
-</fieldset>
-</form>
+         </div>
+       </div>
+       <div class="form-group">
+         <label class="col-sm-3 control-label"></label>
+         <div class="col-sm-8">
+          <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
+          <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">{{Adresse IP}}</label>
+        <div class="col-sm-3">
+          <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">{{Adresse MAC (wol)}}</label>
+        <div class="col-sm-3">
+          <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="mac"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
+        <div class="col-sm-3">
+          <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
+        </div>
+      </div>
+      <div class="form-group expertModeVisible">
+        <label class="col-sm-3 control-label">{{Auto-actualisation (cron)}}</label>
+        <div class="col-sm-2">
+          <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
+        </div>
+        <div class="col-sm-1">
+          <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
+        </div>
+      </div>
+      <div class="form-group expertModeVisible">
+        <label class="col-sm-3 control-label">{{Notifier si le ping est KO}}</label>
+        <div class="col-sm-2">
+          <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="notifyifko"/>
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
-<legend>{{Commandes}}</legend>
-<table id="table_cmd" class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th style="max-width : 200px;">{{Nom}}</th><th>{{Type}}</th><th>{{Action}}</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+</div>
+<div role="tabpanel" class="tab-pane" id="commandtab">
+  <table id="table_cmd" class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th style="max-width : 200px;">{{Nom}}</th><th>{{Type}}</th><th>{{Action}}</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
 
-<form class="form-horizontal">
+
+
+</div>
+</div>
+
+<form class="form-horizontal pull-right">
   <fieldset>
     <div class="form-actions">
       <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>

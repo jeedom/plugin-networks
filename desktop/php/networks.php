@@ -57,7 +57,7 @@ foreach ($eqLogics as $eqLogic) {
     <li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-list-alt"></i> {{Commandes}}</a></li>
   </ul>
 
-  <div class="tab-content" style="height:calc(100% - 100px);overflow:auto;overflow-x: hidden;">
+  <div class="tab-content" style="height:calc(100% - 50px);overflow:auto;overflow-x: hidden;">
     <div role="tabpanel" class="tab-pane active" id="eqlogictab">
       <form class="form-horizontal">
         <fieldset>
@@ -148,20 +148,8 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
     <tbody>
     </tbody>
   </table>
-
-
-
 </div>
 </div>
-
-<form class="form-horizontal pull-right">
-  <fieldset>
-    <div class="form-actions">
-
-    </div>
-  </fieldset>
-</form>
-
 </div>
 </div>
 

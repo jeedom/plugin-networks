@@ -220,8 +220,7 @@ class networks extends eqLogic {
 		} else {
 			$html = template_replace($replace, getTemplate('core', $version, 'networks2', 'networks'));
 		}
-		cache::set('widgetHtml' . $_version . $this->getId(), $html, 0);
-		return $html;
+		return $this->postToHtml($_version, $html);
 	}
 
 	/*     * **********************Getteur Setteur*************************** */

@@ -1,0 +1,13 @@
+{
+	"id" : "networks",
+	"name" : "Network",
+	"description" : "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)",
+	"licence" : "AGPL",
+	"author" : "Loïc",
+	"require" : "2.3",
+	"category" : "communication",
+	"display" : "panel",
+	"mobile" : "panel",
+	"include" : {"type" : "php" , "file" : "networks.inc" },
+	"hasDependency" : true
+}

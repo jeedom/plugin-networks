@@ -38,7 +38,7 @@
 
     $(window).on("orientationchange", function (event) {
         setTileSize('.eqLogic');
-        $('#div_displayEquipementCamera').packery({gutter : 4});
+        $('#div_displayEquipementNetworks').packery({gutter : 4});
     });
 }
 

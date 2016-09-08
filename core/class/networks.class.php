@@ -40,7 +40,7 @@ class networks extends eqLogic {
 
 	public static function dependancy_install() {
 		log::remove('networks_update');
-		$cmd = 'sudo /bin/bash ' . dirname(__FILE__) . '/../../ressources/install.sh';
+		$cmd = 'sudo /bin/bash ' . dirname(__FILE__) . '/../../resources/install.sh';
 		$cmd .= ' >> ' . log::getPathToLog('networks_update') . ' 2>&1 &';
 		exec($cmd);
 	}

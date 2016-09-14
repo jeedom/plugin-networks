@@ -94,9 +94,9 @@ class networks extends eqLogic {
 			$ping->setLogicalId('ping');
 			$ping->setIsVisible(1);
 			$ping->setName(__('Statut', __FILE__));
+			$ping->setOrder(1);
+			$ping->setTemplate('dashboard', 'line');
 		}
-		$ping->setOrder(1);
-		$ping->setTemplate('dashboard', 'line');
 		$ping->setType('info');
 		$ping->setSubType('binary');
 		$ping->setEqLogic_id($this->getId());
@@ -108,9 +108,9 @@ class networks extends eqLogic {
 			$latency->setLogicalId('latency');
 			$latency->setIsVisible(1);
 			$latency->setName(__('Latence', __FILE__));
+			$latency->setOrder(2);
+			$latency->setTemplate('dashboard', 'line');
 		}
-		$latency->setOrder(2);
-		$latency->setTemplate('dashboard', 'line');
 		$latency->setType('info');
 		$latency->setSubType('numeric');
 		$latency->setEqLogic_id($this->getId());

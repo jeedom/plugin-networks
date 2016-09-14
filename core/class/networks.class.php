@@ -95,6 +95,8 @@ class networks extends eqLogic {
 			$ping->setIsVisible(1);
 			$ping->setName(__('Statut', __FILE__));
 		}
+		$ping->setOrder(1);
+		$ping->setTemplate('dashboard', 'line');
 		$ping->setType('info');
 		$ping->setSubType('binary');
 		$ping->setEqLogic_id($this->getId());
@@ -107,6 +109,8 @@ class networks extends eqLogic {
 			$latency->setIsVisible(1);
 			$latency->setName(__('Latence', __FILE__));
 		}
+		$latency->setOrder(2);
+		$latency->setTemplate('dashboard', 'line');
 		$latency->setType('info');
 		$latency->setSubType('numeric');
 		$latency->setEqLogic_id($this->getId());
@@ -186,50 +190,13 @@ class networks extends eqLogic {
 		$this->refreshWidget();
 	}
 
-	public function toHtml($_version = 'dashboard') {
-		$replace = $this->preToHtml($_version);
-		if (!is_array($replace)) {
-			return $replace;
-		}
-		$version = jeedom::versionAlias($_version);
-		foreach ($this->getCmd('info') as $cmd) {
-			$replace['#' . $cmd->getLogicalId() . '_history#'] = '';
-			$replace['#' . $cmd->getLogicalId() . '_id#'] = $cmd->getId();
-			$replace['#' . $cmd->getLogicalId() . '#'] = $cmd->execCmd();
-			if ($cmd->getSubType() == 'numeric' && $replace['#' . $cmd->getLogicalId() . '#'] === '') {
-				$replace['#' . $cmd->getLogicalId() . '#'] = 0;
-			}
-			$replace['#' . $cmd->getLogicalId() . '_collect#'] = $cmd->getCollectDate();
-			if ($cmd->getIsHistorized() == 1) {
-				$replace['#' . $cmd->getLogicalId() . '_history#'] = 'history cursor';
-			}
-		}
-		$replace['#action#'] = '';
-		foreach ($this->getCmd('action') as $cmd) {
-			if ($cmd->getLogicalId() == 'refresh') {
-				continue;
-			}
-			$replace['#action#'] .= $cmd->toHtml($_version, '', '#7f8c8d');
-		}
-		$refresh = $this->getCmd(null, 'refresh');
-		if (is_object($refresh)) {
-			$replace['#refresh_id#'] = $refresh->getId();
-		}
-		if ($replace['#action#'] == '') {
-			$html = template_replace($replace, getTemplate('core', $version, 'networks', 'networks'));
-		} else {
-			$html = template_replace($replace, getTemplate('core', $version, 'networks2', 'networks'));
-		}
-		return $this->postToHtml($_version, $html);
-	}
-
 	/*     * **********************Getteur Setteur*************************** */
 }
 
 class networksCmd extends cmd {
 	/*     * *************************Attributs****************************** */
 
-	public static $_widgetPossibility = array('custom' => false);
+	public static $_widgetPossibility = array('custom' => true);
 
 	/*     * ***********************Methode static*************************** */
 

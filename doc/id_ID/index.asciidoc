@@ -3,3 +3,7 @@
 Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement réseau.
 
 include::configuration.asciidoc[]
+
+'''
+
+include::changelog.asciidoc[]

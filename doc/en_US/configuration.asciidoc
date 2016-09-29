@@ -1,0 +1,60 @@
+== Plugin configuration
+
+Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, il n'y a aucune configuration à ce niveau.
+
+image::../images/networks.PNG[]
+
+== Equipment configuration
+
+La configuration des équipements networks est accessible à partir du menu plugin : 
+
+image::../images/networks2.PNG[]
+
+Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1 équipement) : 
+
+image::../images/networks3.PNG[]
+
+[TIP]
+Comme à beaucoup d'endroits sur Jeedom, placer la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez, à partir de votre profil, le laisser toujours visible).
+
+Une fois que vous cliquez sur l'un d'eux, vous obtenez : 
+
+image::../images/networks4.PNG[]
+
+Vous retrouvez ici toute la configuration de votre équipement : 
+
+* *Nom de l'équipement Networks* : nom de votre équipement Networks,
+* *Objet parent* : indique l'objet parent auquel appartient l'équipement,
+* *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
+* *Activer* : permet de rendre votre équipement actif,
+* *Visible* : rend votre équipement visible sur le dashboard,
+* *Adresse IP* : adresse IP sur laquelle faire le ping,
+* *Adresse MAC (wol)* : adresse MAC pour le wake-on-lan,
+* *Broadcast IP (wol)* : adresse IP de broadcast du réseaux pour envoyer le wake-on-lan,
+* *Auto-actualisation (cron)* : cron definissant la fréquence du ping.
+
+
+En-dessous vous retrouvez la liste des commandes : 
+
+* *Nom* : le nom affiché sur le dashboard,
+* *Afficher* : permet d'afficher la donnée sur le dashboard,
+* *Tester* : permet de tester la commande.
+
+[NOTE]
+Jeedom va vérifier toute les minutes (par defaut) le ping sur l'IP.
+
+[IMPORTANT]
+Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan.
+
+[NOTE]
+L'adresse mac doit être sous la forme : 5E:FF:56:A2:AF:15.
+
+== Widgets
+
+Voila un exemple de widget (sans le wake-on-lan) en desktop :
+
+image::../images/networks5.PNG[]
+
+Et en mobile : 
+
+image::../images/networks6.PNG[]

@@ -146,6 +146,7 @@ class networks extends eqLogic {
 		if ($this->getConfiguration('ip') == '') {
 			return;
 		}
+		$changed = false;
 		$ping = new networks_Ping($this->getConfiguration('ip'));
 		$latency_time = $ping->ping();
 		if ($latency_time === false) {
@@ -165,29 +166,15 @@ class networks extends eqLogic {
 			}
 		}
 		if ($latency_time !== false) {
-			$ping = $this->getCmd(null, 'ping');
-			if (is_object($ping) && $ping->formatValue(1) !== $ping->execCmd(null, 2)) {
-				$ping->setCollectDate('');
-				$ping->event(1);
-			}
-			$latency = $this->getCmd(null, 'latency');
-			if (is_object($latency) && $latency->formatValue($latency_time) !== $latency->execCmd(null, 2)) {
-				$latency->setCollectDate('');
-				$latency->event($latency_time);
-			}
+			$changed = $changed || $this->checkAndUpdateCmd('ping', 1);
+			$changed = $changed || $this->checkAndUpdateCmd('latency', $latency_time);
 		} else {
-			$ping = $this->getCmd(null, 'ping');
-			if (is_object($ping) && $ping->formatValue(0) !== $ping->execCmd(null, 2)) {
-				$ping->setCollectDate('');
-				$ping->event(0);
-			}
-			$latency = $this->getCmd(null, 'latency');
-			if (is_object($latency) && $latency->formatValue(-1) !== $latency->execCmd(null, 2)) {
-				$latency->setCollectDate('');
-				$latency->event(-1);
-			}
+			$changed = $changed || $this->checkAndUpdateCmd('ping', 0);
+			$changed = $changed || $this->checkAndUpdateCmd('latency', -1);
 		}
-		$this->refreshWidget();
+		if ($changed) {
+			$this->refreshWidget();
+		}
 	}
 
 	/*     * **********************Getteur Setteur*************************** */

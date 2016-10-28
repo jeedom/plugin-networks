@@ -166,11 +166,11 @@ class networks extends eqLogic {
 			}
 		}
 		if ($latency_time !== false) {
-			$changed = $changed || $this->checkAndUpdateCmd('ping', 1);
-			$changed = $changed || $this->checkAndUpdateCmd('latency', $latency_time);
+			$changed = $this->checkAndUpdateCmd('ping', 1) || $changed;
+			$changed = $this->checkAndUpdateCmd('latency', $latency_time) || $changed;
 		} else {
-			$changed = $changed || $this->checkAndUpdateCmd('ping', 0);
-			$changed = $changed || $this->checkAndUpdateCmd('latency', -1);
+			$changed = $this->checkAndUpdateCmd('ping', 0) || $changed;
+			$changed = $this->checkAndUpdateCmd('latency', -1) || $changed;
 		}
 		if ($changed) {
 			$this->refreshWidget();

@@ -1,0 +1,45 @@
+{
+    "plugins/networks/plugin_info/info.xml": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)",
+        "Aucune": "Нет"
+    },
+    "plugins/networks/desktop/php/networks.php": {
+        "Ajouter un networks": "Ajouter un networks",
+        "Rechercher": "Искать",
+        "Mes networks": "Mes networks",
+        "Général": "Главная",
+        "Nom de l'équipement networks": "Nom de l'équipement networks",
+        "Objet parent": "Родительский объект",
+        "Aucun": "Нет",
+        "Catégorie": "Категория",
+        "Activer": "Активировать",
+        "Visible": "Видимый",
+        "Adresse IP": "IP Адрес ",
+        "Adresse MAC (wol)": "Adresse MAC (wol)",
+        "Broadcast IP (wol)": "Broadcast IP (wol)",
+        "Auto-actualisation (cron)": "Авто-обновление (cron)",
+        "Commandes": "Команды",
+        "Nom": "Имя",
+        "Type": "Тип",
+        "Action": "Действие",
+        "Supprimer": "Удалить",
+        "Sauvegarder": "Сохранить",
+        "Notifié si le ping est KO": "Notifié si le ping est KO",
+        "Notifier si le ping est KO": "Notifier si le ping est KO",
+        "Equipement": "Оборудование",
+        "Configuration avancée": "Расширенные настройки"
+    },
+    "plugins/networks/desktop/js/networks.js": {
+        "Historiser": "История",
+        "Tester": "Тест"
+    },
+    "plugins/networks/core/class/networks.class.php": {
+        "Rafraîchir": "Обновить",
+        "Statut": "Статус",
+        "Latence": "Latence",
+        "Echec du ping sur : ": "Echec du ping sur :"
+    },
+    "plugins/networks/plugin_info/info.json": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)"
+    }
+}

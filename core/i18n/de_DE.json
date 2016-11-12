@@ -1,0 +1,45 @@
+{
+    "plugins/networks/plugin_info/info.xml": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin für die Verwaltung von Netzwerkgeräten (Ping und Wake on LAN)",
+        "Aucune": "Ohne"
+    },
+    "plugins/networks/desktop/php/networks.php": {
+        "Ajouter un networks": "Netzwerk hinzufügen",
+        "Rechercher": "Suchen nach",
+        "Mes networks": "Meine Netzwerke",
+        "Général": "Allgemein",
+        "Nom de l'équipement networks": "Netzwerk Gerätename",
+        "Objet parent": "Eltern-Objekt",
+        "Aucun": "Ohne",
+        "Catégorie": "Kategorie",
+        "Activer": "aktivieren",
+        "Visible": "Sichtbar",
+        "Adresse IP": "IP Adresse",
+        "Adresse MAC (wol)": "MAC Adresse (wol)",
+        "Broadcast IP (wol)": "Broadcast IP (wol)",
+        "Auto-actualisation (cron)": "Auto - Aktualisierung (Cron) ",
+        "Commandes": "Befehle",
+        "Nom": "Name",
+        "Type": "Typ",
+        "Action": "Aktion",
+        "Supprimer": "Löschen",
+        "Sauvegarder": "Speichern",
+        "Notifié si le ping est KO": "Notifié si le ping est KO",
+        "Notifier si le ping est KO": "Notifier si le ping est KO",
+        "Equipement": "Gerät",
+        "Configuration avancée": "Erweiterte Konfiguration"
+    },
+    "plugins/networks/desktop/js/networks.js": {
+        "Historiser": "Chronik",
+        "Tester": "Test"
+    },
+    "plugins/networks/core/class/networks.class.php": {
+        "Rafraîchir": "Aktualisieren",
+        "Statut": "Status",
+        "Latence": "Wartezeit",
+        "Echec du ping sur : ": "Echec du ping sur :"
+    },
+    "plugins/networks/plugin_info/info.json": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin für die Verwaltung von Netzwerkgeräten (Ping und Wake on LAN)"
+    }
+}

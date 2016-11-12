@@ -1,0 +1,45 @@
+{
+    "plugins/networks/plugin_info/info.xml": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin que permite la gestión redes de los dispositivos (ping y wake on lan)",
+        "Aucune": "Ninguna"
+    },
+    "plugins/networks/desktop/php/networks.php": {
+        "Ajouter un networks": "Añadir un networks",
+        "Rechercher": "Buscar",
+        "Mes networks": "Mis networks",
+        "Général": "Principal",
+        "Nom de l'équipement networks": "Nombre del dispositivo networks",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ningún",
+        "Catégorie": "Categoría",
+        "Activer": "Activar",
+        "Visible": "Visible",
+        "Adresse IP": "Dirección IP",
+        "Adresse MAC (wol)": "Dirección MAC (wol)",
+        "Broadcast IP (wol)": "Difusión IP (wol)",
+        "Auto-actualisation (cron)": "Auto-actualización (cron)",
+        "Commandes": "Ordenes",
+        "Nom": "Nombre",
+        "Type": "Tipo",
+        "Action": "Acción",
+        "Supprimer": "Borrar",
+        "Sauvegarder": "Guardar",
+        "Notifié si le ping est KO": "Notificar si no responde a ping",
+        "Notifier si le ping est KO": "Notificar si no responde a ping",
+        "Equipement": "Dispositivos",
+        "Configuration avancée": "Configuración avanzada"
+    },
+    "plugins/networks/desktop/js/networks.js": {
+        "Historiser": "Historizar",
+        "Tester": "Probar"
+    },
+    "plugins/networks/core/class/networks.class.php": {
+        "Rafraîchir": "Refrescar",
+        "Statut": "Estado",
+        "Latence": "Latencia",
+        "Echec du ping sur : ": "El ping ha fracasado:"
+    },
+    "plugins/networks/plugin_info/info.json": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin que permite la gestión redes de los dispositivos (ping y wake on lan)"
+    }
+}

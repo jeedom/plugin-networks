@@ -1,0 +1,45 @@
+{
+    "plugins/networks/plugin_info/info.xml": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)",
+        "Aucune": "Tak ada"
+    },
+    "plugins/networks/desktop/php/networks.php": {
+        "Ajouter un networks": "Ajouter un networks",
+        "Rechercher": "Mencari",
+        "Mes networks": "Mes networks",
+        "Général": "Umum",
+        "Nom de l'équipement networks": "Nom de l'équipement networks",
+        "Objet parent": "Objek induk",
+        "Aucun": "Tak ada",
+        "Catégorie": "Kategori",
+        "Activer": "Mengaktifkan",
+        "Visible": "Terlihat",
+        "Adresse IP": "Adresse IP",
+        "Adresse MAC (wol)": "Adresse MAC (wol)",
+        "Broadcast IP (wol)": "Broadcast IP (wol)",
+        "Auto-actualisation (cron)": "\nAktualisasi diri (cron)",
+        "Commandes": "Perintah",
+        "Nom": "Nama",
+        "Type": "Jenis",
+        "Action": "Tindakan",
+        "Supprimer": "Menghapus",
+        "Sauvegarder": "Menyimpan",
+        "Notifié si le ping est KO": "Notifié si le ping est KO",
+        "Notifier si le ping est KO": "Notifier si le ping est KO",
+        "Equipement": "Peralatan",
+        "Configuration avancée": "Configuration avancée"
+    },
+    "plugins/networks/desktop/js/networks.js": {
+        "Historiser": "Historicize",
+        "Tester": "Coba"
+    },
+    "plugins/networks/core/class/networks.class.php": {
+        "Rafraîchir": "Rafraîchir",
+        "Statut": "Status",
+        "Latence": "Latence",
+        "Echec du ping sur : ": "Echec du ping sur :"
+    },
+    "plugins/networks/plugin_info/info.json": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)"
+    }
+}

@@ -224,5 +224,3 @@ class networksCmd extends cmd {
 
 	/*     * **********************Getteur Setteur*************************** */
 }
-
-?>

@@ -30,8 +30,8 @@ Vous retrouvez ici toute la configuration de votre équipement :
 * *Visible* : rend votre équipement visible sur le dashboard,
 * *Adresse IP* : adresse IP sur laquelle faire le ping,
 * *Adresse MAC (wol)* : adresse MAC pour le wake-on-lan,
-* *Broadcast IP (wol)* : adresse IP de broadcast du réseaux pour envoyer le wake-on-lan,
-* *Auto-actualisation (cron)* : cron definissant la fréquence du ping.
+* *Broadcast IP (wol)* : adresse IP de broadcast du réseau pour envoyer le wake-on-lan,
+* *Auto-actualisation (cron)* : cron définissant la fréquence du ping.
 
 
 En-dessous vous retrouvez la liste des commandes : 
@@ -41,17 +41,17 @@ En-dessous vous retrouvez la liste des commandes :
 * *Tester* : permet de tester la commande.
 
 [NOTE]
-Jeedom va vérifier toute les minutes (par defaut) le ping sur l'IP.
+Jeedom va vérifier toutes les minutes (par defaut) le ping sur l'IP.
 
 [IMPORTANT]
 Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan.
 
 [NOTE]
-L'adresse mac doit être sous la forme : 5E:FF:56:A2:AF:15.
+L'adresse MAC doit être de la forme : 5E:FF:56:A2:AF:15.
 
 == Widgets
 
-Voila un exemple de widget (sans le wake-on-lan) en desktop :
+Voilà un exemple de widget (sans le wake-on-lan) en desktop :
 
 image::../images/networks5.PNG[]
 

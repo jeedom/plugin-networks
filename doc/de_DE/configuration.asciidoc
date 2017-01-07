@@ -6,11 +6,11 @@ image::../images/networks.PNG[]
 
 == Geräte Konfiguration
 
-La configuration des équipements networks est accessible à partir du menu plugin : 
+Die Konfiguration von Networks-Geräten ist in dem Plugin-Menü verfügbar : 
 
 image::../images/networks2.PNG[]
 
-Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1 équipement) : 
+Das sieht wie die Networks Plugin-Seite aus(hier bereits mit 1 Gerät) : 
 
 image::../images/networks3.PNG[]
 

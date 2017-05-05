@@ -197,7 +197,7 @@ class networksCmd extends cmd {
 		if ($this->getLogicalId() == 'wol') {
 			$f = new \Phpwol\Factory();
 			$magicPacket = $f->magicPacket();
-			$result = $magicPacket->send($eqLogic->getConfiguration('mac'), $eqLogic->getConfiguration('broadcastIP'));
+			$result = $magicPacket->send(trim($eqLogic->getConfiguration('mac')), trim($eqLogic->getConfiguration('broadcastIP')));
 			if (!$result) {
 				$error = '';
 				switch ($magicPacket->getLastError()) {

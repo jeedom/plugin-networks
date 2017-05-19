@@ -8,6 +8,5 @@
 	"category" : "communication",
 	"display" : "panel",
 	"mobile" : "panel",
-	"include" : {"type" : "php" , "file" : "networks.inc" },
 	"hasDependency" : true
 }

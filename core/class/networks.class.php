@@ -40,10 +40,8 @@ class networks extends eqLogic {
 	}
 
 	public static function dependancy_install() {
-		log::remove('networks_update');
-		$cmd = 'sudo /bin/bash ' . dirname(__FILE__) . '/../../resources/install.sh';
-		$cmd .= ' >> ' . log::getPathToLog('networks_update') . ' 2>&1 &';
-		exec($cmd);
+		log::remove(__CLASS__ . '_update');
+		return array('script' => dirname(__FILE__) . '/../../resources/install_#stype#.sh ' . jeedom::getTmpFolder('networks') . '/dependance', 'log' => log::getPathToLog(__CLASS__ . '_update'));
 	}
 
 	public static function cron() {

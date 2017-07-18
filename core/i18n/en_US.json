@@ -1,6 +1,6 @@
 {
     "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin for managing network equipment (ping and wake on lan)",
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin for network equipment management (ping and wake on lan)",
         "Aucune": "None"
     },
     "plugins/networks/desktop/php/networks.php": {
@@ -36,10 +36,10 @@
     "plugins/networks/core/class/networks.class.php": {
         "Rafraîchir": "Refresh",
         "Statut": "Status",
-        "Latence": "latency",
+        "Latence": "Latency",
         "Echec du ping sur : ": "Ping failed on:"
     },
     "plugins/networks/plugin_info/info.json": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin for managing network equipment (ping and wake on lan)"
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin for network equipment management (ping and wake on lan)"
     }
 }

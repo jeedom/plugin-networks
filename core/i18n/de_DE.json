@@ -24,8 +24,8 @@
         "Action": "Aktion",
         "Supprimer": "Löschen",
         "Sauvegarder": "Speichern",
-        "Notifié si le ping est KO": "Notifié si le ping est KO",
-        "Notifier si le ping est KO": "Notifier si le ping est KO",
+        "Notifié si le ping est KO": "Benachrichtigt, wenn Ping KO ist",
+        "Notifier si le ping est KO": "Benachrichtigen, wenn Ping KO ist",
         "Equipement": "Gerät",
         "Configuration avancée": "Erweiterte Konfiguration"
     },
@@ -37,7 +37,7 @@
         "Rafraîchir": "Aktualisieren",
         "Statut": "Status",
         "Latence": "Wartezeit",
-        "Echec du ping sur : ": "Echec du ping sur :"
+        "Echec du ping sur : ": "Ping gescheitert :"
     },
     "plugins/networks/plugin_info/info.json": {
         "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin für die Verwaltung von Netzwerkgeräten (Ping und Wake on LAN)"

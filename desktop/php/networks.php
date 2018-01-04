@@ -116,7 +116,7 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
           <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
         </div>
       </div>
-      <div class="form-group expertModeVisible">
+      <div class="form-group">
         <label class="col-sm-3 control-label">{{Auto-actualisation (cron)}}</label>
         <div class="col-sm-2">
           <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
@@ -125,7 +125,7 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
           <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
         </div>
       </div>
-      <div class="form-group expertModeVisible">
+      <div class="form-group">
         <label class="col-sm-3 control-label">{{Notifier si le ping est KO}}</label>
         <div class="col-sm-2">
           <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="notifyifko"/>

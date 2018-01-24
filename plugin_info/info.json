@@ -8,7 +8,7 @@
 	"category" : "communication",
 	"display" : "panel",
 	"mobile" : "panel",
-	"hasDependency" : true,
-	"changelog" : "https://github.com/jeedom/plugin-networks/blob/stable/doc/#language#/changelog.asciidoc",
-	"documentation" : "https://github.com/jeedom/plugin-networks/blob/stable/doc/#language#/index.asciidoc"
+        "hasDependency" : true,
+        "changelog" : "https://jeedom.github.io/plugin-networks/#language#/changelog",
+        "documentation" : "https://jeedom.github.io/plugin-networks/#language#/"
 }

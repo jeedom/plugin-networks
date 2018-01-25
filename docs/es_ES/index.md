@@ -32,11 +32,11 @@ Une fois que vous cliquez sur l’un d’eux, vous obtenez :
 
 ![networks4](../images/networks4.PNG)
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Aquí encontrará toda la configuración de su dispositivo:
 
 -   **Nom de l’équipement Networks** : nom de votre équipement Networks,
 
--   **Objet parent** : indique l’objet parent auquel appartient
+-   **Objeto padre** : especifica el objeto padre al que pertenece
     l’équipement,
 
 -   **Catégorie** : les catégories de l’équipement (il peut appartenir à

@@ -14,7 +14,7 @@
         "Catégorie": "Kategori",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
-        "Adresse IP": "Adresse IP",
+        "Adresse IP": "IP Address",
         "Adresse MAC (wol)": "Adresse MAC (wol)",
         "Broadcast IP (wol)": "Broadcast IP (wol)",
         "Auto-actualisation (cron)": "\nAktualisasi diri (cron)",
@@ -27,14 +27,14 @@
         "Notifié si le ping est KO": "Notifié si le ping est KO",
         "Notifier si le ping est KO": "Notifier si le ping est KO",
         "Equipement": "Peralatan",
-        "Configuration avancée": "Configuration avancée"
+        "Configuration avancée": "konfigurasi lanjutan"
     },
     "plugins/networks/desktop/js/networks.js": {
         "Historiser": "Historicize",
         "Tester": "Coba"
     },
     "plugins/networks/core/class/networks.class.php": {
-        "Rafraîchir": "Rafraîchir",
+        "Rafraîchir": "dingin",
         "Statut": "Status",
         "Latence": "Latence",
         "Echec du ping sur : ": "Echec du ping sur :"

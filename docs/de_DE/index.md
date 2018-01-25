@@ -32,7 +32,7 @@ Une fois que vous cliquez sur l’un d’eux, vous obtenez :
 
 ![networks4](../images/networks4.PNG)
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Hier finden sie die ganze Konfiguration Ihrer Geräte:
 
 -   **Nom de l’équipement Networks** : nom de votre équipement Networks,
 
@@ -84,7 +84,7 @@ Voilà un exemple de widget (sans le wake-on-lan) en desktop :
 
 ![networks5](../images/networks5.PNG)
 
-Et en mobile :
+Und das Mobile :
 
 ![networks6](../images/networks6.PNG)
 

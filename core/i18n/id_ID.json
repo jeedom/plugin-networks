@@ -1,22 +1,22 @@
 {
     "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)",
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin untuk mengelola peralatan jaringan (ping dan bangun pada lan)",
         "Aucune": "Tak ada"
     },
     "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Ajouter un networks",
+        "Ajouter un networks": "Menambahkan sebuah Link",
         "Rechercher": "Mencari",
-        "Mes networks": "Mes networks",
+        "Mes networks": "Tautan saya",
         "Général": "Umum",
-        "Nom de l'équipement networks": "Nom de l'équipement networks",
+        "Nom de l'équipement networks": "peralatan jaringan nama",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Catégorie": "Kategori",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
         "Adresse IP": "IP Address",
-        "Adresse MAC (wol)": "Adresse MAC (wol)",
-        "Broadcast IP (wol)": "Broadcast IP (wol)",
+        "Adresse MAC (wol)": "MAC (wol)",
+        "Broadcast IP (wol)": "IP Broadcast (wol)",
         "Auto-actualisation (cron)": "\nAktualisasi diri (cron)",
         "Commandes": "Perintah",
         "Nom": "Nama",
@@ -24,8 +24,8 @@
         "Action": "Tindakan",
         "Supprimer": "Menghapus",
         "Sauvegarder": "Menyimpan",
-        "Notifié si le ping est KO": "Notifié si le ping est KO",
-        "Notifier si le ping est KO": "Notifier si le ping est KO",
+        "Notifié si le ping est KO": "Diberitahu jika ping adalah KO",
+        "Notifier si le ping est KO": "Beritahu jika ping adalah KO",
         "Equipement": "Peralatan",
         "Configuration avancée": "konfigurasi lanjutan"
     },
@@ -36,10 +36,10 @@
     "plugins/networks/core/class/networks.class.php": {
         "Rafraîchir": "dingin",
         "Statut": "Status",
-        "Latence": "Latence",
-        "Echec du ping sur : ": "Echec du ping sur :"
+        "Latence": "latency",
+        "Echec du ping sur : ": "Gagal Ping:"
     },
     "plugins/networks/plugin_info/info.json": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)"
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin untuk mengelola peralatan jaringan (ping dan bangun pada lan)"
     }
 }

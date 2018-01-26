@@ -1,31 +1,31 @@
 {
     "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)",
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin per la gestione delle apparecchiature di rete (ping e Wake on LAN)",
         "Aucune": "Nessuno"
     },
     "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Ajouter un networks",
+        "Ajouter un networks": "Aggiungi un collegamento",
         "Rechercher": "Cerca",
-        "Mes networks": "Mes networks",
+        "Mes networks": "il mio link",
         "Général": "Principale",
-        "Nom de l'équipement networks": "Nom de l'équipement networks",
+        "Nom de l'équipement networks": "attrezzature reti Nome",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Catégorie": "Categoria",
         "Activer": "Attivare",
         "Visible": "Visibile",
         "Adresse IP": "Indirizzo IP",
-        "Adresse MAC (wol)": "Adresse MAC (wol)",
-        "Broadcast IP (wol)": "Broadcast IP (wol)",
-        "Auto-actualisation (cron)": "Auto-actualisation (cron)",
+        "Adresse MAC (wol)": "MAC (WOL)",
+        "Broadcast IP (wol)": "IP Broadcast (WOL)",
+        "Auto-actualisation (cron)": "Auto-realizzazione (cron)",
         "Commandes": "Comandi",
         "Nom": "Nome",
         "Type": "Tipo",
         "Action": "Azione",
         "Supprimer": "Elimina",
         "Sauvegarder": "Salva",
-        "Notifié si le ping est KO": "Notifié si le ping est KO",
-        "Notifier si le ping est KO": "Notifier si le ping est KO",
+        "Notifié si le ping est KO": "Avviso se il ping è KO",
+        "Notifier si le ping est KO": "Notifica se il ping è KO",
         "Equipement": "Dispositivo",
         "Configuration avancée": "Configurazione avanzata"
     },
@@ -36,10 +36,10 @@
     "plugins/networks/core/class/networks.class.php": {
         "Rafraîchir": "Aggiorna",
         "Statut": "Stato",
-        "Latence": "Latence",
-        "Echec du ping sur : ": "Echec du ping sur :"
+        "Latence": "latenza",
+        "Echec du ping sur : ": "Impossibile Ping:"
     },
     "plugins/networks/plugin_info/info.json": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)"
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin per la gestione delle apparecchiature di rete (ping e Wake on LAN)"
     }
 }

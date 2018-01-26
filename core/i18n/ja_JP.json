@@ -1,0 +1,45 @@
+{
+    "plugins/networks/plugin_info/info.xml": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "ネットワーク機器を管理するためのプラグイン（LAN上ピングとウェイク）",
+        "Aucune": "何でもありません"
+    },
+    "plugins/networks/desktop/php/networks.php": {
+        "Ajouter un networks": "リンクを追加します",
+        "Rechercher": "検索する",
+        "Mes networks": "私のリンク",
+        "Général": "コモン",
+        "Nom de l'équipement networks": "名前ネットワーク機器",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "何でもありません",
+        "Catégorie": "カテゴリ",
+        "Activer": "アクティブにし",
+        "Visible": "目に見えます",
+        "Adresse IP": "IPアドレス",
+        "Adresse MAC (wol)": "MAC（WOL）",
+        "Broadcast IP (wol)": "IPブロードキャスト（WOL）",
+        "Auto-actualisation (cron)": "自己実現（cronの）",
+        "Commandes": "コマンド",
+        "Nom": "表題",
+        "Type": "タイプ",
+        "Action": "アクション",
+        "Supprimer": "取り除きます",
+        "Sauvegarder": "セーブ",
+        "Notifié si le ping est KO": "pingがKOである場合に通知",
+        "Notifier si le ping est KO": "pingがKOである場合に通知",
+        "Equipement": "設備",
+        "Configuration avancée": "高度な設定"
+    },
+    "plugins/networks/desktop/js/networks.js": {
+        "Historiser": "historicize",
+        "Tester": "テスト"
+    },
+    "plugins/networks/core/class/networks.class.php": {
+        "Rafraîchir": "クール",
+        "Statut": "ステータス",
+        "Latence": "潜在",
+        "Echec du ping sur : ": "Pingが失敗しました："
+    },
+    "plugins/networks/plugin_info/info.json": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "ネットワーク機器を管理するためのプラグイン（LAN上ピングとウェイク）"
+    }
+}

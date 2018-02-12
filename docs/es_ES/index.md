@@ -1,7 +1,7 @@
 Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement
 réseau.
 
-Configuration du plugin 
+configuración del plugin
 =======================
 
 Après téléchargement du plugin, il vous suffit juste d’activer celui-ci,
@@ -37,14 +37,14 @@ Aquí encontrará toda la configuración de su dispositivo:
 -   **Nom de l’équipement Networks** : nom de votre équipement Networks,
 
 -   **Objeto padre** : especifica el objeto padre al que pertenece
-    l’équipement,
+    equipos,
 
 -   **Catégorie** : les catégories de l’équipement (il peut appartenir à
     plusieurs catégories),
 
--   **Activer** : permet de rendre votre équipement actif,
+-   ** ** Activar: para que su equipo activo,
 
--   **Visible** : rend votre équipement visible sur le dashboard,
+-   ** ** visible hace que su equipo visible en el salpicadero,
 
 -   **Adresse IP** : adresse IP sur laquelle faire le ping,
 

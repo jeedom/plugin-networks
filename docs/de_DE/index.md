@@ -24,11 +24,11 @@ Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1
 
 > **Tip**
 >
-> Comme à beaucoup d’endroits sur Jeedom, placer la souris tout à gauche
-> permet de faire apparaître un menu d’accès rapide (vous pouvez, à
-> partir de votre profil, le laisser toujours visible).
+> Wie an vielen Stellen in Jeedom kann mit dem Mauszeiger ganz links, ein
+> Menü mit Schnellzugriff aufgerufen werden (Sie können in Ihrem Profil
+> immer sichtbar einstellen).  
 
-Une fois que vous cliquez sur l’un d’eux, vous obtenez :
+Sobald Sie eines davon anklicken, erhalten Sie :
 
 ![networks4](../images/networks4.PNG)
 

@@ -146,7 +146,7 @@ class networks extends eqLogic {
 			return;
 		}
 		$changed = false;
-		$ping = new networks_Ping($this->getConfiguration('ip'));
+		$ping = new networks_Ping($this->getConfiguration('ip'),$this->getConfiguration('ttl',255));
 		$latency_time = $ping->ping();
 		if ($latency_time === false) {
 			$latency_time = $ping->ping();

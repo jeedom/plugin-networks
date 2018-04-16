@@ -1,0 +1,45 @@
+{
+    "plugins/networks/plugin_info/info.xml": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Donanım ağlarının yönetimine izin veren eklenti (ping et wake on lan)",
+        "Aucune": "Hiçbir"
+    },
+    "plugins/networks/desktop/php/networks.php": {
+        "Ajouter un networks": "Networks ekleyin",
+        "Rechercher": "Arayın",
+        "Mes networks": "Netwoks larım",
+        "Général": "Genel",
+        "Nom de l'équipement networks": "networks ekipman ismi",
+        "Objet parent": "Üst nesne",
+        "Aucun": "Hiçbir",
+        "Catégorie": "Kategori",
+        "Activer": "Etkinleştirmek",
+        "Visible": "Görülebilir",
+        "Adresse IP": "IP adresi",
+        "Adresse MAC (wol)": "MAC Adresi (wol)",
+        "Broadcast IP (wol)": "IP broadcast (wol)",
+        "Auto-actualisation (cron)": "Otomatik güncelleme (cron)",
+        "Commandes": "Komutalar",
+        "Nom": "İsim",
+        "Type": "Ceşit",
+        "Action": "Etki",
+        "Supprimer": "Sil",
+        "Sauvegarder": "Kaydet",
+        "Notifié si le ping est KO": "Ping, KO ise bildirilir",
+        "Notifier si le ping est KO": "Ping, KO ise bildirilir",
+        "Equipement": "Cihaz",
+        "Configuration avancée": "Gelişmiş ayarlar"
+    },
+    "plugins/networks/desktop/js/networks.js": {
+        "Historiser": "Tarihe göre sırala",
+        "Tester": "Dene"
+    },
+    "plugins/networks/core/class/networks.class.php": {
+        "Rafraîchir": "Yenile",
+        "Statut": "Statü",
+        "Latence": "gecikme",
+        "Echec du ping sur : ": "Ping başarısız oldu:"
+    },
+    "plugins/networks/plugin_info/info.json": {
+        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Donanım ağlarının yönetimine izin veren eklenti (ping et wake on lan)"
+    }
+}

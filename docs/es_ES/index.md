@@ -53,6 +53,15 @@ Aquí encontrará toda la configuración de su dispositivo:
 -   **Broadcast IP (wol)** : adresse IP de broadcast du réseau pour
     envoyer le wake-on-lan,
 
+-   **TTL** : Time-to-live, les valeurs peuvent etre : 
+    - 0 : même hote
+    - 1 : même sous-réseaux
+    - 32 : même site
+    - 64 : même région
+    - 128 : même continent
+    - 256 : aucune limite
+Si vous avez une erreur de type 'Time to live exceeded' , il faut augmenter cette valeur. Si vide alors le paramètre vaut 255. A noter que sous certain type de configuration (Docker par exemple) le 255 n'est pas autorisé il faut donc diminuer cette valeur.
+
 -   **Auto-actualisation (cron)** : cron définissant la fréquence
     du ping.
 

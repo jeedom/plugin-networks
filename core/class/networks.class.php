@@ -142,34 +142,38 @@ class networks extends eqLogic {
 	}
 
 	public function ping() {
-		if ($this->getConfiguration('ip') == '') {
-			return;
-		}
-		$changed = false;
-		$ping = new networks_Ping($this->getConfiguration('ip'),$this->getConfiguration('ttl',255));
-		$latency_time = $ping->ping();
-		if ($latency_time === false) {
+		if($this->getConfiguration('pingMode','ip') == 'ip'){
+			if ($this->getConfiguration('ip') == '') {
+				return;
+			}
+			$changed = false;
+			$ping = new networks_Ping($this->getConfiguration('ip'),$this->getConfiguration('ttl',255));
 			$latency_time = $ping->ping();
-		}
-		if ($latency_time === false) {
-			usleep(100);
-			$latency_time = $ping->ping();
-		}
-		if ($this->getConfiguration('notifyifko') == 1) {
 			if ($latency_time === false) {
-				message::add('networks', __('Echec du ping sur : ', __FILE__) . $this->getHumanName(), '', 'pingFailed' . $this->getId());
-			} else {
-				foreach (message::byPluginLogicalId('networks', 'pingFailed' . $this->getId()) as $message) {
-					$message->remove();
+				$latency_time = $ping->ping();
+			}
+			if ($latency_time === false) {
+				usleep(100);
+				$latency_time = $ping->ping();
+			}
+			if ($this->getConfiguration('notifyifko') == 1) {
+				if ($latency_time === false) {
+					message::add('networks', __('Echec du ping sur : ', __FILE__) . $this->getHumanName(), '', 'pingFailed' . $this->getId());
+				} else {
+					foreach (message::byPluginLogicalId('networks', 'pingFailed' . $this->getId()) as $message) {
+						$message->remove();
+					}
 				}
 			}
-		}
-		if ($latency_time !== false) {
-			$changed = $this->checkAndUpdateCmd('ping', 1) || $changed;
-			$changed = $this->checkAndUpdateCmd('latency', $latency_time) || $changed;
-		} else {
-			$changed = $this->checkAndUpdateCmd('ping', 0) || $changed;
-			$changed = $this->checkAndUpdateCmd('latency', -1) || $changed;
+			if ($latency_time !== false) {
+				$changed = $this->checkAndUpdateCmd('ping', 1) || $changed;
+				$changed = $this->checkAndUpdateCmd('latency', $latency_time) || $changed;
+			} else {
+				$changed = $this->checkAndUpdateCmd('ping', 0) || $changed;
+				$changed = $this->checkAndUpdateCmd('latency', -1) || $changed;
+			}
+		}else if($this->getConfiguration('pingMode','ip') == 'arp'){
+			
 		}
 		if ($changed) {
 			$this->refreshWidget();

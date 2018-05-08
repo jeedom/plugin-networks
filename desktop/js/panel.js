@@ -22,8 +22,6 @@
   $('.div_displayEquipement').each(function(){
     var container = $(this).packery({
       itemSelector: ".eqLogic-widget",
-      columnWidth:40,
-      rowHeight: 80,
       gutter : 2,
     });
   });

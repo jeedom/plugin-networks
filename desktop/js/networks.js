@@ -20,7 +20,11 @@
     });
 });
 
- 
+ $('.eqLogicAttr[data-l1key=configuration][data-l2key=pingMode]').on('change',function(){
+    $('.pingMode').hide();
+    $('.pingMode.'+$(this).value()).show();
+});
+
  function addCmdToTable(_cmd) {
     if (!isset(_cmd)) {
         var _cmd = {configuration: {}};

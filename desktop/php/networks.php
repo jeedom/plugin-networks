@@ -28,10 +28,10 @@ foreach ($eqLogics as $eqLogic) {
   <div class="eqLogicThumbnailContainer">
     <div class="cursor eqLogicAction" data-action="add" style="text-align: center; background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
       <i class="fa fa-plus-circle" style="font-size : 7em;color:#94ca02;"></i>
-    <br>
-    <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02">Ajouter</span>
-  </div>
-  <?php
+      <br>
+      <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02">Ajouter</span>
+    </div>
+    <?php
 foreach ($eqLogics as $eqLogic) {
 	$opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
 	echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="text-align: center; background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;' . $opacity . '" >';
@@ -41,7 +41,7 @@ foreach ($eqLogics as $eqLogic) {
 	echo '</div>';
 }
 ?>
-</div>
+ </div>
 
 </div>
 
@@ -111,24 +111,31 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-3 control-label">{{Broadcast IP (wol/ping arp)}}</label>
+        <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
         <div class="col-sm-3">
           <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
         </div>
       </div>
-       <div class="form-group">
+      <div class="form-group">
+        <label class="col-sm-3 control-label">{{Méthode de ping}}</label>
+        <div class="col-sm-3">
+          <select class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="pingMode">
+            <option value="ip">{{IP}}</option>
+            <option value="arp">{{ARP}}</option>
+            <option value="port">{{Port}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group pingMode ip">
         <label class="col-sm-3 control-label">{{TTL}}</label>
         <div class="col-sm-3">
           <input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ttl"/>
         </div>
       </div>
-	<div class="form-group">
-        <label class="col-sm-3 control-label">{{Méthode de ping}}</label>
+       <div class="form-group pingMode port">
+        <label class="col-sm-3 control-label">{{Port}}</label>
         <div class="col-sm-3">
-          <select class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="pingMode">
-		  <option value="ip">IP</option>  
-		  <option value="arp">ARP</option>  
-	  </select>
+          <input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="port"/>
         </div>
       </div>
       <div class="form-group">

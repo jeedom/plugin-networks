@@ -14,6 +14,14 @@ if (!is_object($object)) {
 	throw new Exception('{{Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br/> Si vous ne savez pas quoi faire ou que c\'est la premiere fois que vous utilisez Jeedom n\'hésitez pas a consulter cette <a href="http://jeedom.fr/premier_pas.php" target="_blank">page</a>}}');
 }
 $allObject = jeeObject::buildTree(null, true);
+if (count($object->getEqLogic(true, false, 'networks')) == 0) {
+	foreach ($allObject as $object_sel) {
+		if (count($object_sel->getEqLogic(true, false, 'networks')) > 0) {
+			$object = $object_sel;
+			break;
+		}
+	}
+}
 $child_object = jeeObject::buildTree($object);
 $parentNumber = array();
 ?>
@@ -31,6 +39,9 @@ if ($_SESSION['user']->getOptions('displayObjetByDefault') == 1 && init('report'
 			<li class="filter" style="margin-bottom: 5px;"><input class="filter form-control input-sm" placeholder="{{Rechercher}}" style="width: 100%"/></li>
 			<?php
 foreach ($allObject as $object_li) {
+	if ($object_li->getIsVisible() != 1 || count($object_li->getEqLogic(true, false, 'networks')) == 0) {
+		continue;
+	}
 	$margin = 5 * $object_li->getConfiguration('parentNumber');
 	if ($object_li->getId() == $object->getId()) {
 		echo '<li class="cursor li_object active" ><a data-object_id="' . $object_li->getId() . '" href="index.php?v=d&p=panel&m=camera&object_id=' . $object_li->getId() . '" style="padding: 2px 0px;"><span style="position:relative;left:' . $margin . 'px;">' . $object_li->getHumanName(true) . '</span><span style="font-size : 0.65em;float:right;position:relative;top:7px;">' . $object_li->getHtmlSummary() . '</span></a></li>';

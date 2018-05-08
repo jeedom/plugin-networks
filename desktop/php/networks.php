@@ -111,7 +111,7 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-3 control-label">{{Broadcast IP (wol)}}</label>
+        <label class="col-sm-3 control-label">{{Broadcast IP (wol/ping arp)}}</label>
         <div class="col-sm-3">
           <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="broadcastIP"/>
         </div>
@@ -120,6 +120,15 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
         <label class="col-sm-3 control-label">{{TTL}}</label>
         <div class="col-sm-3">
           <input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ttl"/>
+        </div>
+      </div>
+	<div class="form-group">
+        <label class="col-sm-3 control-label">{{Méthode de ping}}</label>
+        <div class="col-sm-3">
+          <select class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="pingMode">
+		  <option value="ip">IP</option>  
+		  <option value="arp">ARP</option>  
+	  </select>
         </div>
       </div>
       <div class="form-group">

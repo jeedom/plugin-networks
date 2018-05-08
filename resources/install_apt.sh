@@ -11,6 +11,8 @@ echo 50 > ${PROGRESS_FILE}
 apt-get install -y wakeonlan 
 echo 75 > ${PROGRESS_FILE}
 apt-get install -y etherwake 
+echo 85 > ${PROGRESS_FILE}
+apt-get install -y arping 
 echo 100 > ${PROGRESS_FILE}
 echo "Everything is successfully installed!"
 rm ${PROGRESS_FILE}

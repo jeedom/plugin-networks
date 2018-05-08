@@ -128,20 +128,18 @@ class networks_Ping {
 	 * @return int
 	 *   Latency, in ms.
 	 */
-	private function pingExec() {
+	private function pingExec($_mode = 'ip') {
 		$latency = false;
 		$ttl = escapeshellcmd($this->ttl);
 		$host = escapeshellcmd($this->host);
-		// Exec string for Windows-based systems.
-		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-			// -n = number of pings; -i = ttl.
-			$exec_string = 'ping -n 1 -i ' . $ttl . ' ' . $host;
+		
+		if($_mode = 'arp'){
+			$exec_string = 'sudo arpping -n -c 1 -t ' . $ttl . ' ' . $host;
+		}else{
+			$exec_string = 'sudo ping -n -c 1 -t ' . $ttl . ' ' . $host;	
 		}
-		// Exec string for UNIX-based systems (Mac, Linux).
-		else {
-			// -n = numeric output; -c = number of pings; -t = ttl.
-			$exec_string = 'sudo ping -n -c 1 -t ' . $ttl . ' ' . $host;
-		}
+		
+		
 		exec($exec_string, $output, $return);
 		// Strip empty lines and reorder the indexes from 0 (to make results more
 		// uniform across OS versions).

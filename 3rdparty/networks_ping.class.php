@@ -54,14 +54,14 @@ class networks_Ping {
 		$ttl = escapeshellcmd($this->ttl);
 		$host = escapeshellcmd($this->host);
 		if ($_mode == 'arp') {
-			$exec_string = 'sudo arping -c 1 ' . $host;
+			$exec_string = 'sudo arping -c 10 C 1 w 500000' . $host;
 		} else {
 			$exec_string = 'sudo ping -n -c 1 -t ' . $ttl . ' ' . $host;
 		}
 		exec($exec_string, $output, $return);
 		$output = array_values(array_filter($output));
 		if (!empty($output[1])) {
-			$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)ms/", $output[1], $matches);
+			$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)ms/", $output[count($output)-4], $matches);
 			if ($response > 0 && isset($matches['time'])) {
 				$latency = $matches['time'];
 			}

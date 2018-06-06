@@ -1,3 +1,5 @@
+- Ajout du bouton dupliquer
+
 # 08/05/2018
 
 - Support du ping ARP (nécessite de forcer l'installation des dépendances)

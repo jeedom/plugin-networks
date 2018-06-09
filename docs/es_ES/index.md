@@ -36,11 +36,9 @@ Aquí encontrará toda la configuración de su dispositivo:
 
 -   **Nom de l’équipement Networks** : nom de votre équipement Networks,
 
--   **Objeto padre** : especifica el objeto padre al que pertenece
-    equipos,
+-   **Objet parent** : indique l’objet parent auquel appartient l’équipement,
 
--   ** ** Categoría: categorías de equipos (que pueden pertenecer a
-    plusieurs catégories),
+-   **Catégorie** : les catégories de l’équipement (il peut appartenir à plusieurs catégories),
 
 -   ** ** Activar: para que su equipo activo,
 
@@ -50,8 +48,9 @@ Aquí encontrará toda la configuración de su dispositivo:
 
 -   **Adresse MAC (wol)** : adresse MAC pour le wake-on-lan,
 
--   **Broadcast IP (wol)** : adresse IP de broadcast du réseau pour
-    envoyer le wake-on-lan,
+-   **Broadcast IP (wol)** : adresse IP de broadcast du réseau pour     envoyer le wake-on-lan,
+
+-   **Méthode de ping** : Choix de la méthode de ping : ip (normal), arp (a priviliegier pour les téléphone ou péripheriques qui s'endorment), port (pour tester si un port est ouvert)
 
 -   **TTL** : Time-to-live, les valeurs peuvent etre : 
     - 0 : même hote
@@ -62,8 +61,9 @@ Aquí encontrará toda la configuración de su dispositivo:
     - 256 : aucune limite
 Si vous avez une erreur de type 'Time to live exceeded' , il faut augmenter cette valeur. Si vide alors le paramètre vaut 255. A noter que sous certain type de configuration (Docker par exemple) le 255 n'est pas autorisé il faut donc diminuer cette valeur.
 
--   **Auto-actualisation (cron)** : cron définissant la fréquence
-    du ping.
+-   **Port** : Port sur lequel faire le ping si vous etês en mode ping sur un port
+
+-   **Auto-actualisation (cron)** : cron définissant la fréquence du ping.
 
 En-dessous vous retrouvez la liste des commandes :
 

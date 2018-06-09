@@ -67,28 +67,29 @@
   }
   if(_mode == 0){
    $('.div_displayEquipement .eqLogic-widget.allowResize').resizable('destroy');
+   var eqLogics = [];
    $('.div_displayEquipement').each(function(){
         order = 1;
         $(this).find('.eqLogic-widget').each(function(){
-         var eqLogic = {id :$(this).attr('data-eqlogic_id')}
-         eqLogic.display = {};
-         eqLogic.display.width =  Math.floor($(this).width() / 2) * 2 + 'px';
-         eqLogic.display.height = Math.floor($(this).height() / 2) * 2+ 'px';
-         if($(this).attr('data-order') != undefined){
-            eqLogic.order = $(this).attr('data-order');
-        }else{
-            eqLogic.order = order;
-        }
-        eqLogics.push(eqLogic);
-        order++;
-    });
+          var eqLogic = {id :$(this).attr('data-eqlogic_id')}
+          eqLogic.display = {};
+          eqLogic.display.width =  Math.floor($(this).width() / 2) * 2 + 'px';
+          eqLogic.display.height = Math.floor($(this).height() / 2) * 2+ 'px';
+          if($(this).attr('data-order') != undefined){
+             eqLogic.order = $(this).attr('data-order');
+         }else{
+             eqLogic.order = order;
+         }
+         eqLogics.push(eqLogic);
+         order++;
+         });
     });
        jeedom.eqLogic.setOrder({
         eqLogics: eqLogics,
         error: function (error) {
             $('#div_alert').showAlert({message: error.message, level: 'danger'});
         }
-    });
+     });
  }else{
    $( ".div_displayEquipement .eqLogic-widget.allowResize").resizable({
     grid: [ 2, 2 ],

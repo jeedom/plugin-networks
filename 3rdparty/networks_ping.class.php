@@ -54,7 +54,7 @@ class networks_Ping {
 		$ttl = escapeshellcmd($this->ttl);
 		$host = escapeshellcmd($this->host);
 		if ($_mode == 'arp') {
-			$exec_string = 'sudo arping -c 10 C 1 w 500000' . $host;
+			$exec_string = 'sudo arping -c 10 C 1 w 500000 ' . $host;
 		} else {
 			$exec_string = 'sudo ping -n -c 1 -t ' . $ttl . ' ' . $host;
 		}

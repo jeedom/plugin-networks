@@ -1,4 +1,7 @@
- # 09/06/2018
+ # 02/07/2018
+
+- Correction de bugs sur le ping ARP
+# 09/06/2018
 
 - Correction de bugs sur le panel
 - Ajout du bouton dupliquer

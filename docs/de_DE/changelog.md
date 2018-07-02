@@ -1,3 +1,6 @@
+ # 09/06/2018
+
+- Correction de bugs sur le panel
 - Ajout du bouton dupliquer
 
 # 08/05/2018

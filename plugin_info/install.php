@@ -18,11 +18,11 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
-function monitoring2_install() {
-	$cron = cron::byClassAndFunction('monitoring2', 'update');
+function networks_install() {
+	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
-		$cron->setClass('monitoring2');
+		$cron->setClass('networks');
 		$cron->setFunction('update');
 		$cron->setEnable(1);
 		$cron->setDeamon(0);
@@ -32,12 +32,12 @@ function monitoring2_install() {
 	}
 }
 
-function monitoring2_update() {
-	$cron = cron::byClassAndFunction('monitoring2', 'update');
+function networks_update() {
+	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
 	}
-	$cron->setClass('monitoring2');
+	$cron->setClass('networks');
 	$cron->setFunction('update');
 	$cron->setEnable(1);
 	$cron->setDeamon(0);
@@ -45,13 +45,10 @@ function monitoring2_update() {
 	$cron->setTimeout(30);
 	$cron->save();
 	$cron->stop();
-	foreach (monitoring::byType('monitoring2') as $monitoring) {
-		$monitoring->save();
-	}
 }
 
-function monitoring2_remove() {
-	$cron = cron::byClassAndFunction('monitoring2', 'update');
+function networks_remove() {
+	$cron = cron::byClassAndFunction('networks', 'update');
 	if (is_object($cron)) {
 		$cron->remove();
 	}

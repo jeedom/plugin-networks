@@ -44,7 +44,7 @@ class networks extends eqLogic {
 		return array('script' => dirname(__FILE__) . '/../../resources/install_#stype#.sh ' . jeedom::getTmpFolder('networks') . '/dependance', 'log' => log::getPathToLog(__CLASS__ . '_update'));
 	}
 
-	public static function cron() {
+	public static function update() {
 		foreach (self::byType('networks') as $networks) {
 			$autorefresh = $networks->getConfiguration('autorefresh');
 			if ($networks->getIsEnable() == 1 && $autorefresh != '') {

@@ -61,9 +61,11 @@ class networks_Ping {
 		exec($exec_string, $output, $return);
 		$output = array_values(array_filter($output));
 		if (!empty($output[1])) {
-			$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)ms/", $output[count($output)-4], $matches);
-			if ($response > 0 && isset($matches['time'])) {
-				$latency = $matches['time'];
+			if (count($output) == 5) {
+				$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)ms/", $output[count($output)-4], $matches);
+				if ($response > 0 && isset($matches['time'])) {
+					$latency = $matches['time'];
+				}
 			}
 		}
 		return $latency;

@@ -64,7 +64,7 @@ Si vous avez une erreur de type 'Time to live exceeded' , il faut augmenter cett
 
 -   **Auto-actualisation (cron)** : cron définissant la fréquence du ping.
 
-En-dessous vous retrouvez la liste des commandes :
+Below you will find the list of commands:
 
 -   **Nom** : le nom affiché sur le dashboard,
 

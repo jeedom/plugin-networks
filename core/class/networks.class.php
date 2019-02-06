@@ -31,11 +31,13 @@ class networks extends eqLogic {
 		$return = array();
 		$return['log'] = 'networks_update';
 		$return['progress_file'] = '/tmp/dependancy_networks_in_progress';
-		if (exec('which etherwake | wc -l') != 0 && exec('which wakeonlan | wc -l') != 0) {
-			$return['state'] = 'ok';
-		} else {
-			$return['state'] = 'nok';
-		}
+		$return['state'] = 'ok';
+		if (exec('which etherwake | wc -l') == 0 || exec('which wakeonlan | wc -l') == 0) {
+			sleep(1);
+			if (exec('which etherwake | wc -l') == 0 || exec('which wakeonlan | wc -l') == 0) {
+				$return['state'] = 'nok';
+			} 
+		} 
 		return $return;
 	}
 

@@ -33,8 +33,7 @@ class networks extends eqLogic {
 		$return['progress_file'] = '/tmp/dependancy_networks_in_progress';
 		$return['state'] = 'ok';
 		if (exec('which etherwake | wc -l') == 0 || exec('which wakeonlan | wc -l') == 0) {
-			sleep(1);
-			if (exec('which etherwake | wc -l') == 0 || exec('which wakeonlan | wc -l') == 0) {
+			if (exec(" dpkg --get-selections | grep -v deinstall | grep -E 'wakeonlan|etherwake' | wc -l") != 2) {
 				$return['state'] = 'nok';
 			} 
 		} 

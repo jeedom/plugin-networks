@@ -48,7 +48,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<ul class="nav nav-tabs" role="tablist">
 			<li role="presentation"><a href="#" class="eqLogicAction" aria-controls="home" role="tab" data-toggle="tab" data-action="returnToThumbnailDisplay"><i class="fas fa-arrow-circle-left"></i></a></li>
 			<li role="presentation" class="active"><a href="#eqlogictab" aria-controls="home" role="tab" data-toggle="tab"><i class="fas fa-tachometer-alt"></i> {{Equipement}}</a></li>
-            <li role="presentation"><a href="#eqparatab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-wrench"></i> {{Paramètres}}</a></li>
 			<li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-list-alt"></i> {{Commandes}}</a></li>
 		</ul>
 		<div class="tab-content" style="height:calc(100% - 50px);overflow:auto;overflow-x: hidden;">
@@ -96,15 +95,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							</div>
 						</div>
                         <br />
-
-                
-                    </fieldset>
-                </form>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="eqparatab">
-                <br/>
-                <form class="form-horizontal">
-                    <fieldset>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">{{Adresse IP}}</label><div class="col-sm-3">
                             <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip"/>
@@ -159,10 +149,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
                                 <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="notifyifko"/>
                             </div>
                         </div>
-
                     </fieldset>
-                </form>				
-			</div>
+                </form>
+            </div>
             <div role="tabpanel" class="tab-pane" id="commandtab">
 				<br/><br/>
 				<table id="table_cmd" class="table table-bordered table-condensed">
@@ -181,22 +170,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				
 			</div>
         
-    </div>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    </div>  
 </div>
 
 <?php include_file('desktop', 'networks', 'js', 'networks');?>

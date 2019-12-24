@@ -140,7 +140,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
 							</div>
 							<div class="col-sm-1">
-								<i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
+								<i class="fas fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
 							</div>
 						</div>
 						<div class="form-group">
@@ -157,9 +157,10 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<table id="table_cmd" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
-							<th style="width: 250px;">{{Nom}}</th>
-							<th style="width: 80px;">{{Type}}</th>
-							<th style="width: 80px;">{{Action}}</th>
+                            <th style="width: 50px;"> ID</th>
+							<th style="width: 150px;">{{Nom}}</th>
+							<th style="width: 450px;">{{Options}}</th>
+							<th style="width: 50px;"></th>
 						</tr>
 					</thead>
 					
@@ -172,7 +173,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			
 		</div>
 	</div>
-	
-	<?php include_file('desktop', 'networks', 'js', 'networks');?>
-	<?php include_file('core', 'plugin.template', 'js');?>
-	
+    <?php 
+        include_file('desktop', 'networks', 'js', 'networks');
+        include_file('core', 'plugin.template', 'js');
+    ?>

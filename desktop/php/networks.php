@@ -157,9 +157,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<table id="table_cmd" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
-                            <th style="width: 50px;"> ID</th>
-							<th style="width: 150px;">{{Nom}}</th>
-							<th style="width: 450px;">{{Options}}</th>
+							<th style="width: 250px;">{{Nom}}</th>
+							<th style="width: 850px;">{{Options}}</th>
 							<th style="width: 50px;"></th>
 						</tr>
 					</thead>

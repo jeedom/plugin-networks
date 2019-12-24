@@ -31,9 +31,6 @@
     }
     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
     tr += '<td>';
-    tr += '<span class="cmdAttr" data-l1key="id"></span>';
-    tr += '</td>';
-    tr += '<td>';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="id" style="display : none;">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="type" style="display : none;">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="subType" style="display : none;">';

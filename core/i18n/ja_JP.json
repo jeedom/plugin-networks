@@ -1,14 +1,25 @@
 {
-    "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "ネットワーク機器を管理するためのプラグイン（LAN上ピングとウェイク）",
-        "Aucune": "何でもありません"
+    "desktop\/js\/networks.js": {
+        "Historiser": "historicize",
+        "Tester": "テスト"
     },
-    "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "リンクを追加します",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Networks": "Mes Networks",
         "Rechercher": "検索する",
-        "Mes networks": "私のリンク",
-        "Général": "コモン",
-        "Nom de l'équipement networks": "名前ネットワーク機器",
+        "Configuration avancée": "高度な設定",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "セーブ",
+        "Supprimer": "取り除きます",
+        "Equipement": "設備",
+        "Commandes": "コマンド",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "親オブジェクト",
         "Aucun": "何でもありません",
         "Catégorie": "カテゴリ",
@@ -17,29 +28,26 @@
         "Adresse IP": "IPアドレス",
         "Adresse MAC (wol)": "MAC（WOL）",
         "Broadcast IP (wol)": "IPブロードキャスト（WOL）",
+        "Méthode de ping": "Méthode de ping",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Port",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "自己実現（cronの）",
-        "Commandes": "コマンド",
-        "Nom": "表題",
-        "Type": "タイプ",
-        "Action": "アクション",
-        "Supprimer": "取り除きます",
-        "Sauvegarder": "セーブ",
-        "Notifié si le ping est KO": "pingがKOである場合に通知",
         "Notifier si le ping est KO": "pingがKOである場合に通知",
-        "Equipement": "設備",
-        "Configuration avancée": "高度な設定"
+        "Nom": "表題",
+        "Options": "Options"
     },
-    "plugins/networks/desktop/js/networks.js": {
-        "Historiser": "historicize",
-        "Tester": "テスト"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "検索する"
     },
-    "plugins/networks/core/class/networks.class.php": {
-        "Rafraîchir": "クール",
-        "Statut": "ステータス",
-        "Latence": "潜在",
-        "Echec du ping sur : ": "Pingが失敗しました："
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/networks/plugin_info/info.json": {
+    "core\/class\/networks.class.php": {
         "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "ネットワーク機器を管理するためのプラグイン（LAN上ピングとウェイク）"
     }
 }

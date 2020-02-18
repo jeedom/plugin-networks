@@ -1,14 +1,25 @@
 {
-    "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin for network equipment management (ping and wake on lan)",
-        "Aucune": "None"
+    "desktop\/js\/networks.js": {
+        "Historiser": "Historize",
+        "Tester": "Test"
     },
-    "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Add a networks",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "You are in edit mode you can resize widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Gestion": "Management",
+        "Ajouter": "Add",
+        "Configuration": "Configuration",
+        "Mes Networks": "My Networks",
         "Rechercher": "Search",
-        "Mes networks": "My networks",
-        "Général": "Main",
-        "Nom de l'équipement networks": "Name of networks device",
+        "Configuration avancée": "Advanced configuration",
+        "Dupliquer": "Duplicate",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Device",
+        "Commandes": "Commands",
+        "Nom de l'équipement virtuel": "Name of the virtual device",
         "Objet parent": "Parent object",
         "Aucun": "None",
         "Catégorie": "Category",
@@ -17,29 +28,37 @@
         "Adresse IP": "IP address",
         "Adresse MAC (wol)": "MAC address (wol)",
         "Broadcast IP (wol)": "Broadcast IP (wol)",
+        "Méthode de ping": "Ping method",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Harbor",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "Auto-update (cron)",
-        "Commandes": "Commands",
-        "Nom": "Name",
-        "Type": "Type",
-        "Action": "Action",
-        "Supprimer": "Delete",
-        "Sauvegarder": "Save",
-        "Notifié si le ping est KO": "Notifed if the ping is KO",
         "Notifier si le ping est KO": "Notify if the ping is KO",
-        "Equipement": "Device",
-        "Configuration avancée": "Advanced configuration"
+        "Nom": "Name",
+        "Options": "options"
     },
-    "plugins/networks/desktop/js/networks.js": {
-        "Historiser": "Historize",
-        "Tester": "Test"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "No root object found. To create one, go to General -&gt; Object. <br\/> If you do not know what to do or it is the first time you use Jeedom do not hesitate to consult this <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "Search"
     },
-    "plugins/networks/core/class/networks.class.php": {
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Aucune methode correspondante à : ": "No method corresponding to:"
+    },
+    "core\/class\/networks.class.php": {
+        "Erreur pour ": "Error for",
+        "Expression cron non valide pour ": "Invalid cron expression for",
         "Rafraîchir": "Refresh",
         "Statut": "Status",
         "Latence": "Latency",
-        "Echec du ping sur : ": "Ping failed on:"
-    },
-    "plugins/networks/plugin_info/info.json": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin for network equipment management (ping and wake on lan)"
+        "Wake-on-lan": "Wake-on-lan",
+        "L\\'adresse IP ne peut être vide": "IP address cannot be empty",
+        "Echec du ping sur : ": "Ping failed on:",
+        "IP invalide": "Invalid ip",
+        "MAC invalide": "Invalid MAC",
+        "SUBNET invalide": "Invalid SUBNET",
+        "Echec de la commande : ": "Command failed:"
     }
 }

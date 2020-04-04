@@ -1,3 +1,7 @@
+# 04/04/2020
+
+- Suppression du panel
+
 # 11/09/2019
 
 - Adaptation pour jeedom v4

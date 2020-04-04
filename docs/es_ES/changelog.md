@@ -1,11 +1,15 @@
+# 11/09/2019
+
+- Adaptation pour jeedom v4
+
 # 13/08/2019
 
 - Support de PHP 7.3
 
  # 06/02/2018
- 
+
  - Optimisation du calcul des dépendances
- 
+
  # 05/07/2018
 
 - Séparation du cron de refresh dans une tache dédié pour ne pas impacter le cron global des plugins

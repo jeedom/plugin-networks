@@ -1,14 +1,25 @@
 {
-    "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin untuk mengelola peralatan jaringan (ping dan bangun pada lan)",
-        "Aucune": "Tak ada"
+    "desktop\/js\/networks.js": {
+        "Historiser": "Historicize",
+        "Tester": "Coba"
     },
-    "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Menambahkan sebuah Link",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Networks": "Mes Networks",
         "Rechercher": "Mencari",
-        "Mes networks": "Tautan saya",
-        "Général": "Umum",
-        "Nom de l'équipement networks": "peralatan jaringan nama",
+        "Configuration avancée": "konfigurasi lanjutan",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Peralatan",
+        "Commandes": "Perintah",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Catégorie": "Kategori",
@@ -17,29 +28,26 @@
         "Adresse IP": "IP Address",
         "Adresse MAC (wol)": "MAC (wol)",
         "Broadcast IP (wol)": "IP Broadcast (wol)",
+        "Méthode de ping": "Méthode de ping",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Port",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "\nAktualisasi diri (cron)",
-        "Commandes": "Perintah",
-        "Nom": "Nama",
-        "Type": "Jenis",
-        "Action": "Tindakan",
-        "Supprimer": "Menghapus",
-        "Sauvegarder": "Menyimpan",
-        "Notifié si le ping est KO": "Diberitahu jika ping adalah KO",
         "Notifier si le ping est KO": "Beritahu jika ping adalah KO",
-        "Equipement": "Peralatan",
-        "Configuration avancée": "konfigurasi lanjutan"
+        "Nom": "Nama",
+        "Options": "Options"
     },
-    "plugins/networks/desktop/js/networks.js": {
-        "Historiser": "Historicize",
-        "Tester": "Coba"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "Mencari"
     },
-    "plugins/networks/core/class/networks.class.php": {
-        "Rafraîchir": "dingin",
-        "Statut": "Status",
-        "Latence": "latency",
-        "Echec du ping sur : ": "Gagal Ping:"
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/networks/plugin_info/info.json": {
+    "core\/class\/networks.class.php": {
         "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin untuk mengelola peralatan jaringan (ping dan bangun pada lan)"
     }
 }

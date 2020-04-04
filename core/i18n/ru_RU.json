@@ -1,14 +1,25 @@
 {
-    "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Плагин для управления сетевого оборудования (пинг и Wake On LAN)",
-        "Aucune": "Нет"
+    "desktop\/js\/networks.js": {
+        "Historiser": "История",
+        "Tester": "Тест"
     },
-    "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Добавить ссылку",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Networks": "Mes Networks",
         "Rechercher": "Искать",
-        "Mes networks": "моя ссылка",
-        "Général": "Главная",
-        "Nom de l'équipement networks": "Имя сети оборудование",
+        "Configuration avancée": "Расширенные настройки",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Сохранить",
+        "Supprimer": "Удалить",
+        "Equipement": "Оборудование",
+        "Commandes": "Команды",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
         "Catégorie": "Категория",
@@ -17,29 +28,26 @@
         "Adresse IP": "IP Адрес ",
         "Adresse MAC (wol)": "MAC (WOL)",
         "Broadcast IP (wol)": "IP Broadcast (WOL)",
+        "Méthode de ping": "Méthode de ping",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Port",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "Авто-обновление (cron)",
-        "Commandes": "Команды",
-        "Nom": "Имя",
-        "Type": "Тип",
-        "Action": "Действие",
-        "Supprimer": "Удалить",
-        "Sauvegarder": "Сохранить",
-        "Notifié si le ping est KO": "Заявленный если пинг KO",
         "Notifier si le ping est KO": "Сообщите, если пинг KO",
-        "Equipement": "Оборудование",
-        "Configuration avancée": "Расширенные настройки"
+        "Nom": "Имя",
+        "Options": "Options"
     },
-    "plugins/networks/desktop/js/networks.js": {
-        "Historiser": "История",
-        "Tester": "Тест"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "Искать"
     },
-    "plugins/networks/core/class/networks.class.php": {
-        "Rafraîchir": "Обновить",
-        "Statut": "Статус",
-        "Latence": "латентность",
-        "Echec du ping sur : ": "Ошибка Ping:"
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/networks/plugin_info/info.json": {
+    "core\/class\/networks.class.php": {
         "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Плагин для управления сетевого оборудования (пинг и Wake On LAN)"
     }
 }

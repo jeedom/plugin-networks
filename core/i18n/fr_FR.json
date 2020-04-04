@@ -1,14 +1,25 @@
 {
-    "plugins\/networks\/plugin_info\/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)",
-        "Aucune": "Aucune"
+    "desktop\/js\/networks.js": {
+        "Historiser": "Historiser",
+        "Tester": "Tester"
     },
-    "plugins\/networks\/desktop\/php\/networks.php": {
-        "Ajouter un networks": "Ajouter un networks",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Networks": "Mes Networks",
         "Rechercher": "Rechercher",
-        "Mes networks": "Mes networks",
-        "Général": "Général",
-        "Nom de l'équipement networks": "Nom de l'équipement networks",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Sauvegarder",
+        "Supprimer": "Supprimer",
+        "Equipement": "Equipement",
+        "Commandes": "Commandes",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "Objet parent",
         "Aucun": "Aucun",
         "Catégorie": "Catégorie",
@@ -17,29 +28,37 @@
         "Adresse IP": "Adresse IP",
         "Adresse MAC (wol)": "Adresse MAC (wol)",
         "Broadcast IP (wol)": "Broadcast IP (wol)",
+        "Méthode de ping": "Méthode de ping",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Port",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "Auto-actualisation (cron)",
-        "Commandes": "Commandes",
-        "Nom": "Nom",
-        "Type": "Type",
-        "Action": "Action",
-        "Supprimer": "Supprimer",
-        "Sauvegarder": "Sauvegarder",
-        "Notifié si le ping est KO": "Notifié si le ping est KO",
         "Notifier si le ping est KO": "Notifier si le ping est KO",
-        "Equipement": "Equipement",
-        "Configuration avancée": "Configuration avancée"
+        "Nom": "Nom",
+        "Options": "Options"
     },
-    "plugins\/networks\/desktop\/js\/networks.js": {
-        "Historiser": "Historiser",
-        "Tester": "Tester"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "Rechercher"
     },
-    "plugins\/networks\/core\/class\/networks.class.php": {
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    },
+    "core\/class\/networks.class.php": {
+        "Erreur pour ": "Erreur pour ",
+        "Expression cron non valide pour ": "Expression cron non valide pour ",
         "Rafraîchir": "Rafraîchir",
         "Statut": "Statut",
         "Latence": "Latence",
-        "Echec du ping sur : ": "Echec du ping sur : "
-    },
-    "plugins\/networks\/plugin_info\/info.json": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)"
+        "Wake-on-lan": "Wake-on-lan",
+        "L\\'adresse IP ne peut être vide": "L\\'adresse IP ne peut être vide",
+        "Echec du ping sur : ": "Echec du ping sur : ",
+        "IP invalide": "IP invalide",
+        "MAC invalide": "MAC invalide",
+        "SUBNET invalide": "SUBNET invalide",
+        "Echec de la commande : ": "Echec de la commande : "
     }
 }

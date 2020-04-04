@@ -1,14 +1,25 @@
 {
-    "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin per la gestione delle apparecchiature di rete (ping e Wake on LAN)",
-        "Aucune": "Nessuno"
+    "desktop\/js\/networks.js": {
+        "Historiser": "Storicizza",
+        "Tester": "Prova"
     },
-    "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Aggiungi un collegamento",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Networks": "Mes Networks",
         "Rechercher": "Cerca",
-        "Mes networks": "il mio link",
-        "Général": "Principale",
-        "Nom de l'équipement networks": "attrezzature reti Nome",
+        "Configuration avancée": "Configurazione avanzata",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Salva",
+        "Supprimer": "Elimina",
+        "Equipement": "Dispositivo",
+        "Commandes": "Comandi",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Catégorie": "Categoria",
@@ -17,29 +28,26 @@
         "Adresse IP": "Indirizzo IP",
         "Adresse MAC (wol)": "MAC (WOL)",
         "Broadcast IP (wol)": "IP Broadcast (WOL)",
+        "Méthode de ping": "Méthode de ping",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Port",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "Auto-realizzazione (cron)",
-        "Commandes": "Comandi",
-        "Nom": "Nome",
-        "Type": "Tipo",
-        "Action": "Azione",
-        "Supprimer": "Elimina",
-        "Sauvegarder": "Salva",
-        "Notifié si le ping est KO": "Avviso se il ping è KO",
         "Notifier si le ping est KO": "Notifica se il ping è KO",
-        "Equipement": "Dispositivo",
-        "Configuration avancée": "Configurazione avanzata"
+        "Nom": "Nome",
+        "Options": "Options"
     },
-    "plugins/networks/desktop/js/networks.js": {
-        "Historiser": "Storicizza",
-        "Tester": "Prova"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "Cerca"
     },
-    "plugins/networks/core/class/networks.class.php": {
-        "Rafraîchir": "Aggiorna",
-        "Statut": "Stato",
-        "Latence": "latenza",
-        "Echec du ping sur : ": "Impossibile Ping:"
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/networks/plugin_info/info.json": {
+    "core\/class\/networks.class.php": {
         "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin per la gestione delle apparecchiature di rete (ping e Wake on LAN)"
     }
 }

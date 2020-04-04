@@ -1,14 +1,25 @@
 {
-    "plugins/networks/plugin_info/info.xml": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Donanım ağlarının yönetimine izin veren eklenti (ping et wake on lan)",
-        "Aucune": "Hiçbir"
+    "desktop\/js\/networks.js": {
+        "Historiser": "Tarihe göre sırala",
+        "Tester": "Dene"
     },
-    "plugins/networks/desktop/php/networks.php": {
-        "Ajouter un networks": "Networks ekleyin",
+    "desktop\/js\/panel.js": {
+        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
+    },
+    "desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Networks": "Mes Networks",
         "Rechercher": "Arayın",
-        "Mes networks": "Netwoks larım",
-        "Général": "Genel",
-        "Nom de l'équipement networks": "networks ekipman ismi",
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Kaydet",
+        "Supprimer": "Sil",
+        "Equipement": "Cihaz",
+        "Commandes": "Komutalar",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
         "Catégorie": "Kategori",
@@ -17,29 +28,26 @@
         "Adresse IP": "IP adresi",
         "Adresse MAC (wol)": "MAC Adresi (wol)",
         "Broadcast IP (wol)": "IP broadcast (wol)",
+        "Méthode de ping": "Méthode de ping",
+        "IP": "IP",
+        "ARP": "ARP",
+        "Port": "Port",
+        "TTL": "TTL",
         "Auto-actualisation (cron)": "Otomatik güncelleme (cron)",
-        "Commandes": "Komutalar",
-        "Nom": "İsim",
-        "Type": "Ceşit",
-        "Action": "Etki",
-        "Supprimer": "Sil",
-        "Sauvegarder": "Kaydet",
-        "Notifié si le ping est KO": "Ping, KO ise bildirilir",
         "Notifier si le ping est KO": "Ping, KO ise bildirilir",
-        "Equipement": "Cihaz",
-        "Configuration avancée": "Gelişmiş ayarlar"
+        "Nom": "İsim",
+        "Options": "Options"
     },
-    "plugins/networks/desktop/js/networks.js": {
-        "Historiser": "Tarihe göre sırala",
-        "Tester": "Dene"
+    "desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
+        "Rechercher": "Arayın"
     },
-    "plugins/networks/core/class/networks.class.php": {
-        "Rafraîchir": "Yenile",
-        "Statut": "Statü",
-        "Latence": "gecikme",
-        "Echec du ping sur : ": "Ping başarısız oldu:"
+    "core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/networks/plugin_info/info.json": {
+    "core\/class\/networks.class.php": {
         "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Donanım ağlarının yönetimine izin veren eklenti (ping et wake on lan)"
     }
 }

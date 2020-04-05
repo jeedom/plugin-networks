@@ -1,12 +1,5 @@
 {
-    "desktop\/js\/networks.js": {
-        "Historiser": "Historiser",
-        "Tester": "Tester"
-    },
-    "desktop\/js\/panel.js": {
-        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
-    },
-    "desktop\/php\/networks.php": {
+    "plugins\/networks\/desktop\/php\/networks.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Gestion": "Gestion",
         "Ajouter": "Ajouter",
@@ -38,16 +31,15 @@
         "Nom": "Nom",
         "Options": "Options"
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
-        "Rechercher": "Rechercher"
+    "plugins\/networks\/desktop\/js\/networks.js": {
+        "Historiser": "Historiser",
+        "Tester": "Tester"
     },
-    "core\/ajax\/networks.ajax.php": {
+    "plugins\/networks\/core\/ajax\/networks.ajax.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "core\/class\/networks.class.php": {
+    "plugins\/networks\/core\/class\/networks.class.php": {
         "Erreur pour ": "Erreur pour ",
         "Expression cron non valide pour ": "Expression cron non valide pour ",
         "Rafraîchir": "Rafraîchir",

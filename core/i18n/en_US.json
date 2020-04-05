@@ -1,17 +1,10 @@
 {
-    "desktop\/js\/networks.js": {
-        "Historiser": "Historize",
-        "Tester": "Test"
-    },
-    "desktop\/js\/panel.js": {
-        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "You are in edit mode you can resize widgets"
-    },
-    "desktop\/php\/networks.php": {
+    "plugins\/networks\/desktop\/php\/networks.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Gestion": "Management",
         "Ajouter": "Add",
-        "Configuration": "Configuration",
-        "Mes Networks": "My Networks",
+        "Configuration": "Setup",
+        "Mes Networks": "",
         "Rechercher": "Search",
         "Configuration avancée": "Advanced configuration",
         "Dupliquer": "Duplicate",
@@ -25,40 +18,39 @@
         "Catégorie": "Category",
         "Activer": "Activate",
         "Visible": "Visible",
-        "Adresse IP": "IP address",
-        "Adresse MAC (wol)": "MAC address (wol)",
-        "Broadcast IP (wol)": "Broadcast IP (wol)",
-        "Méthode de ping": "Ping method",
+        "Adresse IP": "IP adress",
+        "Adresse MAC (wol)": "",
+        "Broadcast IP (wol)": "",
+        "Méthode de ping": "",
         "IP": "IP",
-        "ARP": "ARP",
-        "Port": "Harbor",
-        "TTL": "TTL",
-        "Auto-actualisation (cron)": "Auto-update (cron)",
-        "Notifier si le ping est KO": "Notify if the ping is KO",
+        "ARP": "",
+        "Port": "Port",
+        "TTL": "",
+        "Auto-actualisation (cron)": "Self-updating (cron)",
+        "Notifier si le ping est KO": "",
         "Nom": "Name",
-        "Options": "options"
+        "Options": "Options"
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access",
-        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "No root object found. To create one, go to General -&gt; Object. <br\/> If you do not know what to do or it is the first time you use Jeedom do not hesitate to consult this <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
-        "Rechercher": "Search"
+    "plugins\/networks\/desktop\/js\/networks.js": {
+        "Historiser": "Historize",
+        "Tester": "Test"
     },
-    "core\/ajax\/networks.ajax.php": {
+    "plugins\/networks\/core\/ajax\/networks.ajax.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Aucune methode correspondante à : ": "No method corresponding to:"
     },
-    "core\/class\/networks.class.php": {
+    "plugins\/networks\/core\/class\/networks.class.php": {
         "Erreur pour ": "Error for",
         "Expression cron non valide pour ": "Invalid cron expression for",
         "Rafraîchir": "Refresh",
         "Statut": "Status",
         "Latence": "Latency",
-        "Wake-on-lan": "Wake-on-lan",
-        "L\\'adresse IP ne peut être vide": "IP address cannot be empty",
-        "Echec du ping sur : ": "Ping failed on:",
-        "IP invalide": "Invalid ip",
-        "MAC invalide": "Invalid MAC",
-        "SUBNET invalide": "Invalid SUBNET",
-        "Echec de la commande : ": "Command failed:"
+        "Wake-on-lan": "",
+        "L\\'adresse IP ne peut être vide": "",
+        "Echec du ping sur : ": "",
+        "IP invalide": "",
+        "MAC invalide": "",
+        "SUBNET invalide": "",
+        "Echec de la commande : ": ""
     }
 }

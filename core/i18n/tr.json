@@ -1,53 +1,56 @@
 {
-    "desktop\/js\/networks.js": {
-        "Historiser": "Tarihe göre sırala",
-        "Tester": "Dene"
-    },
-    "desktop\/js\/panel.js": {
-        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Vous êtes en mode édition vous pouvez redimensionner les widgets"
-    },
-    "desktop\/php\/networks.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Gestion": "Gestion",
-        "Ajouter": "Ajouter",
-        "Configuration": "Configuration",
-        "Mes Networks": "Mes Networks",
+    "plugins\/networks\/desktop\/php\/networks.php": {
+        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
+        "Gestion": "Idare",
+        "Ajouter": "Ekle",
+        "Configuration": "Ayar",
+        "Mes Networks": "",
         "Rechercher": "Arayın",
         "Configuration avancée": "Gelişmiş ayarlar",
-        "Dupliquer": "Dupliquer",
+        "Dupliquer": "Kopyala",
         "Sauvegarder": "Kaydet",
         "Supprimer": "Sil",
         "Equipement": "Cihaz",
         "Commandes": "Komutalar",
-        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
+        "Nom de l'équipement virtuel": "",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
         "Catégorie": "Kategori",
-        "Activer": "Etkinleştirmek",
+        "Activer": "Etkinleştir",
         "Visible": "Görülebilir",
         "Adresse IP": "IP adresi",
-        "Adresse MAC (wol)": "MAC Adresi (wol)",
-        "Broadcast IP (wol)": "IP broadcast (wol)",
-        "Méthode de ping": "Méthode de ping",
-        "IP": "IP",
-        "ARP": "ARP",
-        "Port": "Port",
-        "TTL": "TTL",
-        "Auto-actualisation (cron)": "Otomatik güncelleme (cron)",
-        "Notifier si le ping est KO": "Ping, KO ise bildirilir",
+        "Adresse MAC (wol)": "",
+        "Broadcast IP (wol)": "",
+        "Méthode de ping": "",
+        "IP": "",
+        "ARP": "",
+        "Port": "",
+        "TTL": "",
+        "Auto-actualisation (cron)": "",
+        "Notifier si le ping est KO": "",
         "Nom": "İsim",
-        "Options": "Options"
+        "Options": "Opsiyonlar"
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>",
-        "Rechercher": "Arayın"
+    "plugins\/networks\/desktop\/js\/networks.js": {
+        "Historiser": "Tarihe göre sırala",
+        "Tester": "Test et"
     },
-    "core\/ajax\/networks.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    "plugins\/networks\/core\/ajax\/networks.ajax.php": {
+        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
+        "Aucune methode correspondante à : ": "Aşağıdakilere karşılık gelen bir yöntem yok:"
     },
-    "core\/class\/networks.class.php": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Donanım ağlarının yönetimine izin veren eklenti (ping et wake on lan)"
+    "plugins\/networks\/core\/class\/networks.class.php": {
+        "Erreur pour ": "",
+        "Expression cron non valide pour ": "",
+        "Rafraîchir": "Yenile",
+        "Statut": "Statü",
+        "Latence": "",
+        "Wake-on-lan": "",
+        "L\\'adresse IP ne peut être vide": "",
+        "Echec du ping sur : ": "",
+        "IP invalide": "",
+        "MAC invalide": "",
+        "SUBNET invalide": "",
+        "Echec de la commande : ": ""
     }
 }

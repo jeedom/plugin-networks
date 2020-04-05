@@ -1,17 +1,10 @@
 {
-    "desktop\/js\/networks.js": {
-        "Historiser": "Chronik",
-        "Tester": "Test"
-    },
-    "desktop\/js\/panel.js": {
-        "Vous êtes en mode édition vous pouvez redimensionner les widgets": "Im Bearbeitungsmodus können Sie die Größe von Widgets ändern"
-    },
-    "desktop\/php\/networks.php": {
+    "plugins\/networks\/desktop\/php\/networks.php": {
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
-        "Gestion": "Management",
-        "Ajouter": "hinzufügen",
+        "Gestion": "Verwaltung",
+        "Ajouter": "Hinzufügen",
         "Configuration": "Konfiguration",
-        "Mes Networks": "Meine Netzwerke",
+        "Mes Networks": "",
         "Rechercher": "Suchen nach",
         "Configuration avancée": "Erweiterte Konfiguration",
         "Dupliquer": "Duplikat",
@@ -20,34 +13,44 @@
         "Equipement": "Gerät",
         "Commandes": "Befehle",
         "Nom de l'équipement virtuel": "Name des virtuellen Geräts",
-        "Objet parent": "Eltern-Objekt",
+        "Objet parent": "Übergeordnetes Objekt",
         "Aucun": "Ohne",
         "Catégorie": "Kategorie",
-        "Activer": "aktivieren",
+        "Activer": "Aktivieren",
         "Visible": "Sichtbar",
-        "Adresse IP": "IP Adresse",
-        "Adresse MAC (wol)": "MAC Adresse (wol)",
-        "Broadcast IP (wol)": "Broadcast IP (wol)",
-        "Méthode de ping": "Ping-Methode",
+        "Adresse IP": "IP-Adresse",
+        "Adresse MAC (wol)": "",
+        "Broadcast IP (wol)": "",
+        "Méthode de ping": "",
         "IP": "IP",
-        "ARP": "ARP",
+        "ARP": "",
         "Port": "Hafen",
-        "TTL": "TTL",
-        "Auto-actualisation (cron)": "Auto - Aktualisierung (Cron) ",
-        "Notifier si le ping est KO": "Benachrichtigen, wenn Ping KO ist",
+        "TTL": "",
+        "Auto-actualisation (cron)": "Selbstaktualisierung (cron)",
+        "Notifier si le ping est KO": "",
         "Nom": "Name",
         "Options": "Optionen"
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
-        "Aucun objet racine trouvé. Pour en créer un, allez dans Générale -> Objet.<br\/> Si vous ne savez pas quoi faire ou que c\\'est la premiere fois que vous utilisez Jeedom n\\'hésitez pas a consulter cette <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">page<\/a>": "Kein Stammobjekt gefunden. Um eine zu erstellen, gehen Sie zu Allgemein -&gt; Objekt. <br\/> Wenn Sie nicht wissen, was Sie tun sollen, oder wenn Sie Jeedom zum ersten Mal verwenden, zögern Sie nicht, diese <a href=\"http:\/\/jeedom.fr\/premier_pas.php\" target=\"_blank\">Seite<\/a> zu konsultieren",
-        "Rechercher": "Suchen nach"
+    "plugins\/networks\/desktop\/js\/networks.js": {
+        "Historiser": "Chronik",
+        "Tester": "Test"
     },
-    "core\/ajax\/networks.ajax.php": {
+    "plugins\/networks\/core\/ajax\/networks.ajax.php": {
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Aucune methode correspondante à : ": "Keine Methode entsprechend:"
     },
-    "core\/class\/networks.class.php": {
-        "Plugin permettant la gestion réseaux des équipements (ping et wake on lan)": "Plugin für die Verwaltung von Netzwerkgeräten (Ping und Wake on LAN)"
+    "plugins\/networks\/core\/class\/networks.class.php": {
+        "Erreur pour ": "Fehler für",
+        "Expression cron non valide pour ": "Ungültiger Cron-Ausdruck für",
+        "Rafraîchir": "Aktualisieren",
+        "Statut": "Status",
+        "Latence": "Latenz",
+        "Wake-on-lan": "",
+        "L\\'adresse IP ne peut être vide": "",
+        "Echec du ping sur : ": "",
+        "IP invalide": "",
+        "MAC invalide": "",
+        "SUBNET invalide": "",
+        "Echec de la commande : ": ""
     }
 }

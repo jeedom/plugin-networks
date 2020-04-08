@@ -50,18 +50,18 @@ Vous retrouvez ici toute la configuration de votre équipement :
 
 -   **Broadcast IP (wol)** : adresse IP de broadcast du réseau pour     envoyer le wake-on-lan,
 
--   **Méthode de ping** : Choix de la méthode de ping : ip (normal), arp (a priviliegier pour les téléphone ou péripheriques qui s'endorment), port (pour tester si un port est ouvert)
+-   **Méthode de ping** : Choix de la méthode de ping : IP (normal), ARP (à privilégier pour les téléphone ou périphériques qui s'endorment), PORT (pour tester si un port est ouvert)
     
--   **TTL** : Time-to-live, les valeurs peuvent etre : 
-    - 0 : même hote
+-   **TTL** : Time-to-live, les valeurs peuvent être : 
+    - 0 : même hôte
     - 1 : même sous-réseaux
     - 32 : même site
     - 64 : même région
     - 128 : même continent
     - 256 : aucune limite
-Si vous avez une erreur de type 'Time to live exceeded' , il faut augmenter cette valeur. Si vide alors le paramètre vaut 255. A noter que sous certain type de configuration (Docker par exemple) le 255 n'est pas autorisé il faut donc diminuer cette valeur.
+Si vous avez une erreur de type 'Time to live exceeded', il faut augmenter cette valeur. Si vide alors le paramètre vaut 255. À noter que sous certain type de configuration (Docker par exemple) le 255 n'est pas autorisé il faut donc diminuer cette valeur.
 
--   **Port** : Port sur lequel faire le ping si vous etês en mode ping sur un port
+-   **Port** : Port sur lequel faire le ping si vous êtes en mode ping sur un port
 
 -   **Auto-actualisation (cron)** : cron définissant la fréquence du ping.
 
@@ -75,7 +75,7 @@ En-dessous vous retrouvez la liste des commandes :
 
 > **Note**
 >
-> Jeedom va vérifier toutes les minutes (par defaut) le ping sur l’IP.
+> Jeedom va vérifier toutes les minutes (par défaut) le ping sur l’IP.
 
 > **Important**
 >

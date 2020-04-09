@@ -61,9 +61,9 @@ Here you find all the configuration of your equipment :
     - 256 : 
 . . .
 
--   **Port** : 
+-   **Port** :  : :,
 
--   **Self-updating (cron)** : .
+-   **Self-updating (cron)** : ,
 
 Below you find the list of orders :
 
@@ -84,7 +84,7 @@ Below you find the list of orders :
 
 > **NOTE**
 >
->  : ::56:::15.
+>  : ::56:::15
 
 Widget 
 =======
@@ -98,4 +98,4 @@ Widget
 ![networks6](../images/networks6.PNG)
 
 Changelog detailed :
-<https://github.com/jeedom/plugin-networks/commits/stable>
+<https://jeedom.github.io/plugin-networks/fr_FR/changelog>

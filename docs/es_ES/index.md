@@ -61,9 +61,9 @@ Aquí encontrarás toda la configuración de tu equipo :
     - 256 : 
 . . .
 
--   **Puerto** : 
+-   **Puerto** :  : :,
 
--   **Actualización automática (cron)** : .
+-   **Actualización automática (cron)** : ,
 
 A continuación encontrará la lista de pedidos. :
 
@@ -84,7 +84,7 @@ A continuación encontrará la lista de pedidos. :
 
 > **Nota**
 >
->  : ::56:::15.
+>  : ::56:::15
 
 Reproductores 
 =======
@@ -98,4 +98,4 @@ Reproductores
 ![networks6](../images/networks6.PNG)
 
 Registro de cambios detallado :
-<https://github.com/jeedom/plugin-networks/commits/stable>
+<https://jeedom.github.io/plugin-networks/fr_FR/changelog>

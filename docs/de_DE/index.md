@@ -61,9 +61,9 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
     - 256 : 
 . . .
 
--   **Hafen** : 
+-   **Hafen** :  : :,
 
--   **Selbstaktualisierung (cron)** : .
+-   **Selbstaktualisierung (cron)** : ,
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
@@ -84,7 +84,7 @@ Nachfolgend finden Sie die Liste der Bestellungen :
 
 > **Notiz**
 >
->  : ::56:::15.
+>  : ::56:::15
 
 Widgets 
 =======
@@ -98,4 +98,4 @@ Widgets
 ![networks6](../images/networks6.PNG)
 
 Changelog detailliert :
-<https://github.com/jeedom/plugin-networks/commits/stable>
+<https://jeedom.github.io/plugin-networks/fr_FR/changelog>

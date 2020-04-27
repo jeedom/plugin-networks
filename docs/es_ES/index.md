@@ -24,11 +24,11 @@ equipos) :
 
 > **Punta**
 >
-> 
-> 
-> .
+> Como en muchos lugares de Jeedom, coloca el mouse en el extremo izquierdo
+> muestra un menú de acceso rápido (puede, en
+> desde tu perfil, siempre déjalo visible).
 
- :
+Una vez que haces clic en uno de ellos, obtienes :
 
 ![networks4](../images/networks4.PNG)
 
@@ -46,13 +46,13 @@ Aquí encontrarás toda la configuración de tu equipo :
 
 -   **Dirección IP** : ,
 
--   **** : ,
+-   **Dirección MAC (wol)** : ,
 
--   **** : ,
+-   **Broadcast IP (wol)** : ,
 
--   **** :  : 
+-   **Método de ping** :  : 
     
--   **** :  : 
+-   **TTL** :  : 
     - 0 : 
     - 1 : 
     - 32 : 

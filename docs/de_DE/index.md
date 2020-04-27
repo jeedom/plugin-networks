@@ -24,11 +24,11 @@ Ausrüstung) :
 
 > **Spitze**
 >
-> 
-> 
-> .
+> Platzieren Sie wie an vielen Stellen in Jeedom die Maus ganz links
+> ruft ein Schnellzugriffsmenü auf (Sie können unter
+> Lassen Sie es in Ihrem Profil immer sichtbar.).
 
- :
+Sobald Sie auf eine davon klicken, erhalten Sie :
 
 ![networks4](../images/networks4.PNG)
 

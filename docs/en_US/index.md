@@ -24,11 +24,11 @@ equipment) :
 
 > **Tip**
 >
-> 
-> 
-> .
+> As in many places on Jeedom, place the mouse on the far left
+> brings up a quick access menu (you can, at
+> from your profile, always leave it visible).
 
- :
+Once you click on one of them, you get :
 
 ![networks4](../images/networks4.PNG)
 
@@ -46,13 +46,13 @@ Here you find all the configuration of your equipment :
 
 -   **IP adress** : ,
 
--   **** : ,
+-   **MAC address (wol)** : ,
 
--   **** : ,
+-   **Broadcast IP (wol)** : ,
 
--   **** :  : 
+-   **Ping method** :  : 
     
--   **** :  : 
+-   **TTL** :  : 
     - 0 : 
     - 1 : 
     - 32 : 

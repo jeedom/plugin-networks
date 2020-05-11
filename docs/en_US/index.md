@@ -34,13 +34,13 @@ Once you click on one of them, you get :
 
 Here you find all the configuration of your equipment :
 
--   **Networks equipment name** : name of your Networks equipment,
+-   **Name de l'équipement Networks** : name of your Networks equipment,
 
 -   **Parent object** : indicates the parent object to which the equipment belongs,
 
 -   **Category** : equipment categories (it can belong to several categories),
 
--   **Activer** : makes your equipment active,
+-   **Activate** : makes your equipment active,
 
 -   **Visible** : makes your equipment visible on the dashboard,
 
@@ -59,7 +59,7 @@ Here you find all the configuration of your equipment :
     - 64 : same region
     - 128 : same continent
     - 256 : no limit
-If you have a 'Time to live exceeded' error, increase this value. If empty, then the parameter is 255. NOTE that on some configuration (Docker for example) the 255 is not authorized so it is necessary to decrease this value.
+If you have a 'Time to live exceeded' error, increase this value. If empty, then the parameter is 255. Note that on some configuration (Docker for example) the 255 is not authorized so it is necessary to decrease this value.
 
 -   **Port** : Port to ping if you are in ping mode on a port (example : 8080 for 192.168.0.12:8080),
 
@@ -67,13 +67,13 @@ If you have a 'Time to live exceeded' error, increase this value. If empty, then
 
 Below you find the list of orders :
 
--   **Nom** : the name displayed on the dashboard,
+-   **Name** : the name displayed on the dashboard,
 
--   **Afficher** : allows to display the data on the dashboard,
+-   **Pin up** : allows to display the data on the dashboard,
 
--   **Tester** : Used to test the command.
+-   **Test** : Used to test the command.
 
-> **Note**
+> **NOTE**
 >
 > Jeedom will check the IP ping every minute (default).
 
@@ -82,7 +82,7 @@ Below you find the list of orders :
 > If you do not enter the MAC and broadcast address then you
 > will not have a wake-on-lan command.
 
-> **Note**
+> **NOTE**
 >
 > MAC address must be of the form : 5E:FF:56:A2:AF:15
 
@@ -98,4 +98,4 @@ And in mobile view :
 ![networks6](../images/networks6.PNG)
 
 Changelog detailed :
-<https://jeedom.github.io/plugin-networks/fr_FR/changelog>
+<https://jeedom.github.io/plugin-networks/en_US/changelog>

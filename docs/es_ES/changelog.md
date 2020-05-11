@@ -16,7 +16,7 @@
 
  # 02/02/2018
  
- - Optimización del cálculo de dependencia.
+ - Optimización del cálculo de dependencia
  
  # 05/07/2018
 
@@ -28,7 +28,7 @@
 
 # 06/09/2018
 
-- Corrección de errores en el panel.
+- Corrección de errores en el panel
 - Agregar botón duplicado
 
 # 08/05/2018

@@ -22,7 +22,7 @@ Ausrüstung) :
 
 ![networks3](../images/networks3.PNG)
 
-> **Tip**
+> **Spitze**
 >
 > Platzieren Sie wie an vielen Stellen in Jeedom die Maus ganz links
 > ruft ein Schnellzugriffsmenü auf (Sie können unter
@@ -34,15 +34,15 @@ Sobald Sie auf eine davon klicken, erhalten Sie :
 
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
--   **Name des Netzwerkgeräts** : Name Ihres Netzwerkgeräts,
+-   **Name de l'équipement Networks** : Name Ihres Netzwerkgeräts,
 
 -   **Übergeordnetes Objekt** : Gibt das übergeordnete Objekt an, zu dem das Gerät gehört,
 
 -   **Kategorie** : Gerätekategorien (es kann zu mehreren Kategorien gehören),
 
--   **Activer** : macht Ihre Ausrüstung aktiv,
+-   **Aktivieren** : macht Ihre Ausrüstung aktiv,
 
--   **Visible** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
+-   **Sichtbar** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
 
 -   **IP-Adresse** : IP-Adresse zum Ping,
 
@@ -50,7 +50,7 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
 -   **Broadcast IP (wol)** : Netzwerk-Broadcast-IP-Adresse zum Senden von Wake-on-LAN,
 
--   **Ping-Methode** : Wahl der Ping-Methode : IP (normal), ARP (bevorzugt für Telefone oder Peripheriegeräte, die einschlafen), PORT (um zu testen, ob ein Hafen offen ist)
+-   **Ping-Methode** : Wahl der Ping-Methode : IP (normal), ARP (bevorzugt für Telefone oder Peripheriegeräte, die einschlafen), PORT (um zu testen, ob ein Port offen ist)
     
 -   **TTL** : Lebenszeit können Werte sein : 
     - 0 : gleicher Host
@@ -61,28 +61,28 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
     - 256 : keine Begrenzung
 Wenn Sie den Fehler "Lebenszeit überschritten" haben, erhöhen Sie diesen Wert. Wenn leer, ist der Parameter 255. Beachten Sie, dass bei einigen Konfigurationen (z. B. Docker) der 255 nicht autorisiert ist, sodass dieser Wert verringert werden muss.
 
--   **Port** : Hafen zu Ping, wenn Sie sich an einem Hafen im Ping-Modus befinden (Beispiel) : 8080 für 192.168.0.12:8080),
+-   **Hafen** : Port zu Ping, wenn Sie sich an einem Port im Ping-Modus befinden (Beispiel) : 8080 für 192.168.0.12:8080),
 
 -   **Selbstaktualisierung (cron)** : cron definiert die Ping-Frequenz,
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
--   **Nom** : Der im Dashboard angezeigte Name,
+-   **Name** : Der im Dashboard angezeigte Name,
 
--   **Afficher** : ermöglicht die Anzeige der Daten im Dashboard,
+-   **Anzeige** : ermöglicht die Anzeige der Daten im Dashboard,
 
--   **Tester** : Wird zum Testen des Befehls verwendet.
+-   **Test** : Wird zum Testen des Befehls verwendet.
 
-> **Note**
+> **Notiz**
 >
 > Jeedom überprüft jede Minute den IP-Ping (Standard).
 
-> **Important**
+> **Wichtig**
 >
 > Wenn Sie den MAC und die Broadcast-Adresse nicht eingeben, dann Sie
 > wird keinen Wake-on-Lan-Befehl haben.
 
-> **Note**
+> **Notiz**
 >
 > Die MAC-Adresse muss die Form haben : 5E:FF:56:A2:AF:15
 
@@ -98,4 +98,4 @@ Und in der mobilen Ansicht :
 ![networks6](../images/networks6.PNG)
 
 Changelog detailliert :
-<https://jeedom.github.io/plugin-networks/fr_FR/changelog>
+<https://jeedom.github.io/plugin-networks/de_DE/changelog>

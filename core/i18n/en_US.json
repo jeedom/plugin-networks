@@ -47,7 +47,7 @@
         "Latence": "Latency",
         "Wake-on-lan": "Wake-on-lan",
         "L\\'adresse IP ne peut être vide": "IP address can't be empty",
-        "Echec du ping sur : ": "\nPing failed on:",
+        "Echec du ping sur : ": "Ping failed on:",
         "IP invalide": "Invalide IP",
         "MAC invalide": "MAC address invalid",
         "SUBNET invalide": "Subnet invalid",

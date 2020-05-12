@@ -1,3 +1,5 @@
+# Changelog-Netzwerk
+
 # 04/08/2020
 
 - Bugfix Arp Ping betrachtet das Gerät als nicht vorhanden, wenn mehr als ein Versuch erforderlich war

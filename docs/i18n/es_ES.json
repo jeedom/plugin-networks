@@ -1,5 +1,6 @@
 {
     "changelog.md": {
+        "Changelog Network": "Red de registro de cambios",
         "08\/04\/2020": "08\/04\/2020",
         "bugfix arp ping considère le device absent si plus d'une tentative a été nécessaire": "bugfix arp ping considera el dispositivo ausente si fue necesario más de un intento",
         "04\/04\/2020": "04\/04\/2020",

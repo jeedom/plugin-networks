@@ -1,3 +1,5 @@
+# Red de registro de cambios
+
 # 08/04/2020
 
 - bugfix arp ping considera el dispositivo ausente si fue necesario más de un intento

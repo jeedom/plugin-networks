@@ -18,7 +18,7 @@
         "Catégorie": "категория",
         "Activer": "активировать",
         "Visible": "Видимый",
-        "Adresse IP": "IP Адрес ",
+        "Adresse IP": "IP Адрес",
         "Adresse MAC (wol)": "",
         "Broadcast IP (wol)": "",
         "Méthode de ping": "",
@@ -37,7 +37,7 @@
     },
     "plugins\/networks\/core\/ajax\/networks.ajax.php": {
         "401 - Accès non autorisé": "401 - Несанкционированный доступ",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à :"
     },
     "plugins\/networks\/core\/class\/networks.class.php": {
         "Erreur pour ": "",

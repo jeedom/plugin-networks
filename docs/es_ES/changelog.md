@@ -1,5 +1,9 @@
 # Red de registro de cambios
 
+>**Importante**
+>
+>Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto
+
 # 08/04/2020
 
 - bugfix arp ping considera el dispositivo ausente si fue necesario más de un intento

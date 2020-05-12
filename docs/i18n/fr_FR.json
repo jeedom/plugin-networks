@@ -1,6 +1,8 @@
 {
     "changelog.md": {
         "Changelog Network": "Changelog Network",
+        "IMPORTANT": "IMPORTANT",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte",
         "08\/04\/2020": "08\/04\/2020",
         "bugfix arp ping considère le device absent si plus d'une tentative a été nécessaire": "bugfix arp ping considère le device absent si plus d'une tentative a été nécessaire",
         "04\/04\/2020": "04\/04\/2020",
@@ -26,20 +28,13 @@
         "Possibilité de configurer le TTL": "Possibilité de configurer le TTL"
     },
     "index.md": {
-        "Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement": "Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement",
-        "réseau": "réseau",
+        "Plugin Networks": "Plugin Networks",
+        "Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement réseau": "Ce plugin permet de faire un ping ou un wake-on-lan sur un équipement réseau",
         "Configuration du plugin": "Configuration du plugin",
-        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci",
-        "il n'y a aucune configuration à ce niveau": "il n'y a aucune configuration à ce niveau",
+        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, il n'y a aucune configuration à ce niveau": "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, il n'y a aucune configuration à ce niveau",
         "Configuration des équipements": "Configuration des équipements",
-        "La configuration des équipements Networks est accessible à partir du": "La configuration des équipements Networks est accessible à partir du",
-        "menu plugin": "menu plugin",
-        "Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1": "Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1",
-        "équipement)": "équipement)",
-        "Tip": "Tip",
-        "Comme à beaucoup d'endroits sur Jeedom, placer la souris tout à gauche": "Comme à beaucoup d'endroits sur Jeedom, placer la souris tout à gauche",
-        "permet de faire apparaître un menu d'accès rapide (vous pouvez, à": "permet de faire apparaître un menu d'accès rapide (vous pouvez, à",
-        "partir de votre profil, le laisser toujours visible)": "partir de votre profil, le laisser toujours visible)",
+        "La configuration des équipements Networks est accessible à partir du menu plugin": "La configuration des équipements Networks est accessible à partir du menu plugin",
+        "Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1 équipement)": "Voilà à quoi ressemble la page du plugin Networks (ici avec déjà 1 équipement)",
         "Une fois que vous cliquez sur l'un d'eux, vous obtenez": "Une fois que vous cliquez sur l'un d'eux, vous obtenez",
         "Vous retrouvez ici toute la configuration de votre équipement": "Vous retrouvez ici toute la configuration de votre équipement",
         "Nom de l'équipement Networks": "Nom de l'équipement Networks",
@@ -88,16 +83,11 @@
         "Note": "Note",
         "Jeedom va vérifier toutes les minutes (par défaut) le ping sur l'IP": "Jeedom va vérifier toutes les minutes (par défaut) le ping sur l'IP",
         "Important": "Important",
-        "Si vous ne renseignez pas l'adresse MAC et broadcast alors vous": "Si vous ne renseignez pas l'adresse MAC et broadcast alors vous",
-        "n'aurez pas de commande wake-on-lan": "n'aurez pas de commande wake-on-lan",
+        "Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan": "Si vous ne renseignez pas l'adresse MAC et broadcast alors vous n'aurez pas de commande wake-on-lan",
         "L'adresse MAC doit être de la forme": "L'adresse MAC doit être de la forme",
         "5E": "5E",
         "FF": "FF",
         "A2": "A2",
-        "AF": "AF",
-        "Widgets": "Widgets",
-        "Exemple de widget (sans le wake-on-lan) en vue desktop": "Exemple de widget (sans le wake-on-lan) en vue desktop",
-        "Et en vue mobile": "Et en vue mobile",
-        "Changelog détaillé": "Changelog détaillé"
+        "AF": "AF"
     }
 }

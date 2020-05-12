@@ -1,5 +1,9 @@
 # Rede de Mudanças
 
+>**IMPORTANTE**
+>
+>Como lembrete, se não houver informações sobre a atualização, isso significa que se trata apenas da atualização da documentação, tradução ou texto
+
 # 04/08/2020
 
 - bugfix arp ping considera o dispositivo ausente se for necessária mais de uma tentativa

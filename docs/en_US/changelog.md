@@ -1,5 +1,9 @@
 # Changelog Network
 
+>**Important**
+>
+>As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text
+
 # 04/08/2020
 
 - bugfix arp ping considers the device absent if more than one attempt was necessary

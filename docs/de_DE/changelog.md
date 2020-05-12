@@ -1,5 +1,9 @@
 # Changelog-Netzwerk
 
+>**Wichtig**
+>
+>Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt
+
 # 04/08/2020
 
 - Bugfix Arp Ping betrachtet das Gerät als nicht vorhanden, wenn mehr als ein Versuch erforderlich war

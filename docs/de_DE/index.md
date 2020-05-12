@@ -1,32 +1,22 @@
-Mit diesem Plugin können Sie Geräte anpingen oder aktivieren
-Netzwerk.
+# Plugin-Netzwerke
 
-Plugin Konfiguration 
-=======================
+Mit diesem Plugin können Sie Netzwerkgeräte anpingen oder aktivieren.
 
-Nach dem Herunterladen des Plugins müssen Sie es nur noch aktivieren,
-Auf dieser Ebene gibt es keine Konfiguration.
+# Plugin Konfiguration 
+
+Nachdem Sie das Plugin heruntergeladen haben, müssen Sie es nur noch aktivieren. Auf dieser Ebene gibt es keine Konfiguration.
 
 ![networks](../images/networks.PNG)
 
-Gerätekonfiguration 
-=============================
+# Gerätekonfiguration 
 
-Auf die Konfiguration der Netzwerkgeräte kann über das zugegriffen werden
-Plugin-Menü :
+Auf die Konfiguration der Netzwerkgeräte kann über das Plugin-Menü zugegriffen werden :
 
 ![networks2](../images/networks2.PNG)
 
-So sieht die Networks-Plugin-Seite aus (hier mit bereits 1
-Ausrüstung) :
+So sieht die Networks-Plugin-Seite aus (hier mit bereits 1 Gerät) :
 
 ![networks3](../images/networks3.PNG)
-
-> **Spitze**
->
-> Platzieren Sie wie an vielen Stellen in Jeedom die Maus ganz links
-> ruft ein Schnellzugriffsmenü auf (Sie können unter
-> Lassen Sie es in Ihrem Profil immer sichtbar.).
 
 Sobald Sie auf eine davon klicken, erhalten Sie :
 
@@ -35,23 +25,14 @@ Sobald Sie auf eine davon klicken, erhalten Sie :
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
 -   **Name de l'équipement Networks** : Name Ihres Netzwerkgeräts,
-
 -   **Übergeordnetes Objekt** : Gibt das übergeordnete Objekt an, zu dem das Gerät gehört,
-
 -   **Kategorie** : Gerätekategorien (es kann zu mehreren Kategorien gehören),
-
 -   **Aktivieren** : macht Ihre Ausrüstung aktiv,
-
 -   **Sichtbar** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
-
 -   **IP-Adresse** : IP-Adresse zum Ping,
-
 -   **MAC-Adresse (wol)** : MAC-Adresse für Wake-on-LAN,
-
 -   **Broadcast IP (wol)** : Netzwerk-Broadcast-IP-Adresse zum Senden von Wake-on-LAN,
-
 -   **Ping-Methode** : Wahl der Ping-Methode : IP (normal), ARP (bevorzugt für Telefone oder Peripheriegeräte, die einschlafen), PORT (um zu testen, ob ein Port offen ist)
-    
 -   **TTL** : Lebenszeit können Werte sein : 
     - 0 : gleicher Host
     - 1 : gleiche Subnetze
@@ -59,18 +40,14 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
     - 64 : gleiche Region
     - 128 : gleicher Kontinent
     - 256 : keine Begrenzung
-Wenn Sie den Fehler "Lebenszeit überschritten" haben, erhöhen Sie diesen Wert. Wenn leer, ist der Parameter 255. Beachten Sie, dass bei einigen Konfigurationen (z. B. Docker) der 255 nicht autorisiert ist, sodass dieser Wert verringert werden muss.
-
+    Wenn Sie den Fehler "Lebenszeit überschritten" haben, erhöhen Sie diesen Wert. Wenn leer, ist der Parameter 255. Beachten Sie, dass bei einigen Konfigurationen (z. B. Docker) der 255 nicht autorisiert ist, sodass dieser Wert verringert werden muss.
 -   **Hafen** : Port zu Ping, wenn Sie sich an einem Port im Ping-Modus befinden (Beispiel) : 8080 für 192.168.0.12:8080),
-
 -   **Selbstaktualisierung (cron)** : cron definiert die Ping-Frequenz,
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
 -   **Name** : Der im Dashboard angezeigte Name,
-
 -   **Anzeige** : ermöglicht die Anzeige der Daten im Dashboard,
-
 -   **Test** : Wird zum Testen des Befehls verwendet.
 
 > **Notiz**
@@ -79,23 +56,8 @@ Nachfolgend finden Sie die Liste der Bestellungen :
 
 > **Wichtig**
 >
-> Wenn Sie den MAC und die Broadcast-Adresse nicht eingeben, dann Sie
-> wird keinen Wake-on-Lan-Befehl haben.
+> Wenn Sie den MAC und die Broadcast-Adresse nicht eingeben, haben Sie keinen Wake-on-Lan-Befehl.
 
 > **Notiz**
 >
 > Die MAC-Adresse muss die Form haben : 5E:FF:56:A2:AF:15
-
-Widgets 
-=======
-
-Beispiel für ein Widget (ohne Wake-on-LAN) in der Desktop-Ansicht :
-
-![networks5](../images/networks5.PNG)
-
-Und in der mobilen Ansicht :
-
-![networks6](../images/networks6.PNG)
-
-Changelog detailliert :
-<https://jeedom.github.io/plugin-networks/de_DE/changelog>

@@ -52,5 +52,8 @@
         "MAC invalide": "MAC inválido",
         "SUBNET invalide": "SUBNET inválido",
         "Echec de la commande : ": "Orden fallido:"
+    },
+    "info.json": {
+        "Plugin permettant la gestion réseaux des équipements : ping (ip,arp et port) et wake on lan": "Complemento que permite la gestión de la red del equipo: ping (ip, arp y port) y wake on lan"
     }
 }

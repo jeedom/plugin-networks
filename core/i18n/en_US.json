@@ -52,5 +52,8 @@
         "MAC invalide": "MAC address invalid",
         "SUBNET invalide": "Subnet invalid",
         "Echec de la commande : ": "Command failed:"
+    },
+    "info.json": {
+        "Plugin permettant la gestion réseaux des équipements : ping (ip,arp et port) et wake on lan": "Plugin allowing network management of equipment: ping (ip, arp and port) and wake on lan"
     }
 }

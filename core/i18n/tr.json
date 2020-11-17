@@ -29,9 +29,13 @@
         "Auto-actualisation (cron)": "",
         "Notifier si le ping est KO": "",
         "Nom": "İsim",
-        "Options": "Opsiyonlar"
+        "Type": "Çeşit",
+        "Options": "Opsiyonlar",
+        "Action": "Eylem"
     },
     "plugins\/networks\/desktop\/js\/networks.js": {
+        "Nom": "İsim",
+        "Afficher": "Göster",
         "Historiser": "Tarihe göre sırala",
         "Tester": "Test et"
     },
@@ -54,6 +58,6 @@
         "Echec de la commande : ": ""
     },
     "info.json": {
-        "Plugin permettant la gestion réseaux des équipements : ping (ip,arp et port) et wake on lan": ""
+        "Plugin permettant la gestion réseau des équipements : ping (ip, arp, port) et wake on lan": ""
     }
 }

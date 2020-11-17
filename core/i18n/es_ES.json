@@ -29,9 +29,13 @@
         "Auto-actualisation (cron)": "Actualización automática (cron)",
         "Notifier si le ping est KO": "Notificar si el ping es KO",
         "Nom": "Nombre",
-        "Options": "Opciones"
+        "Type": "Tipo",
+        "Options": "Opciones",
+        "Action": "Acción"
     },
     "plugins\/networks\/desktop\/js\/networks.js": {
+        "Nom": "Nombre",
+        "Afficher": "Mostrar",
         "Historiser": "Guardar historial",
         "Tester": "Probar"
     },
@@ -54,6 +58,6 @@
         "Echec de la commande : ": "Orden fallido:"
     },
     "info.json": {
-        "Plugin permettant la gestion réseaux des équipements : ping (ip,arp et port) et wake on lan": "Complemento que permite la gestión de la red del equipo: ping (ip, arp y port) y wake on lan"
+        "Plugin permettant la gestion réseau des équipements : ping (ip, arp, port) et wake on lan": "Complemento que permite la gestión de equipos en red: ping (ip, arp, puerto) y wake on lan"
     }
 }

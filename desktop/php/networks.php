@@ -164,7 +164,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 					<thead>
 						<tr>
 							<th>{{Nom}}</th>
-							<th>{{Type}}</th>
 							<th>{{Options}}</th>
 							<th>{{Action}}</th>
 						</tr>

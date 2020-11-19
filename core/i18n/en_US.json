@@ -29,7 +29,6 @@
         "Auto-actualisation (cron)": "Self-updating (cron)",
         "Notifier si le ping est KO": "Notify if ping is KO",
         "Nom": "Name",
-        "Type": "Type",
         "Options": "Options",
         "Action": "Action"
     },

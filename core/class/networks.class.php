@@ -96,6 +96,7 @@ class networks extends eqLogic {
 			$ping->setName(__('Statut', __FILE__));
 			$ping->setOrder(1);
 			$ping->setTemplate('dashboard', 'line');
+			$ping->setConfiguration('repeatEventManagement','never');
 		}
 		$ping->setType('info');
 		$ping->setSubType('binary');

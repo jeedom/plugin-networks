@@ -45,6 +45,11 @@ function networks_update() {
 	$cron->setTimeout(30);
 	$cron->save();
 	$cron->stop();
+	foreach(eqLogic::byType('networks') as $eqLogic){
+		$ping = $eqLogic->getCmd(null, 'ping');	
+		$ping->setConfiguration('repeatEventManagement','never');
+		$ping->save();
+	}
 }
 
 function networks_remove() {

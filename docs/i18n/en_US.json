@@ -2,6 +2,8 @@
     "changelog.md": {
         "Changelog Network": "Changelog Network",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text",
+        "09\/06\/2021": "06\/09\/2021",
+        "Correction d'un soucis sur la repetition des commandes": "Fixed an issue with repetition of commands",
         "16\/11\/2020": "16\/11\/2020",
         "Nouvelle présentation de la liste des objets": "New presentation of the list of objects",
         "Ajout du tag \"Compatibilité V4": "Addition of the tag \"V4 compatibility",

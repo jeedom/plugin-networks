@@ -4,6 +4,10 @@
 >
 >Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto
 
+# 09/06/2021
+
+- Se solucionó un problema con la repetición de comandos
+
 # 16/11/2020
 
 - Nueva presentación de la lista de objetos

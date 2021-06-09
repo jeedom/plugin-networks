@@ -4,6 +4,10 @@
 >
 >Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt
 
+# 09.06.2021
+
+- Ein Problem mit der Wiederholung von Befehlen wurde behoben
+
 # 16/11/2020
 
 - Neue Darstellung der Objektliste

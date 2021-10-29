@@ -62,9 +62,16 @@ class networks_Ping {
 		$output = array_values(array_filter($output));
 		if (!empty($output[1])) {
 			if (count($output) >= 5) {
-				$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)[mu]?s/", $output[count($output)-4], $matches);
+				$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)(?<unit>[mu]?s(ec)?)/", $output[count($output)-4], $matches);
 				if ($response > 0 && isset($matches['time'])) {
 					$latency = $matches['time'];
+					if (isset($matches['unit'])) {
+						if ($matches['unit'] == 's' || $matches['unit'] == 'sec') {
+							$latency *= 1000;
+						} elseif ($matches['unit'] == 'us' || $matches['unit'] == 'usec') {
+							$latency /= 1000;
+						}
+					}
 				}				
 			}			
 		}

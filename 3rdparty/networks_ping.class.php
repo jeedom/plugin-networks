@@ -62,7 +62,7 @@ class networks_Ping {
 		$output = array_values(array_filter($output));
 		if (!empty($output[1])) {
 			if (count($output) >= 5) {
-				$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)ms/", $output[count($output)-4], $matches);
+				$response = preg_match("/time(?:=|<)(?<time>[\.0-9]+)(?:|\s)[mu]?s/", $output[count($output)-4], $matches);
 				if ($response > 0 && isset($matches['time'])) {
 					$latency = $matches['time'];
 				}				

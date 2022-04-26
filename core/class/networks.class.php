@@ -153,13 +153,6 @@ class networks extends eqLogic {
 			$ping->setPort($this->getConfiguration('port', 80));
 		}
 		$latency_time = $ping->ping($this->getConfiguration('pingMode', 'ip'));
-		if ($latency_time === false) {
-			$latency_time = $ping->ping($this->getConfiguration('pingMode', 'ip'));
-		}
-		if ($latency_time === false) {
-			usleep(100);
-			$latency_time = $ping->ping($this->getConfiguration('pingMode', 'ip'));
-		}
 		if ($this->getConfiguration('notifyifko') == 1) {
 			if ($latency_time === false) {
 				message::add('networks', __('Echec du ping sur : ', __FILE__) . $this->getHumanName(), '', 'pingFailed' . $this->getId());

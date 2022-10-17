@@ -2,6 +2,9 @@
     "changelog.md": {
         "Changelog Network": "Red de registro de cambios",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto",
+        "17\/10\/2022": "17\/10\/2022",
+        "Ajout présentation mode tableau des équipements": "Adición de presentación en modo tabla de equipos",
+        "Mise à jour liste des commandes pour Jeedom v4.3": "Lista de comandos de actualización para Jeedom v4.3",
         "09\/06\/2021": "09\/06\/2021",
         "Correction d'un soucis sur la repetition des commandes": "Se solucionó un problema con la repetición de comandos",
         "16\/11\/2020": "16\/11\/2020",

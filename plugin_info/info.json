@@ -25,12 +25,7 @@
         "en_US",
         "es_ES",
         "de_DE",
-        "ru_RU",
-        "id_ID",
-        "it_IT",
-        "ja_JP",
-        "pt_PT",
-        "tr"
+        "pt_PT"
     ],
     "compatibility": [
         "miniplus",
@@ -40,5 +35,7 @@
         "diy",
         "mobile",
         "v4"
-    ]
+    ],
+    "changelog_beta": "https:\/\/doc.jeedom.com\/#language#\/plugins\/communication\/networks\/beta\/changelog",
+    "documentation_beta": "https:\/\/doc.jeedom.com\/#language#\/plugins\/communication\/networks\/beta"
 }

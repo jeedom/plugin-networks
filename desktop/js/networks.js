@@ -14,12 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
-$('#bt_cronGenerator').on('click', function () {
-    jeedom.getCronSelectModal({}, function (result) {
-        $('.eqLogicAttr[data-l1key=configuration][data-l2key=autorefresh]').value(result.value);
-    });
-});
-
 $('.eqLogicAttr[data-l1key=configuration][data-l2key=pingMode]').on('change', function () {
     $('.pingMode').hide();
     $('.pingMode.' + $(this).value()).show();

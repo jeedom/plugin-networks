@@ -64,6 +64,8 @@
         "Rafraîchir": "Aktualisieren",
         "Statut": "Status",
         "Latence": "Latenz",
+        "addresseIP": "AdresseIP",
+        "addresseMAC": "MAC-Adresse",
         "Wake-on-lan": "Wake-on-Lan",
         "L\\'adresse IP ne peut être vide": "Die IP-Adresse darf nicht leer sein",
         "Echec du ping sur : ": "Ping fehlgeschlagen am:",

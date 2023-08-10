@@ -64,6 +64,8 @@
         "Rafraîchir": "Dingin",
         "Statut": "Status",
         "Latence": "Latence",
+        "addresseIP": "addresseIP",
+        "addresseMAC": "addresseMAC",
         "Wake-on-lan": "Wake-on-lan",
         "L\\'adresse IP ne peut être vide": "L\\'adresse IP ne peut être vide",
         "Echec du ping sur : ": "Echec du ping sur :",

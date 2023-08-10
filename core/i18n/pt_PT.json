@@ -64,6 +64,8 @@
         "Rafraîchir": "Legal",
         "Statut": "Estado",
         "Latence": "Latência",
+        "addresseIP": "endereço IP",
+        "addresseMAC": "Endereço MAC",
         "Wake-on-lan": "Wake-on-lan",
         "L\\'adresse IP ne peut être vide": "O endereço IP não pode estar vazio",
         "Echec du ping sur : ": "Falha no ping:",

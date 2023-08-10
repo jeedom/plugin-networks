@@ -64,6 +64,8 @@
         "Rafraîchir": "Refrescar",
         "Statut": "Estado",
         "Latence": "Estado latente",
+        "addresseIP": "direcciónIP",
+        "addresseMAC": "Dirección MAC",
         "Wake-on-lan": "Wake-on-lan",
         "L\\'adresse IP ne peut être vide": "La dirección IP no puede estar vacía",
         "Echec du ping sur : ": "Ping falló el:",

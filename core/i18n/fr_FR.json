@@ -7,6 +7,7 @@
         "Mes Networks": "Mes Networks",
         "Aucun équipement trouvé, cliquer sur \"Ajouter\" pour commencer": "Aucun équipement trouvé, cliquer sur \"Ajouter\" pour commencer",
         "Rechercher": "Rechercher",
+        "Fréquence de rafraîchissement des commandes": "Fréquence de rafraîchissement des commandes",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
         "Configuration avancée": "Configuration avancée",
@@ -35,6 +36,7 @@
         "Auto-actualisation": "Auto-actualisation",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Fréquence de rafraîchissement des commandes infos de l'équipement",
         "Cliquer sur ? pour afficher l'assistant cron": "Cliquer sur ? pour afficher l'assistant cron",
+        "Assistant cron": "Assistant cron",
         "Notifier si le ping est KO": "Notifier si le ping est KO",
         "Nom": "Nom",
         "Type": "Type",
@@ -44,7 +46,7 @@
     "plugins\/networks\/desktop\/js\/networks.js": {
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
-        "Commande info liée": "Commande info liée",
+        "Commande information liée": "Commande information liée",
         "Aucune": "Aucune",
         "Afficher": "Afficher",
         "Historiser": "Historiser",
@@ -52,6 +54,8 @@
         "Min": "Min",
         "Max": "Max",
         "Unité": "Unité",
+        "Configuration avancée": "Configuration avancée",
+        "Tester": "Tester",
         "Supprimer la commande": "Supprimer la commande"
     },
     "plugins\/networks\/core\/ajax\/networks.ajax.php": {

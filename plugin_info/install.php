@@ -19,6 +19,9 @@
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
 function networks_install() {
+	if (file_exists(dirname(__FILE__) . '/../mobile')) {
+		rmdir(dirname(__FILE__) . '/../mobile');
+	} 
 	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();

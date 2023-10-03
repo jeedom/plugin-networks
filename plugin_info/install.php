@@ -33,6 +33,9 @@ function networks_install() {
 }
 
 function networks_update() {
+	if (file_exists(dirname(__FILE__) . '/../mobile')) {
+		rmdir(dirname(__FILE__) . '/../mobile');
+	} 
 	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();

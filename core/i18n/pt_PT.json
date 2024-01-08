@@ -7,6 +7,7 @@
         "Mes Networks": "Minhas redes",
         "Aucun équipement trouvé, cliquer sur \"Ajouter\" pour commencer": "Nenhum equipamento encontrado, clique em \"Adicionar\" para iniciar",
         "Rechercher": "Pesquisa",
+        "Fréquence de rafraîchissement des commandes": "Taxa de atualização de comando",
         "Equipement visible": "Equipamento visível",
         "Equipement non visible": "Equipamento não visível",
         "Configuration avancée": "Configuração avançada",
@@ -35,6 +36,7 @@
         "Auto-actualisation": "Atualização automática",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Taxa de atualização do comando de informações do equipamento",
         "Cliquer sur ? pour afficher l'assistant cron": "Clique em ? para exibir o auxiliar cron",
+        "Assistant cron": "CronWizard",
         "Notifier si le ping est KO": "Notificar se o ping é KO",
         "Nom": "Nome",
         "Type": "Gentil",
@@ -44,7 +46,7 @@
     "plugins\/networks\/desktop\/js\/networks.js": {
         "Nom de la commande": "Nome do comando",
         "Choisir une icône": "Escolha um ícone",
-        "Commande info liée": "Comando de informações vinculadas",
+        "Commande information liée": "Informações relacionadas ao pedido",
         "Aucune": "Nenhum",
         "Afficher": "Display",
         "Historiser": "Historicizar",
@@ -52,6 +54,8 @@
         "Min": "Mínimo",
         "Max": "Máx.",
         "Unité": "Unidade",
+        "Configuration avancée": "Configuração avançada",
+        "Tester": "Teste",
         "Supprimer la commande": "Excluir pedido"
     },
     "plugins\/networks\/core\/ajax\/networks.ajax.php": {
@@ -64,6 +68,8 @@
         "Rafraîchir": "Legal",
         "Statut": "Estado",
         "Latence": "Latência",
+        "addresseIP": "endereço IP",
+        "addresseMAC": "Endereço MAC",
         "Wake-on-lan": "Wake-on-lan",
         "L\\'adresse IP ne peut être vide": "O endereço IP não pode estar vazio",
         "Echec du ping sur : ": "Falha no ping:",

@@ -1,0 +1,7 @@
+{
+	"apt": {
+		"wakeonlan": {},
+		"etherwake": {},
+		"arping": {}
+	}
+}

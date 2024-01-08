@@ -7,6 +7,7 @@
         "Mes Networks": "Mis Networks",
         "Aucun équipement trouvé, cliquer sur \"Ajouter\" pour commencer": "No se encontró ningún equipo, haga clic en \"Agregar\" para comenzar",
         "Rechercher": "Buscar",
+        "Fréquence de rafraîchissement des commandes": "Frecuencia de actualización del comando",
         "Equipement visible": "Equipos visibles",
         "Equipement non visible": "Equipo no visible",
         "Configuration avancée": "Configuración avanzada",
@@ -35,6 +36,7 @@
         "Auto-actualisation": "Actualización automática",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Frecuencia de actualización del comando de información del equipo",
         "Cliquer sur ? pour afficher l'assistant cron": "Haga clic en ? para mostrar el ayudante de cron",
+        "Assistant cron": "Asistente Cron",
         "Notifier si le ping est KO": "Notificar si el ping es KO",
         "Nom": "Nombre",
         "Type": "Tipo",
@@ -44,7 +46,7 @@
     "plugins\/networks\/desktop\/js\/networks.js": {
         "Nom de la commande": "Nombre del comando",
         "Choisir une icône": "Elige un icono",
-        "Commande info liée": "Comando de información vinculada",
+        "Commande information liée": "Información relacionada con el pedido",
         "Aucune": "Ninguna",
         "Afficher": "Mostrar",
         "Historiser": "Guardar historial",
@@ -52,6 +54,8 @@
         "Min": "Mínimo",
         "Max": "Máx.",
         "Unité": "Unidad",
+        "Configuration avancée": "Configuración avanzada",
+        "Tester": "Prueba",
         "Supprimer la commande": "Eliminar orden"
     },
     "plugins\/networks\/core\/ajax\/networks.ajax.php": {
@@ -64,6 +68,8 @@
         "Rafraîchir": "Refrescar",
         "Statut": "Estado",
         "Latence": "Estado latente",
+        "addresseIP": "direcciónIP",
+        "addresseMAC": "Dirección MAC",
         "Wake-on-lan": "Wake-on-lan",
         "L\\'adresse IP ne peut être vide": "La dirección IP no puede estar vacía",
         "Echec du ping sur : ": "Ping falló el:",

@@ -118,6 +118,34 @@ class networks extends eqLogic {
 		$latency->setUnite('ms');
 		$latency->save();
 
+		$addresseIP = $this->getCmd(null, 'addresseIP');
+		if (!is_object($addresseIP)) {
+			$addresseIP = new networksCmd();
+			$addresseIP->setLogicalId('addresseIP');
+			$addresseIP->setIsVisible(1);
+			$addresseIP->setName(__('addresseIP', __FILE__));
+			$addresseIP->setOrder(3);
+		}
+		$addresseIP->setType('info');
+		$addresseIP->setSubType('string');
+		$addresseIP->setEqLogic_id($this->getId());
+		$addresseIP->save();
+		$addresseIP->event($this->getConfiguration('ip', ''));
+
+		$addresseMAC = $this->getCmd(null, 'addresseMAC');
+		if (!is_object($addresseMAC)) {
+			$addresseMAC = new networksCmd();
+			$addresseMAC->setLogicalId('addresseMAC');
+			$addresseMAC->setIsVisible(1);
+			$addresseMAC->setName(__('addresseMAC', __FILE__));
+			$addresseMAC->setOrder(4);
+		}
+		$addresseMAC->setType('info');
+		$addresseMAC->setSubType('string');
+		$addresseMAC->setEqLogic_id($this->getId());
+		$addresseMAC->save();
+		$addresseMAC->event($this->getConfiguration('mac'), '');
+
 		$wol = $this->getCmd(null, 'wol');
 		if ($this->getConfiguration('mac') == '' || $this->getConfiguration('broadcastIP') == '') {
 			if (is_object($wol)) {

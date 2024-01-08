@@ -7,6 +7,7 @@
         "Mes Networks": "Meine Netzwerke",
         "Aucun équipement trouvé, cliquer sur \"Ajouter\" pour commencer": "Keine Ausrüstung gefunden, klicken Sie zum Starten auf \"Hinzufügen\"",
         "Rechercher": "Suchen nach",
+        "Fréquence de rafraîchissement des commandes": "Befehlsaktualisierungsrate",
         "Equipement visible": "Sichtbare Ausrüstung",
         "Equipement non visible": "Ausrüstung nicht sichtbar",
         "Configuration avancée": "Erweiterte Konfiguration",
@@ -35,6 +36,7 @@
         "Auto-actualisation": "Selbstauffrischung",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Aktualisierungsrate des Ausrüstungsinfo-Befehls",
         "Cliquer sur ? pour afficher l'assistant cron": "Klicke auf ? um den Cron-Helfer anzuzeigen",
+        "Assistant cron": "CronWizard",
         "Notifier si le ping est KO": "Benachrichtigen, wenn der Ping KO ist",
         "Nom": "Name",
         "Type": "Nett",
@@ -44,7 +46,7 @@
     "plugins\/networks\/desktop\/js\/networks.js": {
         "Nom de la commande": "Befehlsname",
         "Choisir une icône": "Wählen Sie ein Symbol aus",
-        "Commande info liée": "Verknüpfter Info-Befehl",
+        "Commande information liée": "Bestellbezogene Informationen",
         "Aucune": "Keiner",
         "Afficher": "Anzeige",
         "Historiser": "Chronik",
@@ -52,6 +54,8 @@
         "Min": "Minimum",
         "Max": "Max",
         "Unité": "Einheit",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Tester": "Prüfen",
         "Supprimer la commande": "Auftrag löschen"
     },
     "plugins\/networks\/core\/ajax\/networks.ajax.php": {
@@ -64,6 +68,8 @@
         "Rafraîchir": "Aktualisieren",
         "Statut": "Status",
         "Latence": "Latenz",
+        "addresseIP": "AdresseIP",
+        "addresseMAC": "MAC-Adresse",
         "Wake-on-lan": "Wake-on-Lan",
         "L\\'adresse IP ne peut être vide": "Die IP-Adresse darf nicht leer sein",
         "Echec du ping sur : ": "Ping fehlgeschlagen am:",

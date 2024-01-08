@@ -44,7 +44,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '<span class="hiddenAsCard displayTableRight hidden">';
 				if ($eqLogic->getConfiguration('autorefresh', '') != '') {
-					echo '<span class="label label-info">' . $eqLogic->getConfiguration('autorefresh') . '</span>';
+					echo '<span class="label label-info" title="{{Fréquence de rafraîchissement des commandes}}">' . $eqLogic->getConfiguration('autorefresh') . '</span>';
 				}
 				echo ($eqLogic->getIsVisible() == 1) ? '<i class="fas fa-eye" title="{{Equipement visible}}"></i>' : '<i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
 				echo '</span>';
@@ -166,7 +166,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									<div class="input-group">
 										<input type="text" class="eqLogicAttr form-control roundedLeft" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Cliquer sur ? pour afficher l'assistant cron}}">
 										<span class="input-group-btn">
-											<a class="btn btn-default cursor jeeHelper roundedRight" data-helper="cron" title="Assistant cron">
+											<a class="btn btn-default cursor jeeHelper roundedRight" data-helper="cron" title="{{Assistant cron}}">
 												<i class="fas fa-question-circle"></i>
 											</a>
 										</span>

@@ -7,6 +7,8 @@
 # 08/01/2024
 
 - Préparation pour jeedom 4.4
+- Correction de bugs
+- Optimisation de la gestion des unitées
 
 # 17/10/2022
 

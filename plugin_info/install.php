@@ -18,7 +18,16 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
+
+
+
+
+
 function networks_install() {
+	$pathMobile = dirname(__FILE__) . '/../mobile';
+	if (file_exists($pathMobile)) {
+		shell_exec('rm -r ' . $pathMobile);
+	} 
 	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
@@ -33,6 +42,10 @@ function networks_install() {
 }
 
 function networks_update() {
+	$pathMobile = dirname(__FILE__) . '/../mobile';
+	if (file_exists($pathMobile)) {
+		shell_exec('rm -r ' . $pathMobile);
+	} 
 	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();

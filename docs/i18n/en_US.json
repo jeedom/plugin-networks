@@ -2,6 +2,10 @@
     "changelog.md": {
         "Changelog Network": "Changelog Network",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text",
+        "08\/01\/2024": "01\/08\/2024",
+        "Préparation pour jeedom 4.4": "Preparing for jeedom 4.4",
+        "Correction de bugs": "Bugfix",
+        "Optimisation de la gestion des unitées": "Optimization of unit management",
         "17\/10\/2022": "10\/17\/2022",
         "Ajout présentation mode tableau des équipements": "Addition of equipment table mode presentation",
         "Mise à jour liste des commandes pour Jeedom v4.3": "Update command list for Jeedom v4.3",

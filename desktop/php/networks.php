@@ -22,6 +22,16 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<br />
 				<span>{{Configuration}}</span>
 			</div>
+			<?php
+			$jeedomVersion  = jeedom::version() ?? '0';
+			$displayInfo = version_compare($jeedomVersion, '4.4.0', '>=');
+			if ($displayInfo) {
+				echo '<div class="cursor eqLogicAction info" data-action="createCommunityPost">';
+				echo '<i class="fas fa-ambulance"></i><br>';
+				echo '<span>{{Community}}</span>';
+				echo '</div>';
+			}
+			?>
 		</div>
 		<legend><i class="fas fa-sitemap"></i> {{Mes Networks}}</legend>
 		<?php

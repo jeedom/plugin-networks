@@ -3,5 +3,4 @@ test.php
 core/config/common.config.php
 plugins
 sftp-config.json
-.vscode/settings.json
-.vscode/sftp.json
+.vscode

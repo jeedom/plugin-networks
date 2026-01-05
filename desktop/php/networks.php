@@ -146,7 +146,23 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									</select>
 								</div>
 							</div>
-							<div class="form-group pingMode ip">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Timeout (s)}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Entre 1s & 10s. Par défaut 3s.}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="timeout" placeholder="3" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Maximum de tentatives en cas d'échec}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Entre 1 & 10. Par défaut 3.}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="maxTry" placeholder="3" />
+								</div>
+							</div>
+							<div class=" form-group pingMode ip">
 								<label class="col-sm-4 control-label">{{TTL}}</label>
 								<div class="col-sm-6">
 									<input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ttl" />

@@ -21,46 +21,25 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 require_once dirname(__FILE__) . '/../php/networks.inc.php';
 
 class networks extends eqLogic {
-	/*     * *************************Attributs****************************** */
-
-	public static $_widgetPossibility = array('custom' => true);
-
-	/*     * ***********************Methode static*************************** */
-
-	public static function dependancy_info() {
-		$return = array();
-		$return['log'] = 'networks_update';
-		$return['progress_file'] = '/tmp/dependancy_networks_in_progress';
-		$return['state'] = 'ok';
-		if (exec('which etherwake | wc -l') == 0 || exec('which wakeonlan | wc -l') == 0) {
-			if (exec(" dpkg --get-selections | grep -v deinstall | grep -E 'wakeonlan|etherwake' | wc -l") != 2) {
-				$return['state'] = 'nok';
-			} 
-		} 
-		return $return;
-	}
-
-	public static function dependancy_install() {
-		log::remove(__CLASS__ . '_update');
-		return array('script' => dirname(__FILE__) . '/../../resources/install_#stype#.sh ' . jeedom::getTmpFolder('networks') . '/dependance', 'log' => log::getPathToLog(__CLASS__ . '_update'));
-	}
+	/*     * ***********************Method static*************************** */
 
 	public static function update() {
-		foreach (self::byType('networks') as $networks) {
+		/** @var networks */
+		foreach (self::byType('networks', true) as $networks) {
 			$autorefresh = $networks->getConfiguration('autorefresh');
-			if ($networks->getIsEnable() == 1 && $autorefresh != '') {
-				try {
-					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
-					if ($c->isDue()) {
-						try {
-							$networks->ping();
-						} catch (Exception $exc) {
-							log::add('networks', 'error', __('Erreur pour ', __FILE__) . $networks->getHumanName() . ' : ' . $exc->getMessage());
-						}
+			if ($autorefresh == '') continue;
+
+			try {
+				$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
+				if ($c->isDue()) {
+					try {
+						$networks->ping();
+					} catch (Exception $exc) {
+						log::add('networks', 'error', __('Erreur pour ', __FILE__) . $networks->getHumanName() . ' : ' . $exc->getMessage());
 					}
-				} catch (Exception $exc) {
-					log::add('networks', 'error', __('Expression cron non valide pour ', __FILE__) . $networks->getHumanName() . ' : ' . $autorefresh);
 				}
+			} catch (Exception $exc) {
+				log::add('networks', 'error', __('Expression cron non valide pour ', __FILE__) . $networks->getHumanName() . ' : ' . $autorefresh);
 			}
 		}
 	}
@@ -68,6 +47,16 @@ class networks extends eqLogic {
 	/*     * ***********************Methode static*************************** */
 
 	/*     * *********************Méthodes d'instance************************* */
+
+	public function preInsert() {
+		$this->setConfiguration('pingMode', 'ip');
+	}
+
+	public function preUpdate() {
+		if ($this->getConfiguration('ip') == '') {
+			throw new Exception(__('L\'adresse IP ne peut être vide', __FILE__));
+		}
+	}
 
 	public function preSave() {
 		if ($this->getConfiguration('autorefresh') == '') {
@@ -96,7 +85,7 @@ class networks extends eqLogic {
 			$ping->setName(__('Statut', __FILE__));
 			$ping->setOrder(1);
 			$ping->setTemplate('dashboard', 'line');
-			$ping->setConfiguration('repeatEventManagement','never');
+			$ping->setConfiguration('repeatEventManagement', 'never');
 		}
 		$ping->setType('info');
 		$ping->setSubType('binary');
@@ -118,33 +107,33 @@ class networks extends eqLogic {
 		$latency->setUnite('ms');
 		$latency->save();
 
-		$addresseIP = $this->getCmd(null, 'addresseIP');
-		if (!is_object($addresseIP)) {
-			$addresseIP = new networksCmd();
-			$addresseIP->setLogicalId('addresseIP');
-			$addresseIP->setIsVisible(1);
-			$addresseIP->setName(__('addresseIP', __FILE__));
-			$addresseIP->setOrder(3);
+		$addressIP = $this->getCmd(null, 'addresseIP');
+		if (!is_object($addressIP)) {
+			$addressIP = new networksCmd();
+			$addressIP->setLogicalId('addresseIP');
+			$addressIP->setIsVisible(1);
+			$addressIP->setName(__('addresseIP', __FILE__));
+			$addressIP->setOrder(3);
 		}
-		$addresseIP->setType('info');
-		$addresseIP->setSubType('string');
-		$addresseIP->setEqLogic_id($this->getId());
-		$addresseIP->save();
-		$addresseIP->event($this->getConfiguration('ip', ''));
+		$addressIP->setType('info');
+		$addressIP->setSubType('string');
+		$addressIP->setEqLogic_id($this->getId());
+		$addressIP->save();
+		$addressIP->event($this->getConfiguration('ip', ''));
 
-		$addresseMAC = $this->getCmd(null, 'addresseMAC');
-		if (!is_object($addresseMAC)) {
-			$addresseMAC = new networksCmd();
-			$addresseMAC->setLogicalId('addresseMAC');
-			$addresseMAC->setIsVisible(1);
-			$addresseMAC->setName(__('addresseMAC', __FILE__));
-			$addresseMAC->setOrder(4);
+		$addressMAC = $this->getCmd(null, 'addresseMAC');
+		if (!is_object($addressMAC)) {
+			$addressMAC = new networksCmd();
+			$addressMAC->setLogicalId('addresseMAC');
+			$addressMAC->setIsVisible(1);
+			$addressMAC->setName(__('addresseMAC', __FILE__));
+			$addressMAC->setOrder(4);
 		}
-		$addresseMAC->setType('info');
-		$addresseMAC->setSubType('string');
-		$addresseMAC->setEqLogic_id($this->getId());
-		$addresseMAC->save();
-		$addresseMAC->event($this->getConfiguration('mac'), '');
+		$addressMAC->setType('info');
+		$addressMAC->setSubType('string');
+		$addressMAC->setEqLogic_id($this->getId());
+		$addressMAC->save();
+		$addressMAC->event($this->getConfiguration('mac'), '');
 
 		$wol = $this->getCmd(null, 'wol');
 		if ($this->getConfiguration('mac') == '' || $this->getConfiguration('broadcastIP') == '') {
@@ -165,29 +154,23 @@ class networks extends eqLogic {
 		}
 	}
 
-	public function preUpdate() {
-		if ($this->getConfiguration('ip') == '') {
-			throw new Exception(__('L\'adresse IP ne peut être vide', __FILE__));
-		}
-	}
-
 	public function ping() {
 		if ($this->getConfiguration('ip') == '') {
 			return;
 		}
-		$changed = false;
-		$ping = new networks_Ping($this->getConfiguration('ip'), $this->getConfiguration('ttl', 255));
-		if ($this->getConfiguration('pingMode', 'ip') == 'port') {
+		$ping = new networks_Ping($this->getConfiguration('ip'), $this->getConfiguration('ttl', 255), $this->getConfiguration('timeout', 3));
+		$pingMode = $this->getConfiguration('pingMode', 'ip');
+		if ($pingMode == 'port') {
 			$ping->setPort($this->getConfiguration('port', 80));
 		}
-		$latency_time = $ping->ping($this->getConfiguration('pingMode', 'ip'));
-		if ($latency_time === false) {
-			$latency_time = $ping->ping($this->getConfiguration('pingMode', 'ip'));
-		}
-		if ($latency_time === false) {
+
+		$maxTry = max(min(10, $this->getConfiguration('maxTry', 3)), 1);
+		do {
+			log::add(__CLASS__, 'debug', '[' . getmypid() . '] ' . __('Tentative de ping sur : ', __FILE__) . $this->getHumanName());
+			$latency_time = $ping->ping($pingMode);
 			usleep(100);
-			$latency_time = $ping->ping($this->getConfiguration('pingMode', 'ip'));
-		}
+		} while ($latency_time === false && --$maxTry > 0);
+
 		if ($this->getConfiguration('notifyifko') == 1) {
 			if ($latency_time === false) {
 				message::add('networks', __('Echec du ping sur : ', __FILE__) . $this->getHumanName(), '', 'pingFailed' . $this->getId());
@@ -198,18 +181,15 @@ class networks extends eqLogic {
 			}
 		}
 		if ($latency_time !== false) {
-			$changed = $this->checkAndUpdateCmd('ping', 1) || $changed;
-			$changed = $this->checkAndUpdateCmd('latency', $latency_time) || $changed;
+			log::add(__CLASS__, 'info', '[' . getmypid() . '] ' . __('Ping réussi sur : ', __FILE__) . $this->getHumanName());
+			$this->checkAndUpdateCmd('ping', 1);
+			$this->checkAndUpdateCmd('latency', $latency_time);
 		} else {
-			$changed = $this->checkAndUpdateCmd('ping', 0) || $changed;
-			$changed = $this->checkAndUpdateCmd('latency', -1) || $changed;
-		}
-		if ($changed) {
-			$this->refreshWidget();
+			log::add(__CLASS__, 'info', '[' . getmypid() . '] ' . __('Ping échoué sur : ', __FILE__) . $this->getHumanName());
+			$this->checkAndUpdateCmd('ping', 0);
+			$this->checkAndUpdateCmd('latency', -1);
 		}
 	}
-
-	/*     * **********************Getteur Setteur*************************** */
 }
 
 class networksCmd extends cmd {
@@ -217,14 +197,15 @@ class networksCmd extends cmd {
 
 	public static $_widgetPossibility = array('custom' => true);
 
-	/*     * ***********************Methode static*************************** */
+	/*     * ***********************Method static*************************** */
 
-	/*     * *********************Methode d'instance************************* */
+	/*     * *********************Method d'instance************************* */
 
 	public function execute($_options = array()) {
 		if ($this->getType() == 'info') {
 			return;
 		}
+		/** @var networks */
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'wol') {
 			$f = new \Phpwol\Factory();
@@ -253,6 +234,4 @@ class networksCmd extends cmd {
 			$eqLogic->ping();
 		}
 	}
-
-	/*     * **********************Getteur Setteur*************************** */
 }

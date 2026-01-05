@@ -18,16 +18,11 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
-
-
-
-
-
 function networks_install() {
 	$pathMobile = dirname(__FILE__) . '/../mobile';
 	if (file_exists($pathMobile)) {
 		shell_exec('rm -r ' . $pathMobile);
-	} 
+	}
 	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
@@ -45,7 +40,7 @@ function networks_update() {
 	$pathMobile = dirname(__FILE__) . '/../mobile';
 	if (file_exists($pathMobile)) {
 		shell_exec('rm -r ' . $pathMobile);
-	} 
+	}
 	$cron = cron::byClassAndFunction('networks', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
@@ -58,9 +53,9 @@ function networks_update() {
 	$cron->setTimeout(30);
 	$cron->save();
 	$cron->stop();
-	foreach(eqLogic::byType('networks') as $eqLogic){
-		$ping = $eqLogic->getCmd(null, 'ping');	
-		$ping->setConfiguration('repeatEventManagement','never');
+	foreach (eqLogic::byType('networks') as $eqLogic) {
+		$ping = $eqLogic->getCmd(null, 'ping');
+		$ping->setConfiguration('repeatEventManagement', 'never');
 		$ping->save();
 	}
 }
@@ -71,5 +66,3 @@ function networks_remove() {
 		$cron->remove();
 	}
 }
-
-?>

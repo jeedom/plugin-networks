@@ -2,6 +2,8 @@
     "changelog.md": {
         "Changelog Network": "Changelog Network",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text",
+        "05\/01\/2026": "",
+        "Amélioration des logs": "",
         "08\/12\/2024": "08\/12\/2024",
         "Ajout de la possibilité de configurer le timeout des requêtes": "Added ability to configure query timeout",
         "29\/11\/2024": "11\/29\/2024",

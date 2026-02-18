@@ -112,7 +112,7 @@ class networks extends eqLogic {
 			$addressIP = new networksCmd();
 			$addressIP->setLogicalId('addresseIP');
 			$addressIP->setIsVisible(1);
-			$addressIP->setName(__('addresseIP', __FILE__));
+			$addressIP->setName(__('Adresse IP', __FILE__));
 			$addressIP->setOrder(3);
 		}
 		$addressIP->setType('info');
@@ -126,7 +126,7 @@ class networks extends eqLogic {
 			$addressMAC = new networksCmd();
 			$addressMAC->setLogicalId('addresseMAC');
 			$addressMAC->setIsVisible(1);
-			$addressMAC->setName(__('addresseMAC', __FILE__));
+			$addressMAC->setName(__('Adresse MAC', __FILE__));
 			$addressMAC->setOrder(4);
 		}
 		$addressMAC->setType('info');
